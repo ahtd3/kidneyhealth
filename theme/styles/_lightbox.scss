@@ -1,0 +1,38 @@
+// lightbox (featherlight or lightGallery() overrides
+
+// clearfix causes vertical scrollbar to appear on featherlight when page content eg login forms are displayed
+// depending on the site you may need to add other style overrides here (eg backgrounds)
+.container.featherlight-inner
+{
+	&::before, &::after
+	{
+		display: none;
+	}
+}
+
+//featherlight form popup
+.popup-form-wrapper
+{
+	display: none;
+}
+
+.open-popup-form .featherlight-content
+{
+	width: 95%;
+	max-width: 500px;
+}
+
+// on macs with high res screens the font size of the ✕ character can become 
+// too small to be obvious / obscured by scrollbars on tall content
+// sizing it in mm means it is always reasonably sized regardless of the screen resolution 
+.featherlight .featherlight-close-icon
+{
+	top: 10px;
+	right: 10px;
+	font-size: 7mm;
+}
+
+.lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover
+{
+	border-color: $PRIMARY_HIGHLIGHT;
+}

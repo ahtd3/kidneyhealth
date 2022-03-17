@@ -1,0 +1,19 @@
+<p>
+	Hi {{ order.billingAddress.name }},
+</p>
+<p>
+	Thanks for shopping at {{ config.getSiteName() }}
+</p>
+<p>
+	Please deposit <strong>{{ order.total|formatPrice }}</strong> to <strong>{{ config.bankDetails }}</strong>. Please enter <strong>{{ order.reference }}</strong> into the reference field.
+</p>
+<p>
+	Your order number is {{ order.reference }} and the details are:
+</p>
+{% include("orders/sections/order-details-email.twig") %}
+<p>
+	Kind regards,
+</p>
+<p>
+	From the team at {{ config.getSiteName() }}!
+</p>

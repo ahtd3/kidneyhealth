@@ -1,0 +1,40 @@
+{% extends 'template/template.twig' %}
+
+{% block content %}
+	{% block page_image %}
+		{{ page.image.tag('content-image', page.imageDescription)|raw }}
+	{% endblock %}
+	<div class="container">
+		{% block page_content %}
+			{{ page.getPageContent()|expandHtml }}
+		{% endblock %}
+	</div>
+{% endblock %}
+
+{% block page_sections %}
+	{{ parent() }}
+	
+	<div class="home-extra-content container">
+		<div class="latest-news">
+			<h3 class="title">Latest New and Updates</h3>
+			<div class="c-articles">
+				{% for article in lastNews.results %}
+					{% include 'blog/card-article.twig' with {
+						"article": article
+					}%}
+				{% endfor %}
+			</div>
+		</div>
+		<div class="follow-us">
+			<h3 class="title">Follow Us On Facebook</h3>
+			<div class="embed_facebook">
+				{{config.embed_facebook | raw}}
+			</div>
+			
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block class_body %}home-page{% endblock %}
+{% block class_content %}{% endblock %}

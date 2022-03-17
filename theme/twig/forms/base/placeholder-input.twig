@@ -1,0 +1,24 @@
+{#
+	Displays an input with a placeholder label
+	- Required:
+		- type: The type of input to use
+		- label: A label for the input
+	- Optional:
+		- wrapperClasses: Classes to apply to the wrapper's element
+		- name: The name to give to the element
+		- value: The default value for the input
+		- required: Whether the input is required
+		- classes: Classes to apply to the input
+		- attributes: Extra attributes to apply to the input
+		- suggestions: An array of suggestions to display
+#}
+{% embed "forms/base/bare-field.twig" %}
+	{% block field %}
+		{% embed "forms/base/input.twig" %}
+			{% block specific %}
+				placeholder="{{ label }}"
+				title="{{ label }}"
+			{% endblock %}
+		{% endembed %}
+	{% endblock %}
+{% endembed %}

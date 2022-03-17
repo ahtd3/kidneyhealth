@@ -1,0 +1,96 @@
+// These are the base font styles for the site, as well as general typographic elements such as headings and links. Element specific typography should be defined with the rest of the styles for that element, so the styles don't end up being split across multiple files
+
+:root
+{
+	--heading-colour: #{$PRIMARY_HIGHLIGHT};
+	--link-colour: #{$PRIMARY_HIGHLIGHT};
+}
+
+html
+{
+	font-size: $BASE_FONT_SIZE;
+}
+
+body
+{
+	color: $DARK_COLOUR1;
+	font-family: $CONTENT_FONT;
+	line-height: 1.5;
+	font-weight: $LIGHT;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: none;
+}
+
+@include headings
+{
+	margin: 0 0 0.5em;
+	color: var(--heading-colour);
+	font-family: $HEADING_FONT;
+	font-size: var(--heading-responsive-size, initial);
+	line-height: 1.2;
+	
+	@include above($LAPTOP_MEDIUM)
+	{
+		font-size: var(--heading-size, initial);
+	}
+}
+
+h1
+{
+	--heading-size: #{rem(60px)};
+	--heading-responsive-size: #{rem(32px)};
+	font-weight: $MEDIUM;
+	line-height: 34px;
+	text-transform: uppercase;
+}
+
+h2
+{
+	--heading-size: #{rem(32px)};
+	--heading-responsive-size: #{rem(24px)};
+	font-weight: $MEDIUM;
+	line-height: 34px;
+	text-transform: uppercase;
+}
+
+h3
+{
+	--heading-size: #{rem(24px)};
+	--heading-responsive-size: #{rem(20px)};
+	font-weight: $MEDIUM;
+	line-height: 34px;
+	text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+	color: $BLUE_COLOUR;
+	font-weight: $MEDIUM;
+	font-family: $FONT_OSWALD;
+}
+
+@mixin link(
+	$color: var(--link-colour), 
+	$text-decoration: unset,
+	$hover-color: var(--link-colour),
+	$hover-text-decoration: underline
+) {
+	color: $color;
+	text-decoration: $text-decoration;
+	@include hover
+	{
+		color: $hover-color;
+		text-decoration: $hover-text-decoration;
+	}
+}
+a
+{
+	@include link;
+
+	img
+	{
+		border: none;
+	}
+}

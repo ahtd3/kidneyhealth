@@ -1,0 +1,248 @@
+.slideshow
+{
+	// container
+
+	// MAIN SLIDESHOW
+	//// note: arrows and dots turned on/off in javascript
+
+	/// desktop sizing
+	/// scss to calculate the aspect ratio from the dimensions as defined in the Banner classes (width / height)
+	/// this scales the slide no matter the screen width
+	/// a max-height can be used on .slide to override this for really wide screens.
+	$height: calc(100% * #{380 / 2560});
+	$main-height: calc(100% * #{380 / 2560});
+
+	/// mobile sizing (fixed height)
+	$responsive-height: 340px;
+
+	overflow: hidden;
+	position: relative;
+
+	/// mobile-first
+	background: $LIGHT_COLOUR;
+
+	.slide + .slide
+	{
+		display: none;
+	}
+	.slick-initialized .slide
+	{
+		display: block;
+	}
+
+	// slides
+	//// slide elements
+	.slide
+	{
+		overflow: hidden;
+		position: relative;
+		background-color: $LIGHT_COLOUR;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		text-align: center;
+
+		img
+		{
+			height: auto;
+			width: 100%;
+		}
+
+		.background-image
+		{
+			width: 100%;
+			background-position: center bottom;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+			&:after
+			{
+				content: '';
+				display: block;
+				position: relative;
+				padding-top: $responsive-height;
+
+				@include above($SLIDESHOW)
+				{
+					padding-top: $height;
+				}
+
+				html.Front-Page &
+				{
+					@include above($SLIDESHOW)
+					{
+						padding-top: $main-height;
+					}
+				}
+			}
+		}
+
+		.small-screen
+		{
+			@include above($SLIDESHOW)
+			{
+				display: none;
+			}
+		}
+
+		.small-screen + .big-screen
+		{
+			display: none;
+
+			@include above($SLIDESHOW)
+			{
+				display: block;
+			}
+		}
+
+		.caption
+		{
+			display: flex;
+			align-items: center;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 5;
+			//noinspection CssOptimizeSimilarProperties
+			background-position: center top;
+			//noinspection CssOptimizeSimilarProperties
+			background-repeat: no-repeat;
+			color: $DARK_COLOUR;
+			text-align: left;
+			text-transform: none;
+
+			@include above($SLIDESHOW)
+			{
+				align-items: center;
+			}
+
+			@include above($CONTENT_WIDTH)
+			{
+				right: 0;
+				left: 0;
+			}
+
+			h2
+			{
+				margin: 0;
+				color: $LIGHT_COLOUR;
+				font-size: rem(36px);
+				font-family: $CONTENT_FONT;
+
+				@include above($CONTENT_WIDTH)
+				{
+					font-size: rem(60px);
+				}
+			}
+		}
+	}
+}
+
+//// navigation
+button.slick-arrow
+{
+	$arrow_inset: 10px;
+	$arrow_dimension: 18px;
+
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 100;
+	height: 60px;
+	width: 60px;
+	border: none;
+	border-radius: 50%;
+	background: $PRIMARY_HIGHLIGHT;
+	text-indent: -9999px;
+	cursor: pointer;
+
+	@include below($RESPONSIVE_BREAKPOINT)
+	{
+		//have to override an inline style
+		display: none !important;
+	}
+
+	&:before
+	{
+		content: '';
+		display: block;
+		position: absolute;
+
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		border: 1px solid transparent;
+		border-top-color: $LIGHT_COLOUR;
+		border-left-color: $LIGHT_COLOUR;
+		height: $arrow_dimension;
+		width: $arrow_dimension;
+	}
+
+	@include hover
+	{
+		opacity: 0.8;
+	}
+
+	&.slick-prev
+	{
+		//noinspection CssOverwrittenProperties
+		left: $arrow_inset;
+
+		&:before
+		{
+			transform: translateX(50%) translateX(#{$arrow_dimension / 4}) rotate(-45deg);
+			right: 50%;
+		}
+	}
+
+	&.slick-next
+	{
+		//noinspection CssOverwrittenProperties
+		right: $arrow_inset;
+
+		&:before
+		{
+			transform: translateX(50%) translateX(-#{$arrow_dimension / 4}) rotate(135deg);
+			right: 50%;
+		}
+	}
+}
+
+ul.slick-dots
+{
+	position: absolute;
+	top: auto;
+	right: auto;
+	bottom: 20px;
+	left: 30px;
+	margin: 0;
+	padding: 0;
+
+	li
+	{
+		display: inline-block;
+		border: 1px solid $DARK_NEUTRAL_COLOUR;
+		border-radius: 50%;
+		height: 12px;
+		margin: 0 0 0 5px;
+		padding: 0;
+		width: 12px;
+		background: transparent;
+		text-indent: -1000000px;
+	}
+
+	li.slick-active
+	{
+		border: 1px solid $DARK_NEUTRAL_COLOUR;
+		background: $DARK_NEUTRAL_COLOUR;
+	}
+
+	li:hover
+	{
+		cursor: pointer;
+	}
+}

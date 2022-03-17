@@ -1,0 +1,10 @@
+{#
+	Displays a hidden field
+	- Required:
+		- name: The name of the field
+		- value: The value for the field
+	- Optional:
+		- classes: Any classes to apply to the field
+		- attributes: Any extra attributes to apply to the field
+#}
+<input type="hidden" name="{{ name }}" value="{{ value }}" class="{{ classes }}" {{ attributes|raw }} />

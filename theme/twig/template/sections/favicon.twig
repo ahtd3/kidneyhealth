@@ -1,0 +1,14 @@
+{# Favicon links, based on https://www.emergeinteractive.com/insights/detail/the-essentials-of-favicons/ #}
+
+{# Generic links #}
+{% for size in [32, 57, 76, 96, 128, 192, 228] %}
+	<link rel="icon" href="{{ config.getFavicon(size).getLink() }}" sizes="{{ size }}x{{ size }}" />
+{% endfor %}
+
+{# Android #}
+<link rel="shortcut icon" href="{{ config.getFavicon(196).getLink() }}" sizes="196x196" />
+
+{# iOS #}
+{% for size in [120, 152, 180] %}
+	<link rel="apple-touch-icon" href="{{ config.getFavicon(size).getLink() }}" sizes="{{ size }}x{{ size }}" />
+{% endfor %}

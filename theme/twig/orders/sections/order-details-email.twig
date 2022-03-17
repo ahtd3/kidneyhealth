@@ -1,0 +1,45 @@
+<ul>
+	{% for lineItem in order.lineItems %}
+		<li>
+			{% if lineItem.displayQuantity %}
+				{{ lineItem.quantity }} ×
+			{% endif %}
+			{{ lineItem.title }}
+			{% if lineItem.options is defined %}
+				{% for option in lineItem.options %}
+					~ {{ option.optionName }}
+				{% endfor %}
+			{% endif %}
+			- {{ lineItem.total|formatPrice }}
+		</li>
+	{% endfor %}
+</ul>
+<p>
+	Total: {{ order.total|formatPrice }}
+</p>
+{% if 'SHIPPING' is enabled %}
+	<p>
+		Delivery Address:
+	</p>
+	<p>
+		{{ order.shippingAddress.name }}<br />
+		{{ order.shippingAddress.outputAddress()|nl2br }}<br />
+	</p>
+	{% if order.shippingAddress.deliveryInstructions %}
+		<p>Delivery Instructions:</p>
+		<p>{{ order.shippingAddress.deliveryInstructions|nl2br }}</p>
+	{% endif %}
+{% endif %}
+<p>
+	Billing Address:
+</p>
+<p>
+	{{ order.billingAddress.name }}<br />
+	{{ order.billingAddress.outputAddress()|nl2br }}<br />
+	Phone: {{ order.billingAddress.phone }}
+</p>
+
+
+{% if config.gstNumber != '' %}
+	<p><strong>Our GST Number:</strong> {{ config.gstNumber }}</p>
+{% endif %}

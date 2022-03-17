@@ -1,0 +1,29 @@
+{% extends 'template/template.twig' %}
+
+{% block content %}
+	{% block page_image %}
+		{{ page.image.tag('content-image', page.imageDescription)|raw }}
+	{% endblock %}
+	<div class="container">
+		{% block content_title %}
+			<h1>{{ page.getMainHeading() }}</h1>
+		{% endblock %}
+		{% block page_content %}
+			{{ page.getPageContent()|expandHtml }}
+		{% endblock %}
+
+		{% if page.group_links[0] %}
+		<h3>{{page.group_links[0].label}}</h3>
+		<ul>
+			{% for link in page.group_links[0].links %}
+			<li>
+				{% include 'widgets/links/custom-link.twig' with {
+					link: link,
+				} %}
+			</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	</div>
+{% endblock %}
+{% block class_content %}{% endblock %}

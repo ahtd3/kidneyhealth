@@ -1,0 +1,15 @@
+<article class="{% if result.image != null %}has-image{% endif %}">
+	{% if result.image != null %}
+		<a class="search-image" href="{{ result.path }}">
+			{{ result.image.tag("", result.title)|raw }}
+		</a>
+	{% endif %}
+	<div class="search-content">
+		<h5>
+			<a href="{{ result.path }}">{{ result.title }}</a>
+		</h5>
+		<p class="description">
+			{{ result.description }}
+		</p>
+	</div>
+</article>

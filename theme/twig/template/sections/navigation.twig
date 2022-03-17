@@ -1,0 +1,31 @@
+{% for navItem in navItems %}
+
+	{% set classes = [] %}
+	{% set children = [] %}
+
+	{% if currentDepth < maxDepth %}
+		{% set children = navItem.getChildNavItems() %}
+	{% endif %}
+
+	{% if navItem.isHomepage() %}
+		{% set classes = classes|merge(["home"]) %}
+	{% endif %}
+
+	{% if navItem.isNavSelected(currentNavItem) %}
+		{% set classes = classes|merge(["sel"]) %}
+	{% endif %}
+
+	{% if children|length %}
+		{% set classes = classes|merge(["has-children"]) %}
+	{% endif %}
+
+	<li class="{{ classes|join(" ") }}">
+		<a href="{{ navItem.getNavPath() }}" {% if navItem.isOpenedInNewWindow() %} target='_blank' {% endif %}>{{ navItem.getNavLabel()|raw }}</a>
+		{% if children|length > 0 %}
+			<span class='open-sub'></span>
+			<ul>
+			 	{% include "template/sections/navigation.twig" with {"navItems": children, "currentDepth": currentDepth + 1, "maxDepth": maxDepth, "currentNavItem": currentNavItem} only %}
+			</ul>
+		{% endif %}
+	</li>
+{% endfor %}

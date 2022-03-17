@@ -1,0 +1,32 @@
+{% extends 'pages/page.twig' %}
+
+{% block meta_data %}
+	<title>{{ article.getPageTitle() }}</title>
+	<meta name="description" content="{{ article.getMetaDescription() }}" />
+{% endblock %}
+
+{% block canonical_link %} 
+	{% if originalPage.isDuplicate %} <link rel="canonical" href="{{ constant('PROTOCOL') ~ constant('SITE_ROOT') ~ originalPage.original.path ~ article.slug ~ '/' }}" /> {% endif %}
+{% endblock %}
+
+{% block content %}
+	<h1>{{ article.getMainHeading() }}</h1>
+	<p>Posted {{ article.date.format('F j, Y') }}</p>
+	<div class="columns">
+		<div class="{% if article.image != null %} col-2 {% endif %}">
+			{{ article.getPageContent()|expandHtml|raw }}
+			<p><a class="button" href="{{ page.getNavPath() }}?page={{ article.getPageNumber() }}">Back</a></p>
+			{#
+			<p>
+				{% if not article.previous.isNull() %} <a class="button" href="{{ article.previous.path }}">Previous Article</a> {% endif %}
+				{% if not article.next.isNull() %} <a class="button" href="{{ article.next.path }}">Next Article</a> {% endif %}
+			</p>
+			#}
+		</div>
+		{% if article.image != null %}
+			<div class="col-2">
+				{{ article.image.tag('', article.imageDescription)|raw }}
+			</div>
+		{% endif %}
+	</div>
+{% endblock %}

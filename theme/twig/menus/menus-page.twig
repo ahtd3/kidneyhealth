@@ -1,0 +1,14 @@
+{% extends 'pages/page.twig' %}
+
+{% block content %}
+	{{ parent() }}
+	<div class="menus">
+		{% for menu in menus %}
+			<a class="menu-thumb" href="{{ menu.path }}">
+				<div class="image" style="background-image: url('{% if menu.thumbnail != null %} {{ menu.thumbnail.getLink() }} {% endif %}')">
+				</div>
+				<span class="name">{{ menu.name }}</span>
+			</a>
+		{% endfor %}
+	</div>
+{% endblock %}

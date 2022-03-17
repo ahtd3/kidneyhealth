@@ -1,0 +1,225 @@
+/* General standardised styles for native functionality like carts and users */
+
+@keyframes native-ajax-loading-animation
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+
+	100%
+	{
+		transform: rotate(360deg);
+	}
+}
+
+%native-loading
+{
+	position: relative;
+
+	&:before
+	{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba($LIGHT_COLOUR, 0.5);
+	}
+
+	&:after
+	{
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		vertical-align: middle;
+		border: 5px solid;
+		border-color: $PRIMARY_HIGHLIGHT $PRIMARY_HIGHLIGHT transparent transparent;
+		border-radius: 50%;
+		height: 50px;
+		margin-top: -30px;
+		margin-left: -30px;
+		width: 50px;
+		animation: native-ajax-loading-animation 1s linear infinite;
+		transition: opacity 0.2s;
+	}
+}
+
+
+.native 
+{
+	h1
+	{
+		position: relative;
+		padding: 15px;
+		font-size: rem(20px);
+		text-align: left;
+		text-transform: uppercase;
+	}
+
+	h2
+	{
+		font-family: $CONTENT_FONT;
+		font-size: rem(20px);
+		font-weight: bold;
+		text-align: left;
+	}
+
+	.field-wrapper,
+	.field-wrapper > label
+	{
+		display: flex;
+		align-items: flex-start;
+		flex-grow: 1;
+		flex-wrap: wrap;
+
+		@include below($RESPONSIVE_BREAKPOINT)
+		{
+			display: block;
+		}
+
+		.label
+		{
+			margin-top: 10px;
+			margin-right: 10px;
+			text-align: right;
+
+			flex-basis: 150px;
+
+			@include below($RESPONSIVE_BREAKPOINT)
+			{
+				margin-right: 0;
+				text-align: left;
+			}
+		}
+
+		.field
+		{
+			flex-grow: 1;
+		}
+
+		.append-errors 
+		{
+			margin-left: 160px;
+			width: 100%;
+
+			@include below($RESPONSIVE_BREAKPOINT)
+			{
+				margin-left: 0;
+			}
+		}
+	}
+
+	.field-wrapper.group
+	{
+		margin-bottom: 15px;
+	}
+
+	.field-wrapper.checkbox-wrapper,
+	.submit-button,
+	.field-wrapper.group
+	{
+		margin-left: 160px;
+
+		@include below($RESPONSIVE_BREAKPOINT)
+		{
+			margin-left: 0;
+		}
+	}
+}
+
+.native-sections
+{
+	display: flex;
+	flex-direction: column;
+
+	@include above($TABLET_MIN)
+	{
+		align-items: flex-start;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.native-sidebar
+{
+	margin-bottom: 35px;
+	margin-left: 0;
+	min-width: auto;
+
+	order: 0;
+
+	@include above($TABLET_MIN)
+	{
+		flex-shrink: 0;
+		margin-left: 35px;
+		min-width: 30%;
+
+		order: 2;
+	}
+
+	.sidebar-section
+	{
+		border: 1px solid $NEUTRAL_COLOUR;
+		padding: 20px;
+
+		&.loading
+		{
+			@extend %native-loading;
+		}
+	}
+
+	h1
+	{
+		margin: -20px -20px 20px;
+		background: $NEUTRAL_COLOUR;
+		color: $LIGHT_COLOUR;
+	}
+
+	.row
+	{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 15px;
+		font-weight: bold;
+
+		&.total
+		{
+			margin: 20px 0 0;
+			font-size: rem(20px);
+		}
+	}
+}
+
+.native-main
+{
+	flex-grow: 1;
+
+	.main-section,
+	.payment-confirm-section
+	{
+		border: 1px solid $NEUTRAL_COLOUR;
+		margin-bottom: 30px;
+		padding: 15px;
+
+		@include above($TABLET_MIN)
+		{
+			padding: 30px;
+		}
+	}
+
+	h1
+	{
+		margin: -15px -15px 15px;
+		background: $DARK_COLOUR;
+		color: $LIGHT_COLOUR;
+		padding: 30px;
+
+		@include above($TABLET_MIN)
+		{
+			margin: -30px -30px 30px;
+		}
+	}
+}

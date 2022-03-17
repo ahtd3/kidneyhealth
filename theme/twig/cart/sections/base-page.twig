@@ -1,0 +1,79 @@
+{% extends 'pages/page.twig' %}
+
+{% block scripts %}
+	{{ parent() }}
+	{% do script.add("/theme/scripts/cart.js") %}
+{% endblock %}
+
+{% block content_banner %}{# none #}{% endblock %}
+{% block notifications %}{# message output in content #}{% endblock %}
+
+{% block content %}
+	<div class="cart native">
+		{% block cart_steps %}
+			{% include "cart/sections/steps.twig" %}
+		{% endblock %}
+		<div class="native-sections">
+			<section class="native-sidebar">
+				{% if hasDiscounts %}
+					<article class="sidebar-section">
+						<h1>
+							Discount
+						</h1>
+						<form action="/cart/action/discount/" method="post">
+							<label>
+								<p>
+									If you have a discount code, enter it below:
+								</p>
+								<p>
+									<input type="text" name="discount" value="{{ cart.discount.code }}" />
+								</p>
+							</label>
+							<p>
+								<input type="submit" value="Save" class="button" />
+							</p>
+						</form>
+					</article>
+				{% endif %}
+				<article class="sidebar-section js-cart-summary">
+					<h1>
+						Summary
+					</h1>
+					<div class="rows">
+						<div class="row">
+							<span class="label">Subtotal</span> <span class="value">{{ cart.subtotal|formatPrice }}</span>
+						</div>
+						{% for lineItem in cart.specialLineItems %}
+							<div class="row">
+								<span class="label">{{ lineItem.title }}</span> <span class="value">{{ lineItem.displayValue ?? lineItem.total|formatPrice }}</span>
+							</div>
+						{% endfor %}
+						<div class="row total">
+							<span class="label">Total</span> <span class="value">{{ cart.total|formatPrice }}</span>
+						</div>
+					</div>
+				</article>
+			</section>
+			<div class="native-main">
+				{% block cart_main %}
+					<div class="main-section">
+						{% block cart_heading_block %}
+							<h1 class="cart-heading">
+								{% block cart_heading %}{% endblock %}
+							</h1>
+						{% endblock %}
+						{% if message %}
+							<p class="message">
+								{{ message|raw }}
+							</p>
+						{% endif %}
+						<div class="cart-content">
+							{% block cart_content %}{% endblock %}
+						</div>
+					</div>
+				{% endblock %}
+				{% block cart_action %}{% endblock %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

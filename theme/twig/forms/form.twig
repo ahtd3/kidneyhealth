@@ -1,0 +1,36 @@
+{#
+	Displays a form
+	- Required:
+		- form: The Form object to generate a form out of
+		- action: The URL to send the form to
+		- method: The method to use
+	- Optional:
+		- prepend: Some HTML to add to the start of the form
+		- append: Some HTML to add to the end of the form, before the submit button
+		- class: A class name for the form
+#}
+{% set userMessage = form.retrieveUserMessage() %}
+
+<form id="form-{{ form.id }}" class="{{ class }}" action="{{ action }}" method="{{ method }}" enctype="multipart/form-data">
+	{{ (prepend ?? form.prepend)|raw }}	
+	{% if userMessage %}
+		<p class="message">
+			{{ userMessage|raw }}
+		</p>
+	{% endif %}
+	{% include "forms/hidden-field.twig" with
+	{
+		"name": "id",
+		"value": form.id
+	} only %}
+	<div class="fields">
+		{% for field in form.fields %}
+			{% include field.getTemplate() with field.getVariables() only %}
+		{% endfor %}
+		{# Extra div to help Chrome not screw up columns #}
+		<div></div>
+	</div>
+	{% include "forms/captcha.twig" %}
+	{{ (append ?? form.append)|raw }}
+	{% include "forms/submit-button.twig" with {"label": form.buttonText} %}
+</form>

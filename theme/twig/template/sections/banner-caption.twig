@@ -1,0 +1,9 @@
+{% if banner.title != '' %}
+	<h2 class="title">{{ banner.title|nl2br }}</h2>
+{% endif %}
+{% if banner.text != '' %}
+	<p class="tagline">{{ banner.text|nl2br }}</p>
+{% endif %}
+{% if banner.link != '' %}
+	<a href="{{ banner.link }}" class="button">{{ banner.button }}</a>
+{% endif %}

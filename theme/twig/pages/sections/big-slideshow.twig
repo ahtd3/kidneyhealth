@@ -1,0 +1,19 @@
+<div class="big-slideshow {{section.code}}">
+	<div class="side-content">
+		{{ section.content|raw }}
+	</div>
+	<div class="foxy slides js-big-slideshow">
+		{% for slide in section.slides %}
+			<div class="slides-item">
+				<div class="slides-content">
+					<h4>{{slide.altText}}</h4>
+					<div class="detail">{{slide.content | raw}}</div>
+				</div>
+				<div class="slides-image">
+					{{ slide.image.tag("", slide.altText)|raw }}
+				</div>
+			</div>
+			
+		{% endfor %}
+	</div>
+</div>

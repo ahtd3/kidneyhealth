@@ -1,0 +1,14 @@
+{#
+	Displays a colour picker
+	- Required:
+		- label: A label for the colour picker
+	- Optional:
+		- wrapperClasses: Classes to apply to the wrapper's element
+		- error: An error to display
+		- name: The name to give to the element
+		- value: The default value for the colour picker
+		- required: Whether the colour picker is required
+		- classes: Classes to apply to the picker element
+		- attributes: Extra attributes to apply to the picker element
+#}
+{% include "forms/base/labelled-input.twig" with {"type": "color"} %}

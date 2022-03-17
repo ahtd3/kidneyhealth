@@ -1,0 +1,38 @@
+<p>
+	Hi {{ order.billingAddress.name }},
+</p>
+<p>
+	Thanks for shopping at {{ config.getSiteName() }}
+</p>
+<p>
+	{% if isUpdate %}
+		The tracking details for Order #{{ order.reference }} have been updated. Your order was shipped via {{ order.courier.name }} and your tracking number is {{ order.trackingCode }}.
+	{% else %}
+		Order #{{ order.reference }} has been shipped via {{ order.courier.name }} and your tracking number is {{ order.trackingCode }}.
+	{% endif %}
+</p>
+{% if order.getTrackingLink() %}
+	<p>
+		You can track your order by visiting: <a href="{{ order.getTrackingLink() }}">{{ order.getTrackingLink() }}</a>
+	</p>
+{% endif %}
+<p>
+	The following items will be included in this delivery:
+</p>
+<ul>
+	{% for lineItem in order.getOrderDetailsNormalLineItems() %}
+		<li>
+			{% if lineItem.displayQuantity %}
+				{{ lineItem.quantity }} x {{ lineItem.title }}
+			{% else %}
+				{{ lineItem.title }}
+			{% endif %}
+		</li>
+	{% endfor %}
+</ul>
+<p>
+	Kind regards,
+</p>
+<p>
+	From the team at {{ config.getSiteName() }}!
+</p>

@@ -1,0 +1,23 @@
+{% extends "account/sections/base-page.twig" %}
+
+{% block native_sidebar %}
+	{% if "USERS" is enabled and registrationEnabled %}
+		<h1>
+			Don't have an account?
+		</h1>
+		<p>
+			<a class="button" href="/account/register/">Create an account</a>
+		</p>
+	{% endif %}
+{% endblock %}
+
+{% block account_heading_block %}
+	<h1>
+		Login to {{ config.getSiteName() }}
+	</h1>
+{% endblock %}
+
+{% block account_content %}
+	{% include("account/sections/login-form.twig") with { samePage: true } %}
+{% endblock %}
+

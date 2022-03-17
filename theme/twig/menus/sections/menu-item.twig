@@ -1,0 +1,16 @@
+<div class="menu-item">
+	<span class="name">{{ item.name }}</span>
+	<span class="price">
+		{% if not item.menuItemPrice.isNull() and item.menuItemPrice.price > 0 %}
+			<span>${{ item.menuItemPrice.price }} {{ item.menuItemPrice.label }}</span>
+		{% endif %}
+		{% for menuItemPrice in item.getPrices() %}
+			<span>${{ menuItemPrice.price }} {{ menuItemPrice.label }}</span>
+		{% endfor %}
+		<span class="attributes">
+			{% for itemAttribute in item.getAttributes() %}
+				{% include 'menus/sections/menu-attribute.twig' with {'menuAttribute': itemAttribute.menuAttribute} %}
+			{% endfor %}
+		</span>
+	</span>
+</div>

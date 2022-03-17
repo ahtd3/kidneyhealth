@@ -1,0 +1,12 @@
+<p>
+	<strong>Name:</strong> {{ payment.name }} <br />
+	<strong>Email:</strong> {{ payment.email }} <br />
+	<strong>Phone:</strong> {{ payment.phone }}<br />
+	<strong>Payment Amount:</strong> {{ payment.amount|formatPrice }} <br />
+	<strong>Invoice number(s) relating to this payment:</strong> {{ payment.invoiceNumber }}<br />
+	<strong>Payment Method:</strong> {{ payment.getGatewayLabel() }}
+</p>
+
+{% if config.gstNumber != '' %}
+	<p><strong>Our GST Number:</strong> {{ config.gstNumber }}</p>
+{% endif %}

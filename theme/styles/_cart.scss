@@ -1,0 +1,331 @@
+.checkout-navigation
+{
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+
+	@include below($RESPONSIVE_BREAKPOINT)
+	{
+		display: block;
+	}
+
+	li
+	{
+		display: block;
+		position: relative;
+		flex-grow: 1;
+		background: $DARK_COLOUR;
+		color: $LIGHT_COLOUR;
+		text-align: center;
+
+		flex-basis: 0;
+
+		&:before,
+		&:after
+		{
+			content: "";
+			position: absolute;
+			left: 100%;
+			z-index: 1;
+			border-right-width: 0;
+
+			@include below($RESPONSIVE_BREAKPOINT)
+			{
+				display: none;
+			}
+		}
+
+		&:before
+		{
+			top: -7px;
+			border: 30px solid transparent;
+			border-left-color: $LIGHT_COLOUR;
+		}
+
+		&:after
+		{
+			top: 0;
+			border: 23px solid transparent;
+			border-left-color: $DARK_COLOUR;
+		}
+
+		&:last-child
+		{
+			&:before,
+			&:after
+			{
+				display: none;
+			}
+		}
+
+		&.unavailable
+		{
+			padding: 10px;
+			background: $NEUTRAL_COLOUR;
+			color: rgba($DARK_COLOUR, 0.3);
+
+			&:after
+			{
+				border-left-color: $NEUTRAL_COLOUR;
+			}
+		}
+
+		&.current
+		{
+			background: mix($DARK_COLOUR, $NEUTRAL_COLOUR);
+
+			&:after
+			{
+				border-left-color: mix($DARK_COLOUR, $NEUTRAL_COLOUR);
+			}
+		}
+	}
+
+	a
+	{
+		display: block;
+		padding: 10px;
+		text-decoration: none;
+	}
+}
+
+
+.line-items
+{
+	.line-item
+	{
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid $NEUTRAL_COLOUR;
+		margin: 0 -30px 30px;
+		padding: 0 30px 30px;
+
+		&:last-child
+		{
+			border-bottom: 0;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		&.loading
+		{
+			@extend %native-loading;
+		}
+	}
+
+	.image
+	{
+		margin-right: 20px;
+		width: 100px;
+	}
+
+	.details
+	{
+		flex-grow: 1;
+	}
+
+	h2
+	{
+		margin: 0;
+		font-size: rem(20px);
+		text-align: left;
+	}
+
+	a
+	{
+		text-decoration: none;
+	}
+
+	form input[type=number]
+	{
+		display: inline-block;
+		vertical-align: middle;
+		margin: 10px 0;
+		max-width: 4em;
+	}
+
+	.button
+	{
+		min-width: 210px;
+	}
+}
+
+.login-group.activated
+{
+	display: grid;
+
+	.main-section
+	{
+		grid-column: 1;
+		grid-row: 1;
+
+		h1
+		{
+			text-align: center;
+
+			 ~ *
+			{
+				position: relative;
+				z-index: 1;
+			}
+		}
+
+		&.selected h1
+		{
+			border-bottom: 5px solid $PRIMARY_HIGHLIGHT;
+		}
+
+		&:not(.selected) h1
+		{
+			position: relative;
+			z-index: 1;
+			margin-bottom: -30px;
+			background: $NEUTRAL_COLOUR;
+			color: $DARK_COLOUR;
+			cursor: pointer;
+
+			 ~ *
+			{
+				display: none;
+			}
+		}
+	}
+
+	.login h1
+	{
+		margin-right: 50%;
+	}
+
+	.register h1
+	{
+		margin-left: 50%;
+	}
+}
+
+.hide-duplicate-fields .duplicate-field
+{
+	display: none;
+}
+
+.cart-addresses
+{
+	display: flex;
+	justify-content: space-between;
+
+	@include below(800px)
+	{
+		flex-direction: column;
+	}
+
+	.address
+	{
+		flex-grow: 1;
+		margin-right: 20px;
+
+		flex-basis: 0;
+
+		@include below(800px)
+		{
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+
+		&:first-child
+		{
+			margin-right: 0;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.payment-gateway-text
+{
+	padding-left: 44px;
+
+	p
+	{
+ 		font-size: 16px;
+		line-height: 1.2;
+		margin: 4px 0;
+	}
+
+		b
+		{
+			font-size: inherit;
+		}
+}
+
+.genoapay-logo
+{
+	display: inline-block;
+	vertical-align: middle;
+	height: 21px;
+	overflow: hidden;
+	width: 206px;
+	background: transparent url('images/payment-gateways/genoapay.svg') left top no-repeat;
+	background-size: contain;
+	text-indent: -9999px;
+}
+
+.laybuy-logo
+{
+	display: inline-block;
+	vertical-align: middle;
+	height: 21px;
+	overflow: hidden;
+	width: 90px;
+	background: transparent url('images/payment-gateways/laybuy.svg') left top no-repeat;
+	background-size: contain;
+	text-indent: -9999px;
+
+}
+
+.poli-block
+{
+	@extend %clearfix;
+
+	display: inline-block;
+	vertical-align: top;
+
+	img
+	{
+		display: block;
+		float: left;
+		margin: 0 1rem 0 0;
+	}
+}
+
+.confirm-text
+{
+	background: rgba(0,0,0,.05);
+	padding: 10px;
+}
+
+.confirm-table
+{
+	border: 1px solid $NEUTRAL_COLOUR;
+	padding: 10px;
+	width: 100%;
+	background: rgba($DARK_COLOUR, 0.05);
+
+	td,
+	th
+	{
+		vertical-align: top;
+	}
+
+	td:first-child
+	{
+		min-width: 30px;
+	}
+
+	th
+	{
+		text-align: left;
+	}
+
+	.price
+	{
+		text-align: right;
+	}
+}

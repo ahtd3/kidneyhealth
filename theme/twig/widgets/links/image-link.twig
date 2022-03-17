@@ -1,0 +1,11 @@
+{# 
+	@expects string url
+	@expects string text
+	@expects Files\Image $image
+	@optional string attributes
+	@optional string classes
+	@optional bool newTab 
+#}
+<a class="{{ classes }}" href="{{ url }}" {% if newTab %} target="_blank" rel="noopener" {% endif %} {{ attributes }}>
+	{{ image ? image.tag('', text)|raw :  text }}
+</a>

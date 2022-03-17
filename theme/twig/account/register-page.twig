@@ -1,0 +1,20 @@
+{% extends "account/sections/base-page.twig" %}
+
+{% block native_sidebar %}
+	<h1>
+		Already have an account?
+	</h1>
+	<p>
+		<a class="button" href="/account/login/">Login Here</a>
+	</p>
+{% endblock %}
+
+{% block account_heading_block %}
+	<h1>
+		Register at {{ config.getSiteName() }}
+	</h1>
+{% endblock %}
+
+{% block account_content %}
+	{% include("account/sections/register-form.twig") with { samePage: true } %}
+{% endblock %}

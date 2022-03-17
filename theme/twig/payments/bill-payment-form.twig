@@ -1,0 +1,64 @@
+{% if message %}
+	<p class="message">
+		{{ message|raw }}
+	</p>
+{% endif %}
+<form action="{{ page.getNavPath() }}action/pay/" method="post">
+	{% include "forms/text-field.twig" with
+	{
+		"label": "Name",
+		"name": "name",
+		"value": refill.name,
+		"wrapperClasses": "",
+		"required": true,
+		"usePlaceholder": usePlaceholder
+	} only %}
+	{% include "forms/email-field.twig" with
+	{
+		"label": "Email",
+		"name": "email",
+		"value": refill.email,
+		"wrapperClasses": "",
+		"required": true,
+		"usePlaceholder": usePlaceholder
+	} only %}
+	{% include "forms/phone-field.twig" with
+	{
+		"label": "Phone",
+		"name": "phone",
+		"value": refill.phone,
+		"wrapperClasses": "",
+		"required": true,
+		"usePlaceholder": usePlaceholder
+	} only %}
+	{% include "forms/number-field.twig" with
+	{
+		"label": "Payment Amount",
+		"name": "amount",
+		"value": refill.amount,
+		"wrapperClasses": "js-payment-amount",
+		"required": true,
+		"usePlaceholder": usePlaceholder
+	} only %}
+	{% include "forms/text-field.twig" with
+	{
+		"label": "Invoice number(s) relating to this payment",
+		"name": "invoice",
+		"value": refill.invoice,
+		"wrapperClasses": "",
+		"required": true,
+		"usePlaceholder": usePlaceholder
+	} only %}
+
+	{% if paymentGateways|length > 1 %}
+		{% include "forms/radio-buttons.twig" with
+		{
+			"label": "How would you like to pay?",
+			"values": paymentGateways,
+			"selected": refill.payment,
+			"name": "payment",
+			"required": true
+		} only %}
+	{% endif %}
+	{% include "forms/submit-button.twig" with {"label": "Pay Now"} only %}
+</form>

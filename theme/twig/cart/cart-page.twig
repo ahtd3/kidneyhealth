@@ -1,0 +1,56 @@
+{% extends "cart/sections/base-page.twig" %}
+
+{% block cart_steps %}{% endblock %}
+{% block cart_heading %}
+	Your Cart ({{ cart.normalLineItems|length }})
+{% endblock %}
+{% block cart_content %}
+	<div class="line-items js-line-items">
+		{% for lineItem in cart.normalLineItems %}
+			<section class="line-item js-line-item">
+				{% if lineItem.image is not null %}
+					{% if lineItem.link is not null %}
+						<a href="{{ lineItem.link }}" class="image">{{ lineItem.image.tag()|raw }}</a>
+					{% else %}
+						<span class="image">{{ lineItem.image.tag()|raw }}</span>
+					{% endif %}
+				{% endif %}
+				<div class="details">
+					<h2>
+						{% if lineItem.link is not null %}
+							<a href="{{ lineItem.link }}">{{ lineItem.title }}</a>
+						{% else %}
+							{{ lineItem.title }}
+						{% endif %}
+					</h2>
+					{% if lineItem.options is defined %}
+						{% for option in lineItem.options %}
+							<div>
+								{{ option.optionGroupName }}: {{ option.optionName }}
+							</div>
+						{% endfor %}
+					{% endif %}
+					<form action="/cart/action/update/{{ lineItem.identifier }}/" method="post">
+						<div>
+							<input class="js-cart-quantity" type="number" name="quantity" value="{{ lineItem.quantity }}" title="quantity" /> × {{ lineItem.price|formatPrice }}
+						</div>
+						<div>
+							<noscript><input type="submit" value="Update" class="button" /></noscript> <a href="/cart/action/remove/{{ lineItem.identifier }}" class="button js-cart-remove">Remove</a>
+						</div>
+					</form>
+				</div>
+			</section>
+		{% else %}
+			<p>
+				There are no items in your cart
+			</p>
+		{% endfor %}
+	</div>
+{% endblock %}
+{% block cart_action %}
+	{% if cart.normalLineItems is not empty %}
+		<p>
+			<a href="{{ controller.getCheckoutSteps()|first }}" class="button">Checkout</a>
+		</p>
+	{% endif %}
+{% endblock %}

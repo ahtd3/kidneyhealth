@@ -1,0 +1,141 @@
+.big-slideshow
+{
+	display: grid;
+	
+	grid-template-columns: [content-background-start slideshow-start] 20px [content-start] 1fr [content-end] 20px [content-background-end slideshow-end];
+	
+	@include above($LAPTOP_MIN)
+	{
+		grid-template-columns: [content-background-start] 10px [content-start] 3fr [content-end] 10px [content-background-end slideshow-start] 10px 7fr 10px [slideshow-end];
+	}
+	
+	@include above($CONTAINER_WIDTH)
+	{
+		--side-panel-width: max(10px, calc((100% - var(--container-width)) / 2));
+		grid-template-columns:	[content-background-start] var(--side-panel-width) [content-start] 3fr [content-end] 100px [content-background-end slideshow-start] 75px 7fr var(--side-panel-width) [slideshow-end];
+	}
+	
+	&:before
+	{
+		background: $DARK_COLOUR;
+		content: "";
+		grid-column: content-background;
+		grid-row: 1;
+	}
+	
+	.side-content
+	{
+		align-self: center;
+		color: $LIGHT_COLOUR;
+		grid-column: content;
+		grid-row: 1;
+	}
+	
+	h2
+	{
+		font-size: rem(44px);
+	}
+	
+	p
+	{
+		margin: 30px 0;
+	}
+	
+	.slides
+	{
+		grid-column: slideshow;
+		grid-template-rows: auto;
+		
+		@include above($LAPTOP_MIN)
+		{
+			grid-row: 1;
+		}
+		
+		img
+		{
+			height: 100%;
+			object-fit: cover;
+			width: 100%;
+		}
+		
+		.foxy-bullets
+		{
+			bottom: 25px;
+			position: absolute;
+		}
+		
+		.foxy-bullet
+		{
+			background: rgba($DARK_COLOUR, 0.3);
+			box-shadow: none;
+		}
+		
+		.foxy-active .foxy-bullet
+		{
+			background: $LIGHT_COLOUR;
+			opacity: 1;
+		}
+	}
+}
+
+.extra-content
+{
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+.image-block
+{
+	--button-background: #{$SECONDARY_HIGHLIGHT};
+	--button-hover: #{$DARK_COLOUR};
+	--link-colour: #{$LIGHT_COLOUR};
+	
+	background: $PRIMARY_HIGHLIGHT;
+	border-radius: 10px;
+	box-shadow: 0 0 13px 8px rgba($DARK_COLOUR, 0.17);
+	color: $LIGHT_COLOUR;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 75px;
+	margin-top: 75px;
+	overflow: hidden;
+	padding-left: 0;
+	padding-right: 0;
+	
+	@include above($LAPTOP_MIN)
+	{
+		flex-direction: row;
+	}
+	
+	.big-image
+	{
+		display: flex;
+		object-fit: cover;
+		width: 100%;
+		
+		@include above($LAPTOP_MIN)
+		{
+			width: 65.96%;
+		}
+		
+		> * // For streaming video
+		{
+			height: 100%;
+			width: 100%;
+		}
+	}
+	
+	.block-content
+	{
+		align-self: center;
+		padding: 50px;
+	}
+	
+	h2
+	{
+		@include above($DESKTOP_MIN)
+		{
+			font-size: rem(44px);
+		}
+	}
+}

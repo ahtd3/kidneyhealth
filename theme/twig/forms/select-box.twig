@@ -1,0 +1,39 @@
+{#
+	Displays a select box
+	- Required:
+		- label: A label for the checkboxes
+		- values: Label / value pairs for the values, or, optionally, group / (label / value) pairs
+	- Optional:
+		- usePlaceholder: Whether to use a placeholder instead of a label
+		- wrapperClasses: Classes to apply to the element's wrapper
+		- error: An error to display
+		- name: The name to give the select box
+		- selected: The default selected value
+		- required: Whether this box is required
+		- classes: Classes to apply to the select box
+		- attributes: Extra attributes to apply to the select box
+#}
+{% embed (usePlaceholder ? "forms/base/bare-field.twig" : "forms/base/labelled-field.twig") with
+{
+	"label": label,
+	"wrapperClasses": "select-wrapper " ~ wrapperClasses
+} %}
+	{% block field %}
+		<select {% if name is defined %} name="{{ name }}" {% endif %} {% if required %} required="required" {% endif %} class="{{ classes }}" {{ attributes|raw }} {% if usePlaceholder %} title="{{ label }}" {% endif %}>
+			{% if usePlaceholder %}
+				<option value="" {% if required %}disabled="disabled"{% endif %} {% if selected is not defined %} selected="selected" {% endif %}>{{ label }}</option>
+			{% endif %}
+			{% for label, value in values %}
+				{% if value is iterable %}
+					<optgroup label="{{ label }}">
+						{% for sublabel, subvalue in value %}
+							<option value="{{ subvalue }}" {% if selected is defined and selected == subvalue %} selected="selected" {% endif %}>{{ sublabel }}</option>
+						{% endfor %}
+					</optgroup>
+				{% else %}
+					<option value="{{ value }}" {% if selected is defined and selected == value %} selected="selected" {% endif %}>{{ label }}</option>
+				{% endif %}
+			{% endfor %}
+		</select>
+	{% endblock %}
+{% endembed %}

@@ -1,0 +1,99 @@
+.account-navigation
+{
+	ul
+	{
+		margin: 0;
+		padding: 0;
+	}
+
+	li
+	{
+		display: block;
+	}
+
+	a
+	{
+		text-decoration: none;
+
+		@include hover
+		{
+			text-decoration: underline;
+		}
+	}
+}
+
+.register-section
+{
+	max-width: 420px;
+}
+
+.order-list
+{
+	.order
+	{
+		display: flex;
+		justify-content: space-between;
+		border: 1px solid $PRIMARY_HIGHLIGHT;
+		margin-bottom: 20px;
+
+		@include below($RESPONSIVE_BREAKPOINT)
+		{
+			display: block;
+		}
+
+		&:last-child
+		{
+			margin-bottom: 0;
+		}
+	}
+
+	.order-details
+	{
+		border-right: 1px solid $PRIMARY_HIGHLIGHT;
+		max-width: 165px;
+		width: 100%;
+		padding: 10px;
+		background: rgba($PRIMARY_HIGHLIGHT, 0.1);
+		font-size: rem(15px);
+
+		@include below($RESPONSIVE_BREAKPOINT)
+		{
+			border-right: none;
+			border-bottom: 1px solid $PRIMARY_HIGHLIGHT;
+			max-width: 100%;
+		}
+
+		.limited-reorder 
+		{
+			display: block;
+		}
+	}
+
+	h2
+	{
+		margin: 0;
+		font-size: inherit;
+	}
+
+	p
+	{
+		margin: 0;
+	}
+
+	.order-items
+	{
+		flex-grow: 1;
+		margin: 0;
+		padding: 10px;
+	}
+
+	li
+	{
+		display: block;
+	}
+
+	.item-title
+	{
+		font-weight: bold;
+	}
+}

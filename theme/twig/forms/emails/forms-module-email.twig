@@ -1,0 +1,74 @@
+<h1>
+	{{ form.name }}
+</h1>
+{% for key, value in orphanedValues %}
+	{% if value is iterable %}
+		<p>
+			<strong>{{ key }}:</strong>
+		</p>
+		<ul>
+			{% for selection in value %}
+				<li>
+					{{ selection }}
+				</li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>
+			<strong>{{ key }}:</strong> <span>{{ value }}</span>
+		</p>
+	{% endif %}
+{% endfor %}
+{% for field in form.fields %}
+	{% set value = field.getPostValue() %}
+	{% if field.type == controller.getStaticConst("\\Forms\\FormField", "HEADING") %}
+		<h2>
+			{{ field.label }}
+		</h2>
+	{% elseif field.type == controller.getStaticConst("\\Forms\\FormField", "UPLOAD") %}
+		<p>
+			<strong>{{ field.label }}:</strong>
+			{% if not value is empty %}
+				<span>{{ value["name"] }} (attached)</span>
+			{% else %}
+				<span>None</span>
+			{% endif %}
+		</p>
+	{% elseif field.type == controller.getStaticConst("\\Forms\\FormField", "CHECKBOXES") %}
+		<p>
+			<strong>{{ field.label }}:</strong>
+			{% if value is empty %}
+				<span>Nothing selected</span>
+			{% endif %}
+		</p>
+		{% if not value is empty %}
+			<ul>
+				{% for selection in value %}
+					<li>
+						{{ selection }}
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	{% elseif field.type == controller.getStaticConst("\\Forms\\FormField", "DATE") %}
+		<p>
+			<strong>{{ field.label }}:</strong>
+			{% if value %}
+				<span>{{ value|date("j F Y") }}</span>
+			{% else %}
+				<span>None</span>
+			{% endif %}
+		</p>
+	{% elseif field.type == controller.getStaticConst("\\Forms\\FormField", "TEXTAREA") %}
+		<p>
+			<strong>{{ field.label }}:</strong><br />
+			<span>
+				{{ value|nl2br }}
+			</span>
+		</p>
+	{% else %}
+		<p>
+			<strong>{{ field.label }}:</strong> <span>{{ value }}</span>
+		</p>
+	{% endif %}
+{% endfor %}

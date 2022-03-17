@@ -1,0 +1,16 @@
+{#
+	Displays a search field
+	- Required:
+		- label: A label for the field
+	- Optional:
+		- usePlaceholder: Whether to use a placeholder instead of a label
+		- wrapperClasses: Classes to apply to the wrapper's element
+		- error: An error to display
+		- name: The name to give to the element
+		- value: The default value for the input
+		- required: Whether the input is required
+		- classes: Classes to apply to the input
+		- attributes: Extra attributes to apply to the input
+		- suggestions: An array of suggestions for this field
+#}
+{% include (usePlaceholder ? "forms/base/placeholder-input.twig" : "forms/base/labelled-input.twig") with {"type": "search"} %}

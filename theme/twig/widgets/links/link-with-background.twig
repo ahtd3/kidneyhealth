@@ -1,0 +1,11 @@
+{# 
+	@expects string url
+	@expects string text can be html
+	@expects Files\Image $image
+	@optional string attributes
+	@optional string classes
+	@optional bool newTab 
+#}
+<a class="{{ classes }}" href="{{ url }}" {% if image %} style="background-image: url('{{ image.getLink() }}')" {% endif %} {% if newTab %} target="_blank" rel="noopener" {% endif %} {{ attributes }}>
+	{{ text|raw }}
+</a>

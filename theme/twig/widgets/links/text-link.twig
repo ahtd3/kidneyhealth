@@ -1,0 +1,8 @@
+{# 
+	@expects string url
+	@expects string text can be html
+	@optional string attributes
+	@optional string classes
+	@optional bool newTab 
+#}
+<a class="{{ classes }}" href="{{ url }}" {% if newTab %} target="_blank" rel="noopener" {% endif %} {{ attributes }}>{{ text|raw }}</a>

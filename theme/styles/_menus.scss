@@ -1,0 +1,168 @@
+.menus
+{
+	display: grid;
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	grid-template-columns: repeat(auto-fill,minmax(344px,1fr));
+	margin-top: 50px;
+
+	@include below(370px)
+	{
+		display: block;
+		grid-template-columns: auto;
+	}
+}
+
+.menu-thumb
+{
+	position: relative;
+	font-family: $HEADING_FONT;
+
+	&:hover .name
+	{
+		background: $SECONDARY_HIGHLIGHT;
+	}
+
+	.image
+	{
+		position: relative;
+		background-color: $DARK_NEUTRAL_COLOUR;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		&::after
+		{
+			display: block;
+			position: relative;
+			content: '';
+			padding-top: 119%;
+		}
+	}
+
+	.name
+	{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		padding: 10px 20px;
+		background: $PRIMARY_HIGHLIGHT;
+		color: $DARK_COLOUR;
+		font-size: rem(27px);
+	}
+}
+
+/* Individual page */
+
+.Menus .menu-select
+{
+	margin-bottom: 30px;
+
+	label
+	{
+		display: inline;
+		margin: 0;
+	}
+
+	.label
+	{
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 10px 0 0;
+		
+		@include below($RESPONSIVE_BREAKPOINT)
+		{
+			display: block;
+			margin-bottom: 10px;
+			width: 100%;
+		}
+	}
+
+	select
+	{
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 330px;
+		width: 100%;
+	}
+}
+
+.Menus .col-2
+{
+	&:nth-child(odd)
+	{
+		width: calc(60% - 33px);
+
+		@include responsive
+		{
+			width: 100%;
+		}
+	}
+	&:nth-child(even)
+	{
+		width: calc(40% - 33px);
+
+		@include responsive
+		{
+			margin-top: 20px;
+			width: 100%;
+		}
+
+		img
+		{
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.menu-items
+{
+	width: 100%;
+}
+
+.menu-item
+{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 8px 0;
+	border-bottom: 1px solid #cecece;
+
+	.name
+	{
+	    width: 89%;
+		padding-right: 15px;
+	}
+
+	.price
+	{
+		width: 11%;
+		text-align: right;
+	}
+
+	.attributes
+	{
+		margin-top: 10px;
+	}
+}
+
+.drinks-menu
+{
+	width: 100%;
+
+	h3
+	{
+		margin: 0;
+	}
+
+	.menu-items
+	{
+		margin-bottom: 25px;
+
+		.price span
+		{
+			display: block;
+		}
+	}
+}

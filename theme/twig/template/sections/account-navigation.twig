@@ -1,0 +1,35 @@
+{# Generates account nav item. Includes a login form and logout button when appropriate #}
+{% if 'USERS' is enabled %}
+	<li class="account-nav {% if user.isNull() %} do-form {% else %} has-children logged-in {% endif %} {% if page.pageType == "Account" %} sel {% endif %}">
+		<a href="/account/">Account</a>
+		{% if not user.isNull() %}
+			<ul>
+				<li>
+					<a href="/account/action/logout/">Logout</a>
+				</li>
+			</ul>
+		{% else %}
+			<ul>
+				<li>
+					<form action="/account/action/login/" method="post">
+						<p>
+							<input type="text" name="email" placeholder="Email address" />
+						</p>
+						<p>
+							<input type="password" name="password" placeholder="Password" />
+						</p>
+						<div class="actions">
+							<button type="submit" value="Login" class="button">Login</button>
+							<div>
+								{% if controller.getStaticConst('Users\\User', 'REGISTRATION_ENABLED') %}
+									<a class="reset-link" href="/account/register/">No Account?</a><br />
+								{% endif %}
+								<a class="reset-link" href="/account/reset-password/">Forgot Password?</a>
+							</div>
+						</div>
+					</form>
+				</li>
+			</ul>
+		{% endif %}
+	</li>
+{% endif %}

@@ -1,0 +1,178 @@
+.main-navigation .search-form
+{
+	position: relative;
+	display: flex;
+	align-items: center;
+	
+	@include responsive
+	{
+		margin-top: 20px;
+	}
+	
+	.search-icon
+	{
+		display: block;
+		width: 21px;
+		height: 21px;
+		text-align: left;
+		text-indent: -100000px;
+		background: url('/theme/images/icons/search.png') center no-repeat;
+		cursor: pointer;
+		
+		@include responsive
+		{
+			position: absolute;
+			right: 0;
+		}
+	}
+	
+	.field
+	{
+		@include above($NAV_BREAKPOINT)
+		{
+			display: none;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			width: 200px;
+			padding: 3px;
+			background: $LIGHT_COLOUR;
+		}
+		
+		@include responsive
+		{
+			width: 100%;
+		}
+		
+		input
+		{
+			@include responsive
+			{
+				padding: 8px 0;
+				background: transparent;
+				border: none;
+				border-bottom: 1px solid $LIGHT_NEUTRAL_COLOUR;
+				text-transform: uppercase;
+			}
+		}
+		
+		&.open
+		{
+			display: block;
+		}
+		
+	}
+}
+
+.content .searchForm
+{
+	text-align: center;
+	
+	label
+	{
+		display: block;
+		text-align: center;
+	}
+	
+	input[type="text"]
+	{
+		display: inline-block;
+		vertical-align: middle;
+		max-width: calc(100% - 263px);
+		width: 300px;
+		
+		@include below($RESPONSIVE_BREAKPOINT)
+		{
+			margin-bottom: 5px;
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+	
+	.button
+	{
+		vertical-align: middle;
+		padding: 13px 35px;
+	}
+}
+
+.search-results
+{
+	border-top: 1px solid $NEUTRAL_COLOUR;
+	
+	article
+	{
+		display: flex;
+		border-bottom: 1px solid $DARK_COLOUR;
+		padding: 10px;
+
+		@include responsive 
+		{
+			display: block;
+		}
+		
+		&.has-image
+		{
+			.search-content
+			{
+				width: calc(100% - 615px);
+
+				@include responsive 
+				{
+					width: 100%;
+				}
+			}
+		}
+		
+		h5
+		{
+			margin-top: 20px;
+			margin-bottom: 3px;
+		}
+		
+		p
+		{
+			line-height: initial;
+		}
+		
+		.search-image
+		{
+			display: flex;
+			justify-content: center;
+			height: auto;
+			margin-right: 45px;
+			max-width: 570px;
+			width: 100%;
+
+			@include responsive 
+			{
+				max-width: 100%;
+			}
+						
+			img
+			{
+				display: block;
+			}
+		}
+	}
+	
+	ul
+	{
+		margin-top: 10px;
+	}
+	
+	li a
+	{
+		display: inline;
+		padding: 0;
+	}
+}
+
+.sidebar.search-results
+{
+	img
+	{
+		float: none;
+		margin: 0.5em 0;
+	}
+}

@@ -1,0 +1,7 @@
+<span class="menu-item-attribute">
+	{% if menuAttribute.icon != null %}
+		<img src='{{ menuAttribute.icon.getLink() }}' width='{{ menuAttribute.icon.width }}' height='{{ menuAttribute.icon.height }}' alt="{{ menuAttribute.name }}" title='{{ menuAttribute.name }}' />
+	{% else %}
+		{{ menuAttribute.name }}
+	{% endif %}
+</span>

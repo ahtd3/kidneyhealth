@@ -1,0 +1,24 @@
+{#
+	Contains a logical grouping of elements (such as a subsection or a group of radio buttons)
+	- Optional:
+		- wrapperClasses: Classes to apply to the wrapping element
+		- heading: The heading to display for the group
+	- Blocks:
+		- contents: The contents to display inside the group
+#}
+<fieldset class="field-wrapper group {{ wrapperClasses }}">
+	{# Chromium and descendant browsers don't support display flex or grid on fieldset .... #}
+	<div class="layout">
+		{% if heading %}
+			<legend>
+				{{ heading }}
+				{% include 'forms/errors.twig' %}
+			</legend>
+		{% else %}
+			<legend>
+				{% include 'forms/errors.twig' %}
+			</legend>
+		{% endif %}
+		{% block contents %}{% endblock %}
+	</div>
+</fieldset>

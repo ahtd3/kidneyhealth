@@ -1,0 +1,15 @@
+{#
+	A button that submits the current form
+	- Required:
+		- label: A label for the button
+	- Optional:
+		- wrapperClasses: Classes to apply to the wrapping element
+		- value: An optional value for the button
+		- classes: Classes to apply to the button
+		- attributes: Extra attributes to add to the button
+#}
+{% embed "forms/base/bare-field.twig" %}
+	{% block field %}
+		<button class="button {{ classes }} submit-button" type="submit" {% if value is defined %} value="{{ value }}" {% endif %} {{ attributes|raw }}>{{ label }}</button>
+	{% endblock %}
+{% endembed %}

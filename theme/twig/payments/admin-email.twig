@@ -1,0 +1,4 @@
+{% set editLink = constant("PROTOCOL") ~ constant("SITE_ROOT") ~ payment.getEditLink() %}
+
+<p>A customer has made a payment at {{ config.getSiteName() }}. It can be viewed at <a href="{{ editLink }}">{{ editLink }}</a></p>
+{% include "payments/bill-payment-details.twig" %}

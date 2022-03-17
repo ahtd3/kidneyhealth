@@ -1,0 +1,18 @@
+{% set default %}
+	<p class="security-wrapper">
+		<label>
+			Security: <img src="/resources/captcha/CaptchaSecurityImages.php" alt="Security Code" />
+			<input name="auth" type="text" />
+		</label>
+	</p>
+{% endset %}
+
+{% if config.recaptchaSiteKey != '' and config.recaptchaSecret != '' %}
+	<div class="g-recaptcha" data-sitekey="{{ config.recaptchaSiteKey }}"></div>
+
+	<noscript>
+		{{ default }}
+	</noscript>
+{% else %}
+	{{ default }}
+{% endif %}

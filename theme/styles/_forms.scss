@@ -1,0 +1,198 @@
+// default form styling
+// apply custom-form class to forms that shouldn't have default styles
+// - note .button styling at top of global file
+
+//noinspection CssInvalidPseudoSelector
+form:where(:not(.custom-form))
+{
+	.group
+	{
+		display: block;
+		border: 0;
+		margin: 0;
+		padding: 10px;
+		background: rgba($PRIMARY_HIGHLIGHT, 0.05);
+
+		legend
+		{
+			// Enables wrapping in IE
+			display: table;
+			float: left;
+			margin: 0 0 0.3em;
+			padding: 0;
+		}
+
+		.selectable
+		{
+			clear: left;
+			display: block;
+		}
+
+		.error
+		{
+			display: inline-block;
+		}
+	}
+
+	.field-wrapper
+	{
+		margin: 0 0 0.5rem;
+	}
+
+	.label
+	{
+		display: block;
+		margin-bottom: 0.3em;
+	}
+
+	.field
+	{
+		display: block;
+	}
+
+	span.error
+	{
+		display: block;
+		margin-top: 10px;
+		color: $WARNING_COLOUR;
+	}
+
+	@include form-fields
+	{
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		box-sizing: border-box;
+		display: inline-block;
+		border: 1px solid #c1c1c1;
+		padding: 10px;
+		width: 100%;
+		border-radius: 0;
+		background: #fff;
+		font-family: inherit;
+		font-size: inherit;
+	}
+
+	select
+	{
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		padding-right: 30px;
+	}
+
+	.select-wrapper .field
+	{
+		position: relative;
+
+		&:after
+		{
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			border-width: 10px 8px 0;
+			border-style: solid;
+			border-color: $NEUTRAL_COLOUR transparent transparent;
+			margin-top: -5px;
+			pointer-events: none;
+		}
+	}
+
+	textarea
+	{
+		height: 170px;
+	}
+
+	input[type=checkbox],
+	input[type=radio]
+	{
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		box-sizing: border-box;
+		vertical-align: text-bottom;
+		border: 2px solid $NEUTRAL_COLOUR;
+		height: 1.2em;
+		width: 1.2em;
+
+		&:checked
+		{
+			background: $PRIMARY_HIGHLIGHT;
+		}
+	}
+
+	input[type=radio]
+	{
+		border-radius: 50%;
+	}
+
+	.file-picker
+	{
+		&:not(.placeholder) 
+		{
+			.upload-button
+			{
+				max-width: 200px;
+				text-align: center;
+			}
+		}
+		&.placeholder label 
+		{
+			display: block;
+		}
+
+		input
+		{
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			cursor: pointer;
+		}
+
+		.field
+		{
+			position: relative;
+		}
+
+		.upload-button
+		{
+			display: inline-block;
+			position: relative;
+			padding-right: 35px;
+			cursor: pointer;
+
+			@include hover
+			{
+				&:after
+				{
+					top: -10px;
+				}
+			}
+
+			&:after
+			{
+				@extend %absolute-pseudo-block;
+
+				top: 0;
+				right: 15px;
+				bottom: 0;
+				height: 20px;
+				margin: auto;
+				width: 18px;
+				background: url('/theme/images/icons/upload.png') center center no-repeat;
+				transition: all 0.2s;
+			}
+		}
+
+		.uploaded
+		{
+			display: inline-block;
+			margin-left: 20px;
+		}
+	}
+}
+
+.security-wrapper img
+{
+	vertical-align: middle;
+	margin-bottom: 10px;
+}

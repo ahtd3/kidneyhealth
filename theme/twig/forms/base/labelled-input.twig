@@ -1,0 +1,18 @@
+{#
+	Displays an input with a label
+	- Required:
+		- type: The type of input to use
+		- label: A label for the input
+	- Optional:
+		- wrapperClasses: Classes to apply to the wrapper's element
+		- name: The name to give to the element
+		- value: The default value for the input
+		- required: Whether the input is required
+		- classes: Classes to apply to the input
+		- attributes: Extra attributes to apply to the input
+#}
+{% embed "forms/base/labelled-field.twig" %}
+	{% block field %}
+		{% include "forms/base/input.twig" %}
+	{% endblock %}
+{% endembed %}

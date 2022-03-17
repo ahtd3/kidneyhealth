@@ -1,0 +1,469 @@
+@include above($NAV_BREAKPOINT - 1px)
+{
+	.main-navigation
+	{
+		position: relative;
+		z-index: 7;
+		padding: 0;
+		color: $LIGHT_COLOUR;
+		font-family: $HEADING_FONT;
+		font-size: rem(18px);
+		text-transform: none;
+
+		> ul
+		{
+			display: flex;
+			justify-content: space-between;
+			margin: 0;
+			max-width: $CONTENT_WIDTH;
+			padding: 0;
+			width: 100%;
+		}
+
+		li
+		{
+			display: flex;
+			position: relative;
+			flex-grow: 1;
+			margin: 0;
+			padding: 0;
+
+			@include hover
+			{
+				> a
+				{
+					background: $PRIMARY_HIGHLIGHT;
+					color: $LIGHT_COLOUR;
+					text-decoration: none;
+				}
+			}
+
+			a
+			{
+				display: inline-block;
+				width: 100%;
+				background: $LIGHT_COLOUR;
+				color: $DARK_COLOUR;
+				line-height: 50px;
+				text-align: center;
+				text-decoration: none;
+			}
+		}
+
+		li ul
+		{
+			display: block;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			visibility: hidden;
+			opacity: 0;
+			margin: 0;
+			min-width: 100%;
+			padding: 0;
+			background: rgba($DARK_COLOUR,0.9);
+			text-transform: none;
+			transition: all 0.2s;
+
+			li
+			{
+				display: block;
+				position: relative;
+				height: auto;
+				margin: 0;
+				padding: 0;
+				line-height: 1.3em;
+				text-align: left;
+
+				a
+				{
+					padding: 5px 10px;
+					width: 100%;
+					line-height: normal;
+				}
+			}
+		}
+
+		.sel > a,
+		.sel .sel > a
+		{
+			background: $PRIMARY_HIGHLIGHT;
+			color: $LIGHT_COLOUR;
+		}
+
+		li:hover ul,
+		a:focus ~ ul
+		{
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
+
+@include below($NAV_BREAKPOINT)
+{
+	.main-navigation-wrapper
+	{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	.main-navigation
+	{
+		display: none;
+		position: absolute;
+		width: 100%;
+		background: $SECONDARY_HIGHLIGHT;
+		
+		&.open
+		{
+			display: block;
+		}
+
+		> ul
+		{
+			z-index: 10000;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		}
+
+		li
+		{
+			display: block;
+			position: relative;
+			border-top: 1px solid mix($PRIMARY_HIGHLIGHT, $SECONDARY_HIGHLIGHT);
+			width: 100%;
+			text-align: left;
+
+			@include hover
+			{
+				background-color: $PRIMARY_HIGHLIGHT;
+			}
+
+			&.sel
+			{
+				background-color: $PRIMARY_HIGHLIGHT;
+			}
+
+			a
+			{
+				display: block;
+				padding: 10px 1em;
+				color: $LIGHT_COLOUR;
+				text-align: left;
+				text-decoration: none;
+			}
+		}
+
+		li ul
+		{
+			display: none;
+			position: relative;
+			top: auto;
+			left: auto;
+			height: auto;
+			margin-left: 0;
+			padding-left: 0;
+			width: 100%;
+
+			li
+			{
+				width: 100%;
+				background-color: mix($PRIMARY_HIGHLIGHT, $SECONDARY_HIGHLIGHT, 15%);
+
+				a
+				{
+					padding-left: 2.5em;
+				}
+			}
+		}
+
+		//responsive styles
+		li.open
+		{
+			> .open-sub:after
+			{
+				transform: rotate(360deg);
+			}
+			> .open-sub:before
+			{
+				transform: rotate(180deg);
+			}
+
+			> ul
+			{
+				display: block;
+			}
+		}
+		
+		// nav items to the far right of the nav open into the window (content area) rather than out of it.
+		> ul > li:last-child > ul
+		{
+			left: auto;
+			right: 0;
+			
+			ul
+			{
+				left: auto;
+				right: 100%;
+			}
+		}
+	}
+
+	//burger
+	.open-nav
+	{
+		display: block;
+		position: absolute;
+		top: -50px;
+		right: 10px;
+		height: 26px;
+		width: 34px;
+		cursor: pointer;
+
+		.bar
+		{
+			display: block;
+			position: absolute;
+			height: 4px;
+			width: 100%;
+			background: $DARK_COLOUR;
+			transition: all 0.2s;
+
+			&.top
+			{
+				top: 0;
+			}
+
+			&.middle
+			{
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}
+
+			&.bottom
+			{
+				bottom: 0;
+			}
+		}
+
+		&.open .bar
+		{
+			top: 0;
+			bottom: 0;
+			margin: auto;
+
+			&.top,
+			&.middle
+			{
+				transform: rotate(135deg);
+			}
+
+			&.bottom
+			{
+				transform: rotate(-135deg);
+			}
+		}
+	}
+
+	//parents
+	.open-sub
+	{
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 40px;
+		width: 40px;
+		cursor: pointer;
+
+		&:before,
+		&:after
+		{
+			@extend %absolute-pseudo-block;
+
+			display: block;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 4px;
+			margin: auto;
+			width: 50%;
+			background: $LIGHT_COLOUR;
+			transition: all 0.2s;
+		}
+
+		&:after
+		{
+			transform: rotate(90deg);
+		}
+	}
+}
+
+
+li.account-nav
+{
+	@include below($TABLET_MIN + 1px)
+	{
+		position: static !important;//so that the dropdown can be the full width of the screen
+	}
+
+	&.do-form
+	{
+		&:hover ul
+		{
+			display: none;
+		}
+		&.open
+		{
+			background: $SECONDARY_HIGHLIGHT;
+
+			ul
+			{
+				display: block;
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+	&:not(.do-form)
+	{
+		&:hover ul,
+		a:focus ~ ul
+		{
+			display: block;
+		}
+	}
+	&.logged-in > ul
+	{
+		//logout link is on the account page for mobile
+		@include responsive
+		{
+			display: none !important;
+		}
+	}
+
+	> a
+	{
+		background: url('/theme/images/icons/user.png') 8px center no-repeat;
+	}
+
+	ul
+	{
+		display: none;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		left: auto;
+		z-index: 10;
+		margin: 0;
+		padding: 0;
+		background: $SECONDARY_HIGHLIGHT;
+
+		@include responsive
+		{
+			width: 100%;
+		}
+
+		li
+		{
+			width: 100%;
+		}
+	}
+
+	form
+	{
+		margin-top: 0;
+		min-width: 290px;
+		padding: 20px;
+		background: $SECONDARY_HIGHLIGHT;
+
+		input[type="text"],
+		input[type="password"]
+		{
+			padding: 7px;
+			font-size: rem(15px);
+
+			@include responsive
+			{
+				padding: 14px;
+			}
+		}
+
+		.actions
+		{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 0;
+
+			@include responsive
+			{
+				display: block;
+			}
+		}
+
+		.button
+		{
+			border-radius: 0;
+			padding: 10px 20px;
+			margin: 0;
+			min-width: 0;
+			background: $DARK_COLOUR;
+			font-size: rem(15px);
+			text-transform: none;
+		}
+	}
+
+	.reset-link
+	{
+		padding: 0;
+		background: none;
+		font-family: $CONTENT_FONT;
+		font-size: rem(12px);
+		text-align: right;
+
+		@include responsive
+		{
+			display: inline-block;
+			margin-top: 10px;
+			text-align: left;
+		}
+
+		&:hover
+		{
+			color: $LIGHT_COLOUR;
+		}
+	}
+}
+//end account-nav
+
+.cart-link > a .icon
+{
+	display: inline-block;
+	position: relative;
+	height: 17px;
+	margin-right: 15px;
+	width: 17px;
+	background: url('/theme/images/icons/cart.png') center no-repeat;
+
+	.number
+	{
+		display: flex;
+		position: absolute;
+		justify-content: center;
+		align-items: center;
+		top: -10px;
+		right: -14px;
+		border-radius: 50%;
+		height: 18px;
+		width: 18px;
+		background: $DARK_COLOUR;
+		color: $LIGHT_COLOUR;
+	}
+}

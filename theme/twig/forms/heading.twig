@@ -1,0 +1,23 @@
+{#
+	Outputs a single heading for a form
+	- Required:
+		- heading: The heading to display
+	- Optional:
+		- content: A paragraph of content to display below that heading
+		- name: A name to give to a hidden field to be submitted
+#}
+<h2>
+	{{ heading }}
+</h2>
+{% if content %}
+	<p>
+		{{ content }}
+	</p>
+{% endif %}
+{% if name %}
+	{% include "forms/hidden-field.twig" with
+	{
+		"name": name,
+		"value": ""
+	} %}
+{% endif %}

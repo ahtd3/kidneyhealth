@@ -1,0 +1,80 @@
+{% extends 'template/template.twig' %}
+
+{% block content %}
+	{% block page_image %}
+		{{ page.image.tag('content-image', page.imageDescription)|raw }}
+	{% endblock %}
+	<div class="container">
+		{% block content_title %}
+			<h1>{{ page.getMainHeading() }}</h1>
+		{% endblock %}
+		{% block page_content %}
+			{{ page.getPageContent()|expandHtml }}
+		{% endblock %}
+	</div>
+{% endblock %}
+
+{% block page_sections %}
+	{{ parent() }}
+	
+	<div class="container">
+		<div class="regional desktop tabs">
+			<div class="regional__head">
+				<ul>
+					{% for group in config.regional_group %}
+					<li data-target="#regional-{{group.id}}">
+						<div class="regional__head--icon">
+							<img src="{{group.icon.getLink()}}" alt="{{group.label}}">
+							<h3>{{group.label}}</h3>
+						</div>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="regional-tabs">
+				{% for group in config.regional_group %}
+				<div class="regional__body" id="regional-{{group.id}}">
+					<div class="row">
+						{% for subitem in group.regional %}
+						<div class="column">
+							<h4 class="title">{{subitem.label}}</h4>
+							<div class="detail">
+								{{subitem.detail | raw}}
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			
+		</div>
+
+		<div class="regional mobile collapse">
+			{% for group in config.regional_group %}
+			<div class="regional__items">
+				<div class="regional__head">
+					<img src="{{group.icon.getLink()}}" alt="{{group.label}}">
+					<h3>{{group.label}}</h3>
+				</div>
+				<div class="regional__content">
+					<div class="row">
+						{% for subitem in group.regional %}
+						<div class="column">
+							<h4 class="title">{{subitem.label}}</h4>
+							<div class="detail">
+								{{subitem.detail | raw}}
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block class_body %}regional-page{% endblock %}
+{% block class_content %}{% endblock %}

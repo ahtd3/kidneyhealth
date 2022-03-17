@@ -1,0 +1,10 @@
+{% if 'CART' is enabled %}
+	<li class="cart-link">
+		<a class="js-cart" href="/cart/" {% if cart.normalLineItems|length < 1 %} style="display: none" {% endif %}>
+			<span class="icon">
+				<span class="number">{{ cart.normalLineItems|length }}</span>
+			</span>
+			Cart
+		</a>
+	</li>
+{% endif %}

@@ -1,0 +1,20 @@
+{% set reachedCurrent = false %}
+{% set current = false %}
+<ul class="checkout-navigation">
+	{% for label, url in controller.getCheckoutSteps() %}
+		{% if label == step %}
+			{% set current = true %}
+		{% endif %}
+		<li class="{{ current ? "current" : "" }} {{ reachedCurrent ? "unavailable" : "" }}">
+			{% if reachedCurrent %}
+				{{ loop.index }}. {{ label|capitalize }}
+			{% else %}
+				<a href="{{ url }}">{{ loop.index }}. {{ label|capitalize }}</a>
+			{% endif %}
+		</li>
+		{% if current %}
+			{% set reachedCurrent = true %}
+			{% set current = false %}
+		{% endif %}
+	{% endfor %}
+</ul>

@@ -1,0 +1,14 @@
+{% set editLink = constant("PROTOCOL") ~ constant("SITE_ROOT") ~ order.getEditLink() %}
+<p>
+	A customer has placed an order at {{ config.getSiteName() }}. It can be viewed at <a href="{{ editLink }}">{{ editLink }}</a>.
+</p>
+<p>
+	Their order number is {{ order.reference }} and the details are:
+</p>
+{% include("orders/sections/order-details-email.twig") %}
+<p>
+	Kind regards,
+</p>
+<p>
+	From the team at {{ config.getSiteName() }}!
+</p>

@@ -1,0 +1,27 @@
+{#
+	Displays a single checkbox
+	- Required:
+		- label: A label for the checkbox
+	- Optional:
+		- wrapperClasses: Classes to apply to the element's wrapper
+		- error: An error to display
+		- name: The name of the checkbox
+		- value: The value of the checkbox
+		- checked: Whether or not this checkbox is checked
+		- required: Whether or not the checkbox is required
+		- classes: Classes to apply to the checkbox
+		- attributes: Extra attributes to apply to the checkbox
+#}
+{% embed "forms/base/bare-field.twig" with {"wrapperClasses": "checkbox-wrapper " ~ wrapperClasses} %}
+	{% block field %}
+		<label><input
+				type="checkbox"
+				{% if name is defined %} name="{{ name }}" {% endif %}
+				{% if value is defined %} value="{{ value }}" {% endif %}
+				{% if checked %} checked="checked" {% endif %}
+				{% if required %} required="required" {% endif %}
+				class="{{ classes }}"
+				{{ attributes|raw }}
+		/> {{ label }}</label>
+	{% endblock %}
+{% endembed %}

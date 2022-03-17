@@ -1,0 +1,35 @@
+{#
+	Displays a group of checkboxes
+	- Required:
+		- label: A label for the checkboxes
+		- values: Label / value pairs for the values
+	- Optional:
+		- wrapperClasses: Classes to apply to the element's wrapper
+		- name: The name to give all the radio buttons
+		- selected: The default selected value
+		- required: Whether these checkboxes are required
+		- classes: Classes to apply to all the checkboxes
+		- attributes: Extra attributes to apply to all the checkboxes
+		- error: An error to display
+		- htmlLabel: does the label contain html
+#}
+{% embed "forms/group.twig" with {"heading": label} %}
+	{% block contents %}
+		{% for label, value in values %}
+			<label class="selectable"><input
+				type="radio"
+				{% if name is defined %} name="{{ name }}" {% endif %}
+				value="{{ value }}"
+				{% if value == selected %} checked="checked" {% endif %}
+				{% if required %} required="required" {% endif %}
+				class="{{ classes }}"
+				{{ attributes|raw }}
+			/> {{ htmlLabel ? label|raw : label }}</label>
+		{% endfor %}
+		{% if error is defined %}
+			<span class="error">
+				{{ error }}
+			</span>
+		{% endif %}
+	{% endblock %}
+{% endembed %}

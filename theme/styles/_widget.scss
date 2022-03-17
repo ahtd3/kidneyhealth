@@ -1,0 +1,289 @@
+:root {
+	--button-background: #{$PRIMARY_HIGHLIGHT};
+	--button-hover: #{$SECONDARY_HIGHLIGHT};
+}
+
+input,
+textarea,
+button {
+	&:disabled {
+		opacity: 0.5;
+	}
+}
+
+@mixin input() {
+	background-color: $GRAY_COLOUR3;
+	border: 1px solid $GRAY_COLOUR4;
+	font-size: 19px;
+	line-height: 19px;
+	color: $DARK_COLOUR2;
+	font-weight: 300;
+	font-family: "Inter";
+	padding: 14px 23px 13px 23px;
+	width: 100%;
+
+	&:focus,
+	&.focus-visible {
+		border-color: transparent;
+		outline: 1px solid $DARK_COLOUR;
+	}
+	&::-webkit-input-placeholder { /* Edge */
+		color: $DARK_COLOUR2;
+	}
+	
+	&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		color: $DARK_COLOUR2;
+	}
+	
+	&::placeholder {
+		color: $DARK_COLOUR2;
+	}
+}
+
+input,
+textarea {
+	@include input();
+}
+
+
+/*** globally relevant styles ***/
+@mixin button_base($hover-background:$RED_COLOUR_ACTIVE,
+	$background:$RED_COLOUR,
+	$color: $LIGHT_COLOUR,
+	$hover-color: $LIGHT_COLOUR,
+	$font-size: 24px,
+	$border-radius: 3em) {
+	align-items: center;
+	border: none;
+	cursor: pointer;
+	display: inline-flex;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	justify-content: center;
+	font-family: $HEADING_FONT;
+	font-size: $font-size;
+	font-weight: $REGULAR;
+	min-height: 53px;
+	padding: 23px 55px;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: $background;
+	color: $color;
+	line-height: 1.2em;
+	font-weight: $MEDIUM;
+	border-radius: $border-radius;
+	white-space: nowrap;
+
+	&[disabled] {
+		--button-hover: var(--button-background);
+		filter: saturate(0);
+		pointer-events: none;
+	}
+
+	@include hover {
+		text-decoration: none;
+		background: $hover-background;
+		color: $hover-color;
+	}
+
+	@media (max-width: 768.98px) {
+		font-size: 20px;
+		padding: 20px 47px;
+	}
+
+	&:focus {
+		outline: unset;
+		border: unset;
+	}
+}
+
+.button {
+	@include button_base;
+}
+
+
+
+/** These styles can be added to images and media through TinyMCE */
+.float-left,
+.float-right {
+	display: block;
+	margin: 10px auto;
+}
+
+.float-left {
+	@include above($TABLET_MIN) {
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+.float-right {
+	@include above($TABLET_MIN) {
+		float: right;
+		margin-bottom: 10px;
+		margin-left: 10px;
+	}
+}
+
+.centre-block {
+	display: block;
+	margin: 10px auto;
+	text-align: center;
+
+	img,
+	iframe,
+	video {
+		display: inline-block;
+	}
+}
+
+/** End TinyMCE image/media styles */
+
+.map {
+	min-height: 400px;
+	width: 100%;
+}
+
+.message {
+	border: 4px solid $PRIMARY_HIGHLIGHT;
+	padding: 1rem;
+	background: rgba($PRIMARY_HIGHLIGHT, 0.25);
+	color: $WARNING_COLOUR;
+
+	&:empty {
+		display: none;
+	}
+}
+
+.pagination {
+	text-align: center;
+
+	>* {
+		display: inline-block;
+		border-left: 1px solid $DARK_NEUTRAL_COLOUR;
+		padding: 0 10px;
+		// audio browsers may simply read out a rapid-fire string of numbers without this
+		pause-after: medium;
+
+		&:first-child {
+			border-left: none;
+		}
+	}
+
+	.current {
+		font-weight: bold;
+	}
+}
+
+//simple accordion alternative
+.activator {
+	position: relative;
+	display: block;
+	padding: 10px 40px 10px 15px;
+	margin-bottom: 2px;
+	background: $NEUTRAL_COLOUR; //#252b2d;
+	font-size: rem(21px);
+	font-family: $HEADING_FONT;
+	color: $DARK_COLOUR;
+
+	&:before,
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		right: 12px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		width: 15px;
+		height: 3px;
+		background: $DARK_COLOUR;
+		transition: transform 0.2s;
+	}
+
+	&:after {
+		transform: rotate(90deg);
+	}
+
+	&.open {
+		background: $PRIMARY_HIGHLIGHT;
+		color: $LIGHT_COLOUR;
+
+		&:before,
+		&:after {
+			background: $LIGHT_COLOUR;
+		}
+
+		&:after {
+			transform: rotate(0deg);
+		}
+	}
+}
+
+.fader {
+	padding: 15px;
+}
+
+//simple tabs alternative
+.tab-nav {
+	margin-bottom: 15px;
+
+	a {
+		display: inline-block;
+		padding: 15px;
+		margin-right: 5px;
+		background: $LIGHT_NEUTRAL_COLOUR;
+
+		&.active {
+			border-bottom: 3px solid $PRIMARY_HIGHLIGHT;
+		}
+	}
+}
+
+.tab:not(.active) {
+	display: none;
+}
+
+.mobile-hide {
+	display: none;
+
+	@include above($LAPTOP_MIN) {
+		display: block;
+	}
+}
+
+.custom-link {
+	padding: 17px 27px;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		width: 28px;
+		height: 24px;
+		background-image: url('./images/icons/icon-download.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		margin-right: 16px;
+	}
+
+	&.icon-link:before {
+		background-image: url('./images/icons/icon-link.svg');
+	}
+
+	a {
+		font-size: 27px;
+		line-height: 42px;
+		color: $BLUE_COLOUR;
+		font-weight: $MEDIUM;
+		font-family: $FONT_OSWALD;
+		text-decoration: unset;
+	}
+}
+
+@mixin column($percent) {
+	max-width: $percent;
+	-ms-flex-preferred-size: $percent;
+	flex-basis: $percent;
+}

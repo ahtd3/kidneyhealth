@@ -1,0 +1,24 @@
+{% extends 'products/sections/base-page.twig' %}
+
+{% block meta_data %}
+	<title>{{ category.getPageTitle() }}</title>
+	<meta name="description" content="{{ category.getMetaDescription() }}" />
+{% endblock %}
+
+{% block content_title %}
+	<h1>{{ category.getMainHeading() }}</h1>
+{% endblock %}
+
+{% block products_content %}
+	{% set products = category.getAllVisibleProducts() %}
+	{{ category.getPageContent()|raw }}
+	{% if products %}
+		<ul class="product-links">
+			{% for product in products %}
+				{% include 'products/sections/product-summary.twig' %}
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p class="message">No products were found in this category.</p>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,58 @@
+{% set bannerAsBackground = false %}
+
+{% if banners|length > 0 %}
+	<section class="slideshow">
+		<div class="slider">
+			{% for banner in banners %}
+				{# Ignore banners without images #}
+				{% if banner.getLargeImage() != null %}
+					{% set caption = banner.getCaption()|trim %}
+					{% if bannerAsBackground %}
+						<figure class="slide" >
+							{% if banner.getSmallImage() != null %}
+								<div class="small-screen background-image" style="background-image: url('{{ banner.getSmallImage().getLink() }}')"></div>
+							{% endif %}
+							<div class="big-screen background-image" style="background-image: url('{{ banner.getLargeImage().getLink() }}')"></div>
+							{% if caption != '' %}
+								<figcaption class="caption container">
+									<div class="caption-content">
+										{{ caption|raw }}
+									</div>
+								</figcaption>
+							{% endif %}
+						</figure>
+						{% set content_below = banner.content_below | trim %}
+						{% if content_below is empty %}
+						<div class="banner-content-below">
+							{{content_below | raw}}
+						</div>
+						{% endif %}
+					{% else %}
+						<figure class="slide">
+							<picture>
+								<source srcset="{{ banner.getLargeImage().getLink() }}" media="(min-width: 769px)" />
+								{% if banner.getSmallImage() != null %}
+									<source srcset="{{ banner.getSmallImage().getLink() }}" />
+								{% endif %}
+								<img src="{{ banner.getLargeImage().getLink() }}" alt="" />
+							</picture>
+							{% if caption != '' %}
+								<figcaption class="caption container">
+									<div class="caption-content">
+										{{ caption|raw }}
+									</div>
+								</figcaption>
+							{% endif %}
+							{% set content_below = banner.content_below | trim %}
+							{% if not content_below is empty %}
+							<div class="banner-content-below">
+								{{content_below | raw}}
+							</div>
+							{% endif %}
+						</figure>
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+		</div>
+	</section>
+{% endif %}

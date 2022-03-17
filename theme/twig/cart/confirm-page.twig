@@ -1,0 +1,33 @@
+{% extends "cart/sections/base-page.twig" %}
+{% block cart_main %}
+	<div class="main-section">
+		{% block cart_heading_block %}
+			<h1 class="cart_heading">
+				Review your order
+			</h1>
+		{% endblock %}
+		{% if message %}
+			<p class="message">
+				{{ message|raw }}
+			</p>
+		{% endif %}
+		<div class="cart-content">
+			<p class="confirm-text">
+				Please double check the information below, then click the <strong>Place Order</strong> button. Your order has not been submitted yet.
+			</p>
+			{% include "orders/sections/order-details-template.twig" with {"orderDetails": cart} %}
+		</div>
+	</div>
+	{% if cartConfirmHtml %}
+		<div class="payment-confirm-section">
+			{{ cartConfirmHtml|raw }}
+		</div>
+	{% endif %}
+{% endblock %}
+
+{% block cart_action %}
+	<p>
+		<a href="/cart/step/payment/" class="button">&lt; Back</a>
+		<a href="/cart/action/order/" class="button">Place Order</a>
+	</p>
+{% endblock %}

@@ -1,0 +1,143 @@
+{% extends 'products/sections/base-page.twig' %}
+
+{# some designs only have the add to cart button (quantity always = 1) This is a quick toggle for the product-actions form generating code #}
+{% set showQuantityField = false %}
+
+{% block meta_data %}
+	<title>{{ product.getPageTitle() }}</title>
+	<meta name="description" content="{{ product.getMetaDescription() }}" />
+{% endblock %}
+
+{% block canonical_link %}
+	<link rel="canonical" href="{{ product.getCanonicalLink() }}" />
+{% endblock %}
+
+{% block content_title %}
+	<h1>{{ product.getMainHeading() }}</h1>
+{% endblock %}
+
+{% block products_content %}
+	{% set pricedOptions = product.pricedOptionGroup.getOptions() %}
+	{% set addUrl = "/Cart/Action/Add/" ~ controller.callStatic('Products\\Product', 'getClassLineItemGeneratorIdentifier') ~ "/" ~ product.getLineItemGeneratorIdentifier() ~ "/" %}
+	{% if pricedOptions %}
+		{% set addUrl = "/Cart/Action/Add/" ~ controller.callStatic('Products\\Options\\PricedProductOption', 'getClassLineItemGeneratorIdentifier') ~ "/" %}
+	{% endif %}
+
+	<div class="columns">
+		<div class="col-2 product-images js-product-images">
+			{% set images = product.getVisibleImages() %}
+			{% if images %}
+				{% set image = images[0] %}
+					<a class="main-image image" href="{{ image.image.getLink() }}" data-src="{{ image.image.getLink() }}" data-thumb="{{ image.thumbnail.getLink() }}" >
+						{{ image.thumbnail.tag('', image.imageDescription)|raw }}
+					</a>
+					{% endif %}
+			{% if images|length > 1 %}
+				<div class="small-images">
+					{% for i in range(1, (images|length - 1)) %}
+						<a class="small-image image" href="{{ images[i].image.getLink() }}" data-src="{{ images[i].image.getLink() }}">
+							{{ images[i].thumbnail.tag('', images[i].imageDescription)|raw }}
+						</a>
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
+		<div class="col-2 product-details">
+			
+			<p class="js-product-price">
+				{% if pricedOptions %}
+					{{ pricedOptions[0].getPrice()|formatPrice }}
+				{% else %}
+					{{ product.getPrice()|formatPrice }}
+				{% endif %}
+			</p>
+
+			{{ product.content|raw }}
+
+			{% set tabs = product.getVisibleTabs() %}
+			{% if tabs %}
+				<div class="tab-nav">
+					{% for tab in tabs %}
+						<a class="js-tab-link {% if loop.index == 1 %}active{% endif %}" href="#tab-{{ tab.id }}">{{ tab.name }}</a>
+					{% endfor %}
+				</div>
+				{% for tab in tabs %}
+					<div class="tab js-tab {% if loop.index == 1 %}active{% endif %}" id="tab-{{ tab.id }}">
+						{{ tab.content|raw }}
+					</div>
+				{% endfor %}
+			{% endif %}
+
+			<div class="product-actions">
+				{% if constant('DO_ENQUIRY_FORM', product) %}
+					<a class="button js-open-form" href="#enquire">Enquire Now</a>
+					<div class="popup-form-wrapper">
+						<div id="enquire">
+							<h3>{{ product.name }}</h3>
+							{{ product.outputEnquiryForm()|raw }}
+						</div>
+					</div>
+				{% endif %}
+
+				{% if 'CART' is enabled %}
+					<form class="js-add-to-cart-form add-to-cart custom-form" action="{{ addUrl }}" method="post">
+						{% if pricedOptions %}
+							<p>
+								<label class="select-wrapper">
+									<span class="label">{{ product.pricedOptionGroup.name }}</span>
+									<span class="field">
+										{# The name attribute is just "id" here, so it's consistent with the URL scheme for adding a regular product #}
+										<select name="id" class="js-product-price-adjuster">
+											{% for option in pricedOptions %}
+												<option value="{{ option.id }}" data-price="{{ option.getPrice()|formatPrice }}">{{ option.name }} - {{ option.getPrice()|formatPrice }}</option>
+											{% endfor %}
+										</select>
+									</span>
+								</label>
+							</p>
+						{% endif %}
+
+						{% for optionGroup in product.optionGroups %}
+							<p>
+								<label class="select-wrapper"><span class="label">{{ optionGroup.name }}</span> <span class="field"><select name="options[{{ optionGroup.id }}]">
+									{% for option in optionGroup.getOptions() %}
+										<option value="{{ option.id }}">{{ option.name }}</option>
+									{% endfor %}
+								</select></span></label>
+							</p>
+						{% endfor %}
+
+						{% set stock = product.getAvailableStock() %}
+						{% if stock > 0 %}
+							{% if showQuantityField %}
+								<p class="field-wrapper">
+									<label>
+										<span class="label">Quantity</span> <input class="field" type="number" name="quantity" value="1" max="{{ stock }}" min="1" />
+									</label>
+									<span class="append-errors"></span>
+								</p>
+							{% else %}
+								<input type="hidden" name="quantity" value="1" />
+							{% endif %}
+							{% include 'forms/submit-button.twig' with {'label': 'Add to Cart'} %}
+						{% else %}
+							<p><strong>Out of Stock</strong></p>
+						{% endif %}
+
+					</form>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	{% set associated = product.getAssociatedProductCategories() %}
+	{% if associated %}
+		<h2>You may also be interested in &hellip;</h2>
+		<ul class="product-links">
+			{% for associatedProduct in associated %}
+				{% include 'products/sections/product-summary.twig' with {'product': associatedProduct.to.product } only %}
+			{% endfor %}
+		</ul>
+	{% endif %}
+
+{% endblock %}

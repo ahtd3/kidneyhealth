@@ -1,0 +1,46 @@
+/* tinymce universal formatting */
+#tinymce
+{
+	display: block;
+	min-height: 0;
+	max-width: $CONTENT_WIDTH;
+	padding: 10px;
+	background: $LIGHT_COLOUR;
+	color: $DARK_COLOUR;
+	font-size: 1em;
+	text-align: left;
+
+	p
+	{
+		margin: 0 0 1em;
+	}
+
+	form
+	{
+		outline: 1px dotted $DARK_NEUTRAL_COLOUR;
+	}
+
+	a
+	{
+		border-bottom: 1px dotted $DARK_NEUTRAL_COLOUR;
+		text-decoration: none;
+	}
+
+	td
+	{
+		font-family: inherit;
+		font-size: inherit;
+	}
+
+	.button {
+		@include button_base(	
+			$hover-background: $RED_COLOUR_ACTIVE, 
+			$background:$RED_COLOUR, 
+			$color: $LIGHT_COLOUR, 
+			$hover-color: $LIGHT_COLOUR,
+			$font-size: 20px,
+			$border-radius: 3em
+		);
+		padding: 11px 39px;
+	}
+}

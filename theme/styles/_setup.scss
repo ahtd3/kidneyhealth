@@ -1,0 +1,79 @@
+// getting fonts here means they are picked up by the editor in the admin panel
+// they are also set in the <head> of the site template to reduce content flash
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap";
+
+// comment out stylesheets which are not used in the site for lighter css
+@import "variables";
+@import "functions";
+@import "typography";
+@import "widget";
+@import "template";
+@import "forms";
+@import "galleries";
+@import "lightbox";
+@import "native";
+@import "navigation";
+@import "page-sections";
+@import "tinymce";
+
+//noinspection CssInvalidFunction
+@if has-slideshow()
+{
+	@import "slideshow";
+}
+
+//noinspection CssInvalidFunction
+@if has-blog()
+{
+	@import "blog";
+}
+
+//noinspection CssInvalidFunction
+@if has-menus()
+{
+	@import "menus";
+}
+
+@if has-products()
+{
+	@import "products";
+}
+
+//noinspection CssInvalidFunction
+@if has-cart()
+{
+	@import "hover-cart";
+	@import "cart";
+}
+
+//noinspection CssInvalidFunction
+@if has-users()
+{
+	@import "user";
+}
+
+//noinspection CssInvalidFunction
+@if has-testimonials()
+{
+	@import "testimonials";
+}
+
+// serch blocks may wish to alter styles from module content
+@import "search";
+// front-page comes last as it is likely to want to alter-only-slightly blocks primarily styled in other modules eg blog, products
+//  and putting it at the end of the cascade lets this be done with minimum specificity override
+@import "front-page";
+
+
+@import "knh_header";
+@import "knh_footer";
+@import "knh_banner";
+@import "cms_support_us";
+@import "cms_contact_us";
+@import "cms_home";
+@import "cms_about";
+@import "cms_patients";
+@import "cms_regional";
+@import "_cms_for-health-professionals";
+@import "knh_search_result";
+@import "cms_support_group";

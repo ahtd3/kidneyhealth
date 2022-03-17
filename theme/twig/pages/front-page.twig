@@ -1,0 +1,7 @@
+{% extends 'pages/page.twig' %}
+
+{# content_wrapper is the block most likely to be overidden (to include multiple content sections), 
+ # but on some sites it may only be necessary to override the content block, or not at all #}
+{% block content_wrapper %}
+	{{ parent() }}
+{% endblock %}

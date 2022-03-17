@@ -1,0 +1,82 @@
+{% extends "cart/sections/base-page.twig" %}
+{% block cart_heading %}
+	Enter your delivery address
+{% endblock %}
+{% block cart_content %}
+	<form action="/cart/action/step/delivery/" method="post">
+		{% if shippingRegions is not empty %}
+			{% set prepend = {'Please Select': ''} %}
+			{% set shippingRegions = prepend|merge(shippingRegions) %}
+			{% set classes = "" %}
+			{% if 'WEIGHT_BASED_SHIPPING' is enabled %}
+				{% set classes = "js-shipping-select js-has-weight-validation" %}
+			{% endif %}
+			{% include "forms/select-box.twig" with
+			{
+				"label": "Where should we ship to?",
+				"values": shippingRegions,
+				"name": "shippingRegion",
+				"selected": cart.shippingRegion.id,
+				"required": true,
+				"classes": classes
+			} only %}
+		{% endif %}
+		{% include "forms/text-field.twig" with
+		{
+			"label": "Name",
+			"name": "name",
+			"value": cart.shippingAddress.name == "" ? user.address.name : cart.shippingAddress.name,
+			"required": true
+		} only %}
+		{% include "forms/text-field.twig" with
+		{
+			"label": "Address",
+			"name": "address",
+			"value": cart.shippingAddress.address == "" ? user.address.address : cart.shippingAddress.address,
+			"required": true,
+			"classes": "js-address"
+		} only %}
+		{% include "forms/text-field.twig" with
+		{
+			"label": "Suburb (Optional)",
+			"name": "suburb",
+			"value": cart.shippingAddress.suburb == "" and cart.shippingAddress.address == "" ? user.address.suburb : cart.shippingAddress.suburb,
+			"classes": "js-suburb"
+		} only %}
+		{% include "forms/text-field.twig" with
+		{
+			"label": "City/Town",
+			"name": "city",
+			"value": cart.shippingAddress.city == "" ? user.address.city : cart.shippingAddress.city,
+			"required": true,
+			"classes": "js-city"
+		} only %}
+		{% include "forms/text-field.twig" with
+		{
+			"label": "Postal Code",
+			"name": "postCode",
+			"value": cart.shippingAddress.postCode == "" ? user.address.postCode : cart.shippingAddress.postCode,
+			"required": true,
+			"classes": "js-post-code"
+		} only %}
+		{% include "forms/text-field.twig" with
+		{
+			"label": "Country",
+			"name": "country",
+			"value": cart.shippingAddress.country == "" ? user.address.country : cart.shippingAddress.country,
+			"required": true,
+			"classes": "js-country"
+		} only %}
+		{% include "forms/textarea.twig" with
+		{
+			"label": "Delivery Instructions (Optional)",
+			"name": "instructions",
+			"value": cart.shippingAddress.deliveryInstructions == "" ? user.address.deliveryInstructions : cart.shippingAddress.deliveryInstructions
+		} only %}
+		{% include "forms/submit-button.twig" with {"label": "Next"} %}
+	</form>
+	
+	{% if 'WEIGHT_BASED_SHIPPING' is enabled %}
+		{% include 'cart/sections/overweight-form.twig' %}
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,121 @@
+<div class="cart-addresses">
+	{% if hasShipping %}
+		<div class="address">
+			<h2>
+				Delivery address
+			</h2>
+			<div>
+				{{ orderDetails.getOrderDetailsShippingAddress().name }}
+			</div>
+			<div>
+				{{ orderDetails.getOrderDetailsShippingAddress().address }}
+			</div>
+			<div>
+				{{ orderDetails.getOrderDetailsShippingAddress().suburb }}
+			</div>
+			<div>
+				{{ orderDetails.getOrderDetailsShippingAddress().city }} {{ orderDetails.getOrderDetailsShippingAddress().postCode }}
+			</div>
+			<div>
+				{{ orderDetails.getOrderDetailsShippingAddress().country }}
+			</div>
+			{% if orderDetails.getOrderDetailsShippingAddress().deliveryInstructions != "" %}
+				<p>
+					{{ orderDetails.getOrderDetailsShippingAddress().deliveryInstructions|nl2br }}
+				</p>
+			{% endif %}
+		</div>
+	{% endif %}
+	<div class="address">
+		<h2>
+			Billing
+		</h2>
+		<div>
+			Payment Method: {{ orderDetails.getOrderDetailsPaymentGateway() }}
+		</div>
+		<div>
+			{{ orderDetails.getOrderDetailsBillingAddress().name }}
+		</div>
+		<div>
+			{{ orderDetails.getOrderDetailsBillingAddress().address }}
+		</div>
+		<div>
+			{{ orderDetails.getOrderDetailsBillingAddress().suburb }}
+		</div>
+		<div>
+			{{ orderDetails.getOrderDetailsBillingAddress().city }} {{ orderDetails.getOrderDetailsBillingAddress().postCode }}
+		</div>
+		<div>
+			{{ orderDetails.getOrderDetailsBillingAddress().country }}
+		</div>
+		<div>
+			Email: {{ orderDetails.getOrderDetailsBillingAddress().email }}
+		</div>
+		<div>
+			Phone: {{ orderDetails.getOrderDetailsBillingAddress().phone }}
+		</div>
+	</div>
+</div>
+<h2>
+	Items
+</h2>
+<table class="confirm-table">
+	<tbody>
+		{% for lineItem in orderDetails.getOrderDetailsNormalLineItems() %}
+			<tr>
+				<td>
+					{{ lineItem.displayQuantity ? lineItem.quantity ~ ' ×' : '' }}
+				</td>
+				<td>
+					{{ lineItem.title }}
+					{% if lineItem.options is defined %}
+						{% for option in lineItem.options %}
+							~ {{ option.optionName }}
+						{% endfor %}
+					{% endif %}
+				</td>
+				<td class="price">
+					{{ lineItem.total|formatPrice }}
+				</td>
+			</tr>
+		{% endfor %}
+		{% if orderDetails.getOrderDetailsSpecialLineItems()|length > 0 %}
+			<tr>
+				<td></td>
+				<th>
+					Subtotal:
+				</th>
+				<th class="price">
+					{{ orderDetails.getOrderDetailsSubtotal()|formatPrice }}
+				</th>
+			</tr>
+		{% endif %}
+		{% for lineItem in orderDetails.getOrderDetailsSpecialLineItems() %}
+			<tr>
+				<td>
+					{{ lineItem.displayQuantity ? lineItem.quantity ~ ' ×' : '' }}
+				</td>
+				<td>
+					{{ lineItem.title }}
+					{% if lineItem.options is defined %}
+						{% for option in lineItem.options %}
+							~ {{ option.optionName }}
+						{% endfor %}
+					{% endif %}
+				</td>
+				<td class="price">
+					{{ lineItem.total|formatPrice }}
+				</td>
+			</tr>
+		{% endfor %}
+		<tr>
+			<td></td>
+			<th>
+				Total:
+			</th>
+			<th class="price">
+				{{ orderDetails.getOrderDetailsTotal()|formatPrice }}
+			</th>
+		</tr>
+	</tbody>
+</table>

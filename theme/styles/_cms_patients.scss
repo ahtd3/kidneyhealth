@@ -1,0 +1,168 @@
+.patients {
+    ul {
+        list-style-type: none;
+    }
+
+    h1 {
+        color: $BLUE_COLOUR;
+        margin-top: 79px;
+        line-height: 60px;
+        position: relative;
+        text-transform: none;
+        font-size: 54px;
+        font-weight: $MEDIUM;
+        font-family: "Oswald";
+    }
+
+    h1::after {
+        content: "";
+        background-color: $RED_COLOUR;
+        display: block;
+        height: 2px;
+        position: absolute;
+        top: 77px;
+        width: 158px;
+    }
+
+    p {
+        font-size: 19px;
+        line-height: 26px;
+        color: $DARK_COLOUR1;
+        font-weight: $LIGHT;
+        font-family: "Montserrat";
+    }
+
+    .for-patients-contain {
+        display: flex;
+        margin-bottom: 80px;
+        h3 {
+            color: $BLUE_COLOUR;
+            line-height: 42px;
+            text-transform: inherit;
+            font-size: 36px;
+            font-weight: $MEDIUM;
+            font-family: "Oswald";
+        }
+
+        h1 {
+            margin-bottom: 60px;
+        }
+
+        .content-left {
+            width: 47%;
+
+            h3 {
+                margin-top: 25px;
+                margin-bottom: -7px;
+            }
+
+            p {
+                margin-bottom: 30px;
+            }
+        }
+
+        .content-right {
+            padding-top: 194px;
+            padding-left: 22px;
+            width: 53%;
+            li {
+                background-color: $GRAY_COLOUR;
+                margin-bottom: 6px;
+            }
+
+            h3 {
+                color: $RED_COLOUR;
+                padding-left: 38px;
+            }
+
+            .custom-link  {
+                padding: 17px 6px 16px 27px;
+            }
+
+            .custom-link:before {
+                margin-right: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .patients {
+        h1::after {
+            top: 63px;
+        }
+
+        .for-patients-contain {
+            .content-left {
+                width: 50%;
+            }
+        } 
+    }
+} 
+
+@media screen and (max-width: 1200px) {
+    .patients {
+        .for-patients-contain {
+            .content-left {
+                width: 60%;
+            }
+        } 
+    }
+} 
+
+@media screen and (max-width: 925px) {
+    .patients {
+        h1 {
+            margin-top: 50px;
+        }
+        .for-patients-contain {
+            margin-bottom: 55px;
+            .content-left {
+                width: 74%;
+            }
+
+            a {
+                font-size: 25px;
+            }
+
+            .content-right {
+                padding-top: 149px;
+            }
+        } 
+    }
+} 
+
+@media screen and (max-width: 768.98px) {
+    .patients {
+        h1 {
+            margin-top: 24px;
+            font-size: 48px;
+        }
+        .for-patients-contain {
+            display:block;
+            margin-bottom: 35px;
+            
+            .content-left {
+                width: 100%;
+            }
+
+            a {
+                font-size: 23px;
+            }
+
+            .content-right {
+                padding-left: 0;
+                padding-top: 20px;
+                width: 100%;
+
+                h3 {
+                    padding-left: 0;
+                }
+            }
+
+            ul {
+                padding-left: 0;
+            }
+        } 
+    }
+}

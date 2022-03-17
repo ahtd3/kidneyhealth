@@ -1,0 +1,56 @@
+<section class="site-footer">
+    <div class="container">
+        <div class="footer-top">
+            <h3 class="footer-top__content">Got questions? 0800 Kidney (0800 543 630)</h3>
+        </div>
+        <div class="footer-body">
+            <div class="column column-1">
+                <div class="footer-logo mobile">
+                    <img src="{{config.logo_footer.getLink()}}" alt="Logo Footer">
+                </div>
+                <div class="column-top">
+                    <h3>Get in touch</h3>
+                    <p>Phone: <a href="sms:0800543639">0800 543 639</a></p>
+                    <p>Email: <a href="mailto:info@kidney.health.nz">info@kidney.health.nz</a></p>
+                    <p class="address">6F/6 Sir William Pickering Drive PO Box 20072, Burnside Christchurch</p>
+                    <ul>
+                        {% for item in config.getVisibleSocialMediaLinks() %}
+                        <li>
+                            <a href="{{item.url}}" target="_blank">
+                                <img src="{{item.image.getLink()}}" alt="Social Media">
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="column-bottom desktop">
+                    <p>© Kidney Health New Zealand</p>
+                </div>
+            </div>
+            <div class="column column-2">
+                <div class="footer-logo desktop">
+                    <a href="/">
+                        <img src="{{config.logo_footer.getLink()}}" alt="Logo Footer">
+                    </a>
+                </div>
+
+                <div class="support-our">
+                    {{config.supporters_footer | raw}}
+                </div>
+
+                <div class="mobile copyright">
+                    <p>© Kidney Health New Zealand</p>
+                    <p>Web Design by Activate</p>
+                </div>
+            </div>
+            <div class="column column-3 desktop">
+                <div class="column-top">
+                    {{config.footer_link | raw}}
+                </div>
+                <div class="column-bottom">
+                    <p>Web Design by Activate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,14 @@
+{#
+	A button with no default functionality, should probably be used for JavaScript actions
+	- Required:
+		- label: A label for the button
+	- Optional:
+		- wrapperClasses: Classes to apply to the wrapping element
+		- classes: Classes to apply to the button
+		- attributes: Extra attributes to add to the button
+#}
+{% embed "forms/base/bare-field.twig" %}
+	{% block field %}
+		<button class="button {{ classes }}" type="button" {{ attributes|raw }}>{{ label }}</button>
+	{% endblock %}
+{% endembed %}

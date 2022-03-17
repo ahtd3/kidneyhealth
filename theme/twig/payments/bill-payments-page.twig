@@ -1,0 +1,30 @@
+{% extends 'pages/page.twig' %}
+
+{% block content_banner %}{# none #}{% endblock %}
+{% block notifications %}{# message is displayed with form or payment details #}{% endblock %}
+
+{% block content %}
+	{% if page.mainHeading != '' %} <h1>{{ page.mainHeading }}</h1> {% endif %}
+
+	<div class="columns">
+		<div class="col-2">
+			{{ page.output()|raw }}
+		</div>
+		<div class="col-2">
+			{% if payment %}
+				{% include 'payments/bill-payment-success.twig' %}
+			{% else %}
+				{% include 'payments/bill-payment-form.twig' with {
+					'user': user,
+					'paymentGateways': paymentGateways,
+					'page': page,
+					'message': message,
+					'refill': refill,
+					'stripeOnly': stripeOnly,
+					'usePlaceholder': usePlaceholder
+					}
+				 %}
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}

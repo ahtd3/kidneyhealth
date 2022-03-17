@@ -1,0 +1,9 @@
+{% extends 'pages/page.twig' %}
+
+{# 
+ # because ProductsController usually redirects to the first active category we will only end up here if there are no active categories 
+ # (no need for category navigation) or that behavior has been changed, in which case this only need be changed to extend products/sections/base-page.twig
+ #}
+{% block products_content %}
+	{{ block('content', 'pages/page.twig') }}
+{% endblock %}

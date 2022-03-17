@@ -1,0 +1,234 @@
+:root
+{
+	--container-width: #{$LAPTOP_CONTAINER_WIDTH};
+	--container-width-no-padding: #{$LAPTOP_CONTAINER_WIDTH - $CONTAINER_PADDING - $CONTAINER_PADDING};
+	@include above($DESKTOP_MIN)
+	{
+		--container-width: #{$CONTAINER_WIDTH};
+		--container-width-no-padding: #{$CONTENT_WIDTH};
+	}
+}
+
+// Everything box-sizing
+html,
+details > * // Chrome and Safari override with content-box otherwise
+{
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after
+{
+	box-sizing: inherit;
+}
+
+// These already have explicit widths and heights, so we don't want borders or padding to squash them
+canvas,
+embed,
+iframe,
+img,
+object,
+video
+{
+	box-sizing: content-box;
+}
+
+/*** element styles ***/
+html,
+body
+{
+	scroll-behavior: smooth;
+	min-height: 100vh;
+}
+
+body
+{
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	background: $LIGHT_COLOUR;
+}
+
+img
+{
+	height: auto;
+	max-width: 100%;
+}
+
+iframe
+{
+	object-position: top left;
+	max-width: 100%;
+}
+
+
+/*** section styles ***/
+[role=banner],
+main
+{
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.container
+{
+	margin: 0 auto;
+	max-width: var(--container-width);
+	// a bit of padding either side for readability which becomes irrelevant after content width is passed
+	padding: 0 $CONTAINER_PADDING;
+	width: 100%;
+}
+
+body > header
+{
+	position: sticky;
+	top: 0;
+	height: auto;
+	background: rgba($LIGHT_COLOUR, 0.9);
+	z-index: 10;
+
+	.site-header
+	{
+		position: relative;
+	}
+
+	.logo
+	{
+		display: block;
+		margin: 10px;
+
+		img
+		{
+			display: block;
+		}
+	}
+}
+
+main
+{
+	// needs display: block to resolve MS Edge issue
+	display: block;
+	z-index: 5;
+	flex-grow: 1;
+}
+
+.content-wrapper
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.content
+{
+	// note: sometimes .container and .content are the same element, so be wary of overriding the .container left/right padding which keeps page content clear of the edge of the window
+	
+	display: flex;
+	flex-flow: column;
+	
+	@include above($LAPTOP_MIN)
+	{
+		display: block; // trigger floating image
+	}
+}
+.content-image
+{
+	order: 2; // first in source order for float purposes; display after other content on small displays
+	align-self: center;
+
+	@include above($LAPTOP_MIN)
+	{
+		float: right; // now other content wraps around image
+		margin: 0.75rem 0 20px 40px;
+		max-width: calc(50% - 20px);
+	}
+}
+
+.module-content // use this as a wrapper on module-generated content sections ~ to .content-image to avoid float issues
+{
+	clear: both;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.columns,
+.contains-sidebar
+{
+	@include above($LAPTOP_MIN)
+	{
+		display: flex;
+		flex-wrap: wrap;
+
+		&:before,
+		&:after
+		{
+			display: none;
+		}
+	}
+}
+
+.columns
+{
+	gap: 50px;
+	
+	> *
+	{
+		@include above($LAPTOP_MIN)
+		{
+			flex-basis: 0;
+			flex-grow: 1;
+		}
+	}
+}
+
+.sidebar
+{
+	@include above($LAPTOP_MIN)
+	{
+		margin-right: rem(40px);
+		width: rem(270px);
+	}
+}
+
+.has-sidebar
+{
+	margin-top: 30px;
+}
+
+footer[role="banner"]
+{
+	z-index: 0;
+	font-size: rem(13px);
+	
+	a
+	{
+		color: inherit;
+	}
+}
+
+.sub-footer
+{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin: 20px auto;
+
+	@include above($TABLET_MIN)
+	{
+		flex-flow: row;
+		justify-content: space-between;
+	}
+
+	.copyright
+	{
+
+	}
+
+	.attribution
+	{
+
+	}	
+}

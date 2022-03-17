@@ -1,0 +1,107 @@
+{% extends "cart/sections/base-page.twig" %}
+{% block cart_heading %}
+	Enter your billing details
+{% endblock %}
+{% block cart_content %}
+	<form action="/cart/action/step/payment/" method="post" class="js-payment-fields">
+		{% if hasShipping %}
+			{% include "forms/checkbox.twig" with
+			{
+				"label": "Use delivery address",
+				"name": "sameAddress",
+				"checked": cart.sameAddress,
+				"classes": "js-same-address"
+			} only %}
+		{% endif %}
+		{% include "forms/text-field.twig" with
+		{
+			"label": "Name",
+			"name": "name",
+			"value": cart.billingAddress.name == "" ? user.name : cart.billingAddress.name,
+			"wrapperClasses": "duplicate-field",
+			"required": true
+		} only %}
+		{% include "forms/phone-field.twig" with
+		{
+			"label": "Phone Number",
+			"name": "phone",
+			"value": cart.billingAddress.phone == "" ? user.address.phone : cart.billingAddress.phone,
+			"required": true
+		} only %}
+		{% include "forms/email-field.twig" with
+		{
+			"label": "Email Address",
+			"name": "email",
+			"value": cart.billingAddress.email == "" ? user.email : cart.billingAddress.email,
+			"required": true
+		} only %}
+		{% include "forms/text-field.twig" with
+		{
+			"label": "Address",
+			"name": "address",
+			"value": cart.billingAddress.address == "" ? user.address.address : cart.billingAddress.address,
+			"wrapperClasses": "duplicate-field",
+			"classes": "js-address",
+			"required": true
+		} only %}
+		{% include "forms/text-field.twig" with
+		{
+			"label": "Suburb (Optional)",
+			"name": "suburb",
+			"value": cart.billingAddress.suburb,
+			"wrapperClasses": "duplicate-field",
+			"classes": "js-suburb"
+		} only %}
+		{% include "forms/text-field.twig" with
+		{
+			"label": "City/Town",
+			"name": "city",
+			"value": cart.billingAddress.city == "" ? user.address.city : cart.billingAddress.city,
+			"wrapperClasses": "duplicate-field",
+			"classes": "js-city",
+			"required": true
+		} only %}
+		{% include "forms/text-field.twig" with
+		{
+			"label": "Postal Code",
+			"name": "postCode",
+			"value": cart.billingAddress.postCode == "" ? user.address.postCode : cart.billingAddress.postCode,
+			"wrapperClasses": "duplicate-field",
+			"classes": "js-post-code",
+			"required": true
+		} only %}
+		{% include "forms/text-field.twig" with
+		{
+			"label": "Country",
+			"name": "country",
+			"value": cart.billingAddress.country == "" ? user.address.country : cart.billingAddress.country,
+			"wrapperClasses": "duplicate-field",
+				"classes": "js-country",
+			"required": true
+		} only %}
+		{% if not user.isNull() %}
+			{% set checked = false %}
+			{% if user.address.isNull() %}
+				{% set checked = true %}
+			{% endif %}
+			{% include "forms/checkbox.twig" with
+			{
+				"label": "Update saved address",
+				"name": "updateAddress",
+				"checked": checked
+			} only %}
+		{% endif %}
+		{% if paymentGateways|length > 1 %}
+			{% include "forms/radio-buttons.twig" with
+			{
+				"label": "How would you like to pay?",
+				"htmlLabel": true,
+				"values": paymentGateways,
+				"name": "payment",
+				"selected": cart.paymentGateway,
+				"required": true
+			} only %}
+		{% endif %}
+		{% include "forms/submit-button.twig" with {"label": "Next"} only %}
+	</form>
+{% endblock %}

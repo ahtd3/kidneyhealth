@@ -1,0 +1,10 @@
+
+<div class="popup-form-wrapper ">
+    <span class="js-max-weight">{{ cart.shippingRegion.maxWeight() }}kg</span>
+    <div class="js-overweight-error">
+        Please enquire <a class="js-open-form" href="#shipping-enquiry">here</a> for shipping cost for orders over 
+    </div>
+    <div id="shipping-enquiry" class="js-shipping-form">
+        {{ cart.outputShippingEnquiryForm()|raw }}
+    </div>
+</div>

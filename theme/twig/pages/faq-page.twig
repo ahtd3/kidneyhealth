@@ -1,0 +1,11 @@
+{% extends 'pages/page.twig' %}
+
+{% block content %}
+    {{ parent() }}
+	<div class="module-content faqs">
+		{% for faq in page.getVisibleFaqs() %}
+			<a class="activator js-activator" href="#faq-{{ faq.id }}">{{ faq.title }}</a>
+			<div class="fader js-fader" id="faq-{{ faq.id }}">{{ faq.text|raw }}</div>
+		{% endfor %}
+	</div>
+{% endblock %}

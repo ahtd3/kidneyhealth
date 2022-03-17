@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@300;700&family=Oswald:wght@500&family=Roboto+Condensed:wght@300&display=swap');
+
+$BLUE_COLOUR: #004c83;
+$BLUE_COLOUR_ACTIVE: rgba(0, 76, 131, .75);
+$GRAY_COLOUR: #f2f1ee;
+$GRAY_COLOUR1: #bfbbad;
+$GRAY_COLOUR2: #ccc8ba;
+$GRAY_COLOUR3: #f1f0ec;
+$GRAY_COLOUR4: #cbcac5;
+$GRAY_COLOUR5: #f1efed;
+$GRAY_COLOUR6: #d7ceb7;
+$RED_COLOUR: #98012e;
+$RED_COLOUR_ACTIVE: rgba(152, 1, 46, .75);
+$DARK_COLOUR1: #344054;
+$DARK_COLOUR2: #00233a;
+$DARK_COLOUR3: #2c3035;
+
+// COLOURS
+$PRIMARY_HIGHLIGHT: $RED_COLOUR;
+$SECONDARY_HIGHLIGHT: $RED_COLOUR;
+$DARK_COLOUR: #000;
+$DART_COLOUR1: #252525;
+$LIGHT_COLOUR: #fff;
+$NEUTRAL_COLOUR: #626262;
+$DARK_NEUTRAL_COLOUR: #30312e;
+$LIGHT_NEUTRAL_COLOUR: #e4dfce;
+$WARNING_COLOUR: #fd1a00;
+
+
+$FONT_OSWALD: 'Oswald', sans-serif;
+$FONT_MONTSERRAT: 'Montserrat', sans-serif;
+$FONT_ROBOTO: 'Roboto Condensed', sans-serif;
+
+// FONTS and font weights
+$BASE_FONT_SIZE: 16px; // used for converting px measurements from design into more responsive rem units which will respect the user's browser font settings @see the rem() function
+$CONTENT_FONT: $FONT_MONTSERRAT;
+$HEADING_FONT: $FONT_OSWALD;
+
+$CONTENT_WIDTH: 1410px;
+$CONTAINER_PADDING: 20px;
+/// Maximum width of content as per design
+$CONTAINER_WIDTH: $CONTENT_WIDTH + ($CONTAINER_PADDING * 2);
+$LAPTOP_CONTAINER_WIDTH: 1200px + ($CONTAINER_PADDING * 2);
+
+$THIN: 100;
+$EXTRA_LIGHT: 200;
+$LIGHT: 300;
+$REGULAR: normal;
+$MEDIUM: 500;
+$SEMI_BOLD: 600;
+$BOLD: bold;
+$EXTRA_BOLD: 800;
+$BLACK: 900;
+
+$MOBILE_MAX: 768.98px;
+$TABLET_MAX: 1023.98px;
+
+// BREAKPOINTS used in conjunction with above() mixin (below and between are available if really needed)
+// these can be adjusted based on the needs of the design
+
+/// we don't really support displays smaller than this (ie they get the default styles) but sometimes it is useful to turn a rule on or off at this point
+$MOBILE_MIN: 320px;
+
+/// point at which design elements change for slightly larger screens, could be portrait or landscape.
+$TABLET_MIN: 640px;
+
+/// point at which we start assuming landscape display and expecting mouse/trackpad keyboard availability.
+/// 	this doesn't mean we should assume mouse/trachpad over touchscreen, ever
+$LAPTOP_MIN: 1024px;
+
+/// Point at which we are pretty sure the user is at a large laptop or desktop.
+$LAPTOP_MEDIUM: 1280px;
+
+// Pretty certain we're on a desktop, also wider than most  current designs
+$DESKTOP_MIN: 1600px;
+
+/// usually the full width of the design file, scaling of full-width elements often needs to change above this point.
+$DESKTOP_LARGE: 1920px;
+
+/// where slideshow can change from portrait to landscape version
+/// if the slideshow has different images for large and small screens this will usally be thw width of the smaller image
+$SLIDESHOW: $TABLET_MIN;
+
+/// where page is wide enough that full menu can be displayed insteadof the burger
+/// can vary significantly from design to design up to $CONTENT_WIDTH
+$NAV_BREAKPOINT: $LAPTOP_MEDIUM;
+
+// deprecated but still in use in files which haven't been updated
+$RESPONSIVE_BREAKPOINT: $TABLET_MIN;

@@ -1,0 +1,29 @@
+{% extends "cart/sections/base-page.twig" %}
+{% block cart_heading_block %}{% endblock %}
+{% block cart_main %}
+	<div class="login-group js-login-group activated">
+		<section class="login main-section selected">
+			<h1>
+				Login to {{ config.getSiteName() }}
+			</h1>
+			{% include "account/sections/login-form.twig" %}
+		</section>
+		<section class="register main-section">
+			<h1>
+				Register at {{ config.getSiteName() }}
+			</h1>
+			{% include "account/sections/register-form.twig" %}
+		</section>
+	</div>
+	<section class="anonymous main-section">
+		<h1>
+			Or checkout anonymously
+		</h1>
+		<p>
+			By creating an account you will be able to shop faster, keep up to date on an order's status, and keep track of the orders you have previously made.
+		</p>
+		<p>
+			<a href="/cart/step/delivery/" class="button">Continue</a>
+		</p>
+	</section>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'pages/page.twig' %}
+
+{% block content %}
+	{{ page.output()|raw }}
+
+	<div class="articles">
+		{% for article in articles.results %}
+			{% include 'blog/card-article.twig' with {
+				"article": article
+			}%}
+		{% endfor %}
+	</div>
+
+	{% if articles.totalPages() > 1 %}
+		<div class="blog-pagination">{{ articles.generatePageLinks(page.getNavPath() ~ '?page=')|raw }}</div>
+	{% endif %}
+{% endblock %}

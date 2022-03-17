@@ -1,0 +1,34 @@
+{% extends 'pages/page.twig' %}
+
+{% block meta_data %}
+	<title>{{ menu.getPageTitle() }}</title>
+	<meta name="description" content="{{ menu.getMetaDescription() }}" />
+{% endblock %}
+
+{% block content %}
+	<h1>{{ menu.name }}</h1>
+	<div class="columns">
+		<div class="{{ menu.image != null ? "col-2" : "" }}">
+			<div class="drinks-menu">
+				<div class="menu-items">
+					{% for item in menu.getVisibleMenuItems() %}
+						{% include "menus/sections/menu-item.twig" %}
+					{% endfor %}
+				</div>
+				{% for group in menu.getVisibleMenuGroups() %}
+					<h3>{{ group.heading }}</h3>
+					<div class="menu-items">
+						{% for item in group.getVisibleMenuItems() %}
+							{% include "menus/sections/menu-item.twig" %}
+						{% endfor %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		{% if menu.image != null %}
+			<div class="col-2">
+				{{ menu.image.tag()|raw }}
+			</div>
+		{% endif %}
+	</div><!-- end content -->
+{% endblock %}

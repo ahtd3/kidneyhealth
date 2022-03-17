@@ -1,0 +1,22 @@
+{% extends 'pages/page.twig' %}
+
+{% block content_banner %}{# Content banner block should be empty on the invoice page #}{% endblock %}
+
+{% block content %}
+	<div class="cart native">
+		<div class="native-main">
+			<div class="main-section">
+				<h1>
+					Thank you for your order (#{{ payment.order.reference }})
+				</h1>
+				{{ paymentGatewayHtml|raw }}
+				<div class="cart-content">
+					{% include "orders/sections/order-details-template.twig" with {"orderDetails": payment.order, "hasShipping": true} only %}
+				</div>
+				{% if config.gstNumber != '' %}
+					<p><strong>Our GST Number:</strong> {{ config.gstNumber }}</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

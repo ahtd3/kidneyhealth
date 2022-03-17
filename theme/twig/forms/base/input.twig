@@ -1,0 +1,37 @@
+{#
+	Displays an input, base of labelled-input and placeholder-input
+	- Required:
+		- type: The type of input to use
+	- Optional:
+		- wrapperClasses: Classes to apply to the wrapper's element
+		- name: The name to give to the element
+		- value: The default value for the input
+		- required: Whether the input is required
+		- classes: Classes to apply to the input
+		- attributes: Extra attributes to apply to the input
+		- suggestions: An array of suggestions to display
+#}
+{% if suggestions is defined %}
+	{% set suggestionsId = name ~ random() %}
+{% endif %}
+<!--suppress HtmlFormInputWithoutLabel -->
+<input
+	type="{{ type }}"
+	{% if name is defined %} name="{{ name }}" {% endif %}
+	{% if value is defined %} value="{{ value }}" {% endif %}
+	{% if required %} required="required" {% endif %}
+	class="{{ classes }}"
+	{{ attributes|raw }}
+	{% if suggestions is defined %}
+		list="{{ suggestionsId }}"
+	{% endif %}
+	{% block specific %}{% endblock %}
+/>
+{% if suggestions is defined %}
+	<datalist id="{{ suggestionsId }}">
+		{% for suggestion in suggestions %}
+			<!--suppress CheckEmptyScriptTag -->
+			<option value="{{ suggestion }}" />
+		{% endfor %}
+	</datalist>
+{% endif %}

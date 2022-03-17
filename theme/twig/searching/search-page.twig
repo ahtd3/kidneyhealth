@@ -1,0 +1,30 @@
+{% extends "pages/page.twig" %}
+
+{% block content_banner %}{# none #}{% endblock %}
+
+{% block content %}
+	<form class="searchResult searchForm" action="" method="get">
+		<div class="flex relative">
+			<label for="SearchResult-search">Results for:</label>
+			<input type="text" name="search" id="SearchResult-search" value="{{ search }}" />
+			{# <input type="submit" class="button" value="Search" /> #}
+			<button class="button" type="submit">Search</button>
+		</div>
+		<p>
+			<input type="hidden" name="sort" value="{{ sort }}" />
+		</p>
+	</form>
+	{% if search == '' %}
+		Please enter a search term.
+	{% elseif results|length == 0 %}
+		Sorry no results were found. Please try a different search.
+	{% else %}
+		<section class="search-results">
+			{% for result in results %}
+				{% include "searching/sections/search-result.twig" %}
+			{% endfor %}
+		</section><!-- end search results -->
+	{% endif %}
+{% endblock %}
+
+{% block class_body %}search-page{% endblock %}

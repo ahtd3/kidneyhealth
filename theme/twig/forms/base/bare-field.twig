@@ -1,0 +1,14 @@
+{#
+	A field with no label
+	- Optional:
+		- wrapperClasses: Classes to apply to the wrapping element
+		- error: An error to display
+	- Blocks:
+		- field: The field to wrap around
+#}
+<p class="field-wrapper {{ wrapperClasses }}">
+	<span class="field">
+		{% block field %}{% endblock %}
+		{% include 'forms/errors.twig' %}
+	</span>
+</p>

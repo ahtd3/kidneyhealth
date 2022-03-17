@@ -1,0 +1,65 @@
+{% extends 'pages/page.twig' %}
+
+{% block content_banner %}{# none #}{% endblock %}
+{% block notifications %}{# message output in content #}{% endblock %}
+
+{% block content %}
+	<div class="native">
+		<div class="native-sections">
+			{% if cartEnabled or paymentsEnabled %}
+				<section class="native-sidebar">
+					<article class="sidebar-section">
+						{% block native_sidebar %}
+							<h1>
+								My Account
+							</h1>
+							<nav class="account-navigation">
+								<ul>
+									<li>
+										<a href="/account/">Account Details</a>
+									</li>
+									{% if cartEnabled %}
+										<li>
+											<a href="/account/address/">My Address</a>
+										</li>
+										<li>
+											<a href="/account/orders/">My Orders</a>
+										</li>
+									{% endif %}
+									{% if paymentsEnabled %}
+										<li>
+											<a href="/account/payments/">My Payments</a>
+										</li>
+									{% endif %}
+									<li>
+										<a href="/account/action/logout/">Logout</a>
+									</li>
+								</ul>
+							</nav>
+						{% endblock %}
+					</article>
+				</section>
+			{% endif %}
+			<div class="native-main">
+				{% block account_main %}
+					<div class="main-section">
+						{% block account_heading_block %}
+							<h1 class="native-heading">
+								{% block account_heading %}{% endblock %}
+							</h1>
+						{% endblock %}
+						{% if message %}
+							<p class="message">
+								{{ message|raw }}
+							</p>
+						{% endif %}
+						<div class="native-content">
+							{% block account_content %}{% endblock %}
+						</div>
+					</div>
+				{% endblock %}
+				{% block account_action %}{% endblock %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

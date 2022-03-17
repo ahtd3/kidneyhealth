@@ -1,0 +1,45 @@
+{#
+	Displays a file picker
+	- Required:
+		- label: A label for the file picker
+	- Optional:
+		- wrapperClasses: Classes to apply to the wrapper's element
+		- error: An error to display
+		- name: The name to give to the element
+		- required: Whether the field is required
+		- accepts: An array of file types that this picker accepts
+		- classes: Classes to apply to the picker element
+		- attributes: Extra attributes to apply to the picker element
+#}
+{% set wrapperClasses = "file-picker js-file-wrapper " ~ wrapperClasses %}
+{% if usePlaceholder %}
+	{% set wrapperClasses = wrapperClasses ~ " placeholder" %}
+{% endif %}
+
+{% embed (usePlaceholder ? "forms/base/bare-field.twig" : "forms/base/labelled-field.twig") with 
+{
+	wrapperClasses: wrapperClasses
+} %}
+	{% block field %}
+		{% if usePlaceholder %}
+			<label> {# bare-field.twig doesn't come with any labels	#}
+		{% endif %}
+			{% if not usePlaceholder %}
+				<span class="upload-button">Choose File</span><span class="uploaded js-uploaded" data-default-text="No file chosen">No file chosen</span>
+			{% else %}
+				<span class="upload-button js-uploaded" data-default-text="No file chosen">{{ label }}</span>
+			{% endif %}
+			<!--suppress HtmlFormInputWithoutLabel -->
+			<input
+				type="file"
+				{% if name is defined %} name="{{ name }}" {% endif %}
+				{% if required %} required="required" {% endif %}
+				accept="{{ accepts|join(",") }}"
+				class="{{ classes }}"
+				{{ attributes|raw }}
+			/>
+		{% if usePlaceholder %}
+			</label>
+		{% endif %}
+	{% endblock %}
+{% endembed %}

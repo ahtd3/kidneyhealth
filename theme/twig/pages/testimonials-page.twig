@@ -1,0 +1,10 @@
+{% extends 'pages/page.twig' %}
+
+{% block content %}
+	{{ parent() }}
+	<div class="module-content testimonials">
+		{% for testimonial in controller.callStatic('Testimonial', 'loadAllActive') %}
+			{% include 'pages/sections/testimonial.twig' %}
+		{% endfor %}
+	</div>
+{% endblock %}

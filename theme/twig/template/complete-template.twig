@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-NZ" class="{{ page.pageType|replace({' ': "-"}) }}">
+	<head>
+		{% block meta_data %}
+			<title>{{ page.getPageTitle() }}</title>
+			<meta name="description" content="{{ page.getMetaDescription() }}" />
+		{% endblock %}
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		{% if config.googleSiteVerification != '' %}
+			<meta name="google-site-verification" content="{{ config.googleSiteVerification }}">
+		{% endif %}
+		{% block canonical_link %}
+			{% if originalPage.isDuplicate %}
+				<link rel='canonical' href='{{ constant('PROTOCOL') ~ constant('SITE_ROOT') ~ originalPage.original.path }}' />
+			{% else %}
+				<link rel='canonical' href='{{ controller.generateCanonicalUrl() }}' />
+			{% endif %}
+		{% endblock %}
+		{# get fonts early to reduce content flash. Still need set in _setup.css as well #}
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+		<script type="text/javascript">
+			// add this immediately so elements which are initially hidden based on presence of javascript don't 'flash'
+			(function(){let node=document.documentElement; node.setAttribute('class', node.getAttribute('class') + ' javascript')})()
+		</script>
+		{% block styles %}
+			{# Load stylesheets first for speed. Load all plugin stylesheets before local stylesheet to allow overrides with minimum declarations #}
+			<link rel="stylesheet" type="text/css" href="/node_modules/slick-carousel/slick/slick.css" />
+			<link rel="stylesheet" type="text/css" href="/node_modules/lightgallery/css/lightgallery-bundle.min.css" />
+			<link rel="stylesheet" type="text/css" href="/node_modules/featherlight/release/featherlight.min.css" />
+			<!--suppress HtmlUnknownTarget -->
+			<link rel="stylesheet" type="text/css" href="/theme/style.css" />
+		{% endblock %}
+		{% if config.favicon != null %}
+			{% include "template/sections/favicon.twig" %}
+		{% endif %}
+		{% block scripts %}
+			{% do script.add("/node_modules/jquery/dist/jquery.min.js") %}
+			{% do script.add("/node_modules/js-cookie/dist/js.cookie.js") %}
+			{% do script.add("/theme/scripts/validation.js") %}
+			{% do script.add("/node_modules/lightgallery/lightgallery.min.js") %}
+			{% do script.add("/node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js") %}
+			{% do script.add("/node_modules/featherlight/release/featherlight.min.js") %}
+			{% do script.add("/theme/scripts/featherlight-mouseup-fix.js") %}
+			{% do script.add("/node_modules/slick-carousel/slick/slick.min.js") %}
+
+			{% if 'HOVER_CART' is enabled %}
+				{% do script.add("/theme/scripts/hover-cart.js") %}
+			{% endif %}
+
+			{% do script.add("/theme/scripts/script.js") %}
+
+			{% if constant('GOOGLE_MAPS_API') != "" %}
+				{% set scriptUrl = 'https://maps.googleapis.com/maps/api/js?key=' ~ constant('GOOGLE_MAPS_API') %}
+
+				{% if 'SHIPPING' is enabled %}
+					{# Note, this must be loaded before the Google Maps crap gets loaded, so we load it separately from everything else #}
+					<script type='text/javascript' src='/theme/scripts/auto-address.js'></script>
+					{% set scriptUrl = scriptUrl ~ '&libraries=places&callback=initAutocomplete' %}
+				{% endif %}
+
+				<script type="text/javascript" src="{{ scriptUrl }}"></script>
+			{% endif %}
+
+			{% if config.analyticsId != '' %}
+				{% include 'template/sections/google-analytics.twig' %}
+			{% endif %}
+
+			{% if config.tagManagerId != '' %}
+				{% include 'template/sections/google-tag-manager.twig' %}
+			{% endif %}
+
+			{% if config.recaptchaSiteKey != '' and config.recaptchaSecret != '' %}
+				<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+			{% endif %}
+
+			{% do script.add("/theme/scripts/custom.js") %}
+		{% endblock %}
+	</head>
+	<body class="{% block class_body %}{% endblock %} {{page.code}}">
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0" nonce="6AKPGW8I"></script>
+		<header role="banner">
+			<section class="site-header">
+				<div class="site-header__top">
+					<div class="expand-link">
+						<div class="expand-link__search">
+							<form action="/search" method="get">
+								<div class="search-wrap">
+									<input type="text" name="search" class="input-search" placeholder="Search...">
+									<button type="submit" class="submit"></button>
+								</div>
+							</form>
+						</div>
+						<div class="button-donate">
+							<a class="button" href="#">donate now</a>
+						</div>
+					</div>
+				</div>
+				<div class="site-header__bottom">
+
+					<div class="site-header__left">
+						<a href="{{ homePath }}">
+							<img class="logo" src="{{config.logo_header.getLink()}}" width="" height="" alt="{{ config.getSiteName() }}" />
+						</a>
+						{#{% include 'template/sections/search-form.twig' %}#}
+					</div>
+					<span class="open-nav">
+						<span class="bar top"></span>
+						<span class="bar middle"></span>
+						<span class="bar bottom"></span>
+					</span>
+					<div class="site-header__right">
+						<div class="expand-link">
+							<div class="expand-link__wrap">
+								<ul>
+									{% for item in navTopHead %}
+									<li><a href="{{item.getNavPath()}}">{{item.name}}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+							<div class="expand-link__search">
+								<form action="/search" method="get">
+									<div class="search-wrap">
+										<input type="text" name="search" class="input-search" placeholder="Search...">
+										<button type="submit" class="submit"></button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="main-navigation-wrapper">
+							<nav class="main-navigation container">
+								<ul>
+									<li class="button-help">
+										<a href="#">Help...</a>
+									</li>
+									{% include "template/sections/navigation.twig" with {
+										"navItems": navItems,
+										"currentDepth": 1,
+										"maxDepth": 2,
+										"currentNavItem": currentNavItem
+									} only %}
+									{% include 'template/sections/cart-navigation.twig' %}
+									{% include 'template/sections/account-navigation.twig' %}
+									
+									<li class="button-donate">
+										<a class="button" href="#">donate now</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</section>
+		</header><!-- end header -->
+		<main>
+			{% block content_banner %}
+				{% include 'template/sections/top-banner.twig' %}
+			{% endblock %}
+			{% block content_wrapper %}
+				<section class="content-wrapper">
+					<div class="content {% block class_content %}container{% endblock %}">
+						{% block notifications %}
+							{% if message != '' %}
+								<p class="message">
+									{{ message|raw }}
+								</p>
+							{% endif %}
+						{% endblock %}
+						{% block content %}{% endblock %}
+					</div><!-- end content -->
+				</section>
+				{% block page_sections %}
+					{% for section in page.getVisiblePageSections() %}
+						{% include section.getTemplateLocation() %}
+					{% endfor %}
+				{% endblock %}
+			{% endblock %}
+		</main>
+		<footer role="banner">
+			{% include 'template/sections/footer.twig' %}
+		</footer>
+		{{ script.output()|raw }}
+		{# Below is a completely nonsensical fix for a range of bonkers page load display issues in Chrome and Firefox #}
+		<script> </script>
+	</body>
+</html>

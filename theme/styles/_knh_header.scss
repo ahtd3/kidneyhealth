@@ -1,0 +1,304 @@
+.site-header {
+    max-width: 1820px;
+    margin: 0 auto;
+
+    &__top {
+        display: none;
+        padding: 0 20px;
+        .button {
+            @include button_base(
+                $hover-background:$BLUE_COLOUR_ACTIVE, 
+                $background: $BLUE_COLOUR, 
+                $font-size: 18px,
+                $border-radius: 3em
+            );
+            padding: 11px 39px;
+            line-height: 40px;
+            font-weight: $MEDIUM;
+        }
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    &__left {
+        max-width: 407px;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        a {
+            width: 100%;
+        }
+        .logo {
+            width: 100%;
+            margin: 0;
+            padding-bottom: 18px;
+            max-width: 407px;
+        }
+    }
+
+    &__right {
+
+    }
+    
+    
+
+    .main-navigation {
+        padding: 24px 0;
+
+        li {
+            align-items: center;
+            margin-left: 30px;
+
+            &.sel,
+            &:hover {
+                a:not(.button) {
+                    color: $RED_COLOUR;
+                    background: unset;
+                }
+            }
+            &.button-donate {
+                margin-left: 60px;
+                .button {
+                    @include button_base(
+                        $hover-background:$BLUE_COLOUR_ACTIVE, 
+                        $background: $BLUE_COLOUR, 
+                        $font-size: 18px,
+                        $border-radius: 3em
+                    );
+                    padding: 11px 39px;
+                    line-height: 40px;
+                    font-weight: $MEDIUM;
+                }
+            }
+
+            &.button-help {
+                margin-left: 103px;
+                a:not(.button) {
+                    font-size: 24px;
+                    color: $RED_COLOUR;
+                }
+                
+            }
+            a:not(.button) {
+                font-size: 20px;
+                line-height: 40px;
+                color: $DARK_COLOUR3;
+                font-weight: 400;
+                font-family: "Oswald";
+                white-space: nowrap;
+            }
+
+            a.button {
+                background: $BLUE_COLOUR;
+            }
+        }
+    }
+    .expand-link {
+        display: flex;
+        border-bottom: 1px solid #d1cab9;
+        justify-content: flex-end;
+        ul {
+            display: flex;
+            margin: 0;
+            list-style-type: none;
+            padding: 12px 0;
+            margin-right: 19px;
+            li {
+                font-size: 19px;
+                line-height: 40px;
+                padding: 0 12px;
+                font-family: $FONT_OSWALD;
+
+                a {
+                    color: #2c3035;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        &__search {
+            padding: 14px 0;
+            .search-wrap {
+                position: relative;
+            }
+            input {
+                padding-left: 16px;
+                color: $DARK_COLOUR3;
+                font-weight: $LIGHT;
+                font-family: $FONT_ROBOTO;
+                min-width: 244px;
+                background-color: $GRAY_COLOUR5;
+                font-size: 19px;
+                padding-right: 40px;
+                border-color: $GRAY_COLOUR6;
+                padding-top: 9px;
+                padding-bottom: 9px;
+            }
+
+            .submit {
+                width: 20px;
+                height: 20px;
+                border: unset;
+                outline: unset;
+                background-image: url(./images/icons/icon-search.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                top: 50%;
+                right: 11px;
+                background-color: unset;
+                cursor: pointer;
+                transform: translateY(-50%);
+                &:focus {
+                    border: unset;
+                    outline: unset;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:  1500px) {
+    .site-header {
+        .main-navigation {
+            li {
+                margin-left: 20px;
+                &.button-help {
+                    margin-left: 50px;
+                }
+
+                &.button-donate {
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:  1279px) {
+    .site-header {
+        .button {
+            padding: 2px 27px;
+            font-size: 16px;
+            line-height: 40px;
+            min-height: unset;
+        }
+        &__top {
+            display: block;
+            .expand-link {
+                justify-content: space-between;
+            }
+            .button-donate {
+                display: flex;
+                align-items: center;
+            }
+        }
+        &__bottom {
+            position: relative;
+            .expand-link {
+                display: none;
+            }
+        }
+        
+        &__left {
+            padding-top: 20px;
+            a {
+            }
+            .logo {
+
+            }
+        }
+
+        .open-nav {
+            transform: translateY(-50%);
+            top: 50%;
+            right: 20px;
+            height: 19px;
+            width: 33px;
+            .bar {
+                height: 3px;
+                background: #98012e;
+            }
+        }
+    
+        .main-navigation {
+            background-color: $LIGHT_COLOUR;
+            padding-top: 10px;
+            width: 100%;
+            max-width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: #f2f1ee;
+            .button-donate {
+                display: none;
+            }
+            li {
+                margin-left: unset;
+                &.sel,
+                &:hover {
+                    background-color: unset;
+                }
+    
+                &.button-help {
+                    margin: unset;
+                }
+
+                &:first-child {
+                    border-top: unset;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:  768.98px) {
+    .site-header {
+        &__top {
+            .expand-link {
+
+                &__search {
+                    margin-right: 16px;
+                    input {
+                        min-width: 172px;
+                        padding: 7px 10px;
+                        font-size: 19px;
+                    }
+
+                    .submit {
+                        width: 17px;
+                        height: 17px;
+                        right: 12px;
+                    }
+                }
+            }
+            .button-donate {
+                padding: 10px 0;
+            }
+        }
+
+        &__left {
+            max-width: 77.5%;
+            padding-top: 8px;
+        }
+    }
+}
+
+@media screen and (max-width:  359px) {
+    .site-header {
+        .button {
+            padding: 2px 18px;
+            font-size: 14px;
+        }
+
+        &__top {
+            .expand-link__search {
+                input {
+                    min-width: 142px;
+                }
+            }
+        }
+    }
+}

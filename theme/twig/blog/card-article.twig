@@ -1,0 +1,9 @@
+<div class="article-summary">
+    <a class="image" href="{{ article.path }}" style="background-image: url({{ article.thumbnail.getLink() }})">
+    </a>
+    <div class="summary">
+        <h3 class="summary__title">{{ article.mainHeading }}</h3>
+        <p>{{ article.summary }} </p>
+        <a class="read-more" href="{{ article.path }}">Read more</a>
+    </div>
+</div>

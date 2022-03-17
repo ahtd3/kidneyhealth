@@ -1,0 +1,200 @@
+.hover-cart
+{
+	box-sizing: border-box;
+	overflow: auto;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 10;
+	max-height: calc(100vh - 20px);
+	max-width: 430px;
+	padding: 10px;
+	width: calc(100% - 20px);
+	background: $LIGHT_COLOUR;
+	line-height: 1.2;
+	box-shadow: 0 0 20px rgba($DARK_COLOUR, 0.1);
+	transition: all 0.2s;
+
+	&.visible
+	{
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.controls
+	{
+		display: flex;
+		justify-content: space-between;
+
+		&:before
+		{
+			content: "";
+			display: inline-block;
+			left: 10px;
+			opacity: 0;
+			vertical-align: middle;
+			border: 2px solid;
+			border-color: $PRIMARY_HIGHLIGHT $PRIMARY_HIGHLIGHT transparent transparent;
+			border-radius: 50%;
+			height: 20px;
+			width: 20px;
+			animation: hover-cart-loading-animation 1s linear infinite;
+			transition: opacity 0.2s;
+
+			@keyframes hover-cart-loading-animation
+			{
+				0%
+				{
+					transform: rotate(0deg);
+				}
+
+				100%
+				{
+					transform: rotate(360deg);
+				}
+			}
+		}
+
+		.close
+		{
+			-moz-appearance: none;
+			-webkit-appearance: none;
+			overflow: hidden;
+			position: relative;
+			border: 0;
+			width: 14px;
+			background: none;
+			font-size: rem(18px);
+			text-indent: 9999px;
+			cursor: pointer;
+
+			&:after
+			{
+				content: "✕";
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-indent: 0;
+			}
+		}
+	}
+
+	&.loading .controls:before
+	{
+		opacity: 1;
+	}
+
+	&.refreshed
+	{
+		.contents,
+		.subtotal
+		{
+			opacity: 0;
+			transition: none;
+		}
+	}
+
+	.row
+	{
+		display: flex;
+		border-top: 1px solid $LIGHT_NEUTRAL_COLOUR;
+		margin-top: 20px;
+		padding-top: 20px;
+
+		&:first-child
+		{
+			border-top: 0;
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+		&.removing
+		{
+			opacity: 0.5;
+		}
+
+		.image
+		{
+			height: 100px;
+			margin-right: 10px;
+			width: 100px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		.details
+		{
+			width: calc(100% - 110px);
+		}
+
+		h3
+		{
+			margin: 0;
+		}
+
+		.remove
+		{
+			-moz-appearance: none;
+			-webkit-appearance: none;
+			border: 0;
+			padding: 0;
+			background: none;
+			font-family: inherit;
+			font-size: inherit;
+			font-weight: bold;
+			cursor: pointer;
+
+			@include hover
+			{
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.empty-message
+	{
+		display: none;
+	}
+
+	&.empty .empty-message
+	{
+		display: block;
+	}
+
+	.actions
+	{
+		display: flex;
+		justify-content: space-between;
+		margin-top: 20px;
+
+		.cart-button
+		{
+			-moz-appearance: none;
+			-webkit-appearance: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: none;
+			border-radius: 1000px;
+			padding: 10px;
+			width: 47%;
+			background: $DARK_COLOUR;
+			color: $LIGHT_COLOUR;
+			font-family: inherit;
+			font-size: rem(17px);
+			font-weight: normal;
+			line-height: 1;
+			text-align: center;
+			cursor: pointer;
+			text-decoration: none;
+
+			@include hover
+			{
+				background: $PRIMARY_HIGHLIGHT;
+			}
+		}
+	}
+}

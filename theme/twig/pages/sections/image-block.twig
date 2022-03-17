@@ -1,0 +1,60 @@
+{% if section.custom_type == 'image_right' %}
+<div class="image_right {{section.code}}">
+	<div class="container">
+		<div class="cus-row">
+			<div class="cus-col">
+				{{ section.content|raw }}
+			</div>
+			<div class="cus-col">
+				{{ section.image.tag("big-image", section.imageDescription)|raw }}
+			</div>
+		</div>
+	</div>
+</div>
+{% elseif section.custom_type == 'content_above_image_left' %}
+<div class="image-block-wrapper image-overflow content_above_image_left {{ section.useSpecialBackground ? "special" : "" }} {{section.code}}" data-media="1024">
+	<div class="image-block">
+		<div class="image">
+			{{ section.image.tag("big-image", section.imageDescription)|raw }}
+		</div>
+		<div class="block-content">
+			<div class="block-content__wrap">
+				<div class="block-content__inner">
+					{{ section.content|raw }}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% elseif section.custom_type == 'content_above_image_right' %}
+<div class="image-block-wrapper image-overflow content_above_image_right {{ section.useSpecialBackground ? "special" : "" }} {{section.code}}" data-media="1024">
+	<div class="image-block">
+		<div class="block-content">
+			<div class="block-content__wrap">
+				<div class="block-content__inner">
+					{{ section.content|raw }}
+				</div>
+			</div>
+		</div>
+		<div class="image">
+			{{ section.image.tag("big-image", section.imageDescription)|raw }}
+		</div>
+	</div>
+</div>
+{% else %}
+
+<div class="image-block-wrapper {{ section.useSpecialBackground ? "special" : "" }} {{section.code}}">
+	<div class="container image-block">
+		{% if section.image != null %}
+			{{ section.image.tag("big-image", section.imageDescription)|raw }}
+		{% else %}
+			<div class="big-image">
+				{{ section.getMedia().getEmbedCode()|raw }}
+			</div>
+		{% endif %}
+		<div class="block-content">
+			{{ section.content|raw }}
+		</div>
+	</div>
+</div>
+{% endif %}

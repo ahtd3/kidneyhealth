@@ -1,0 +1,14 @@
+<li>
+	{% if key|first != "_" %}
+		<strong>{{ key }}:</strong>
+	{% endif %}
+	{% if value is iterable %}
+		<ul>
+			{% for key, value in value %}
+				{% include "/forms/sections/output-post-value.twig" %}
+			{% endfor %}
+		</ul>
+	{% else %}
+		<span>{{ value|nl2br }}</span>
+	{% endif %}
+</li>

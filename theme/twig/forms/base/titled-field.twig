@@ -1,0 +1,17 @@
+{#
+	Contains a label, but is not wrapped in a label element
+	- Required:
+		- label: The label to give to the form field
+	- Optional:
+		- wrapperClasses: Classes to apply to the wrapping element
+		- error: An error to display
+	- Blocks:
+		- field: The field to wrap around
+#}
+<p class="field-wrapper {{ wrapperClasses }}">
+	<span class="label">{{ label }}</span>
+	<span class="field">
+		{% block field %}{% endblock %}
+		{% include 'forms/errors.twig' %}
+	</span>
+</p>
