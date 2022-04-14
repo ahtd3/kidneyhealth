@@ -19,21 +19,10 @@
 	 */
 	class EmbedCode extends ExtraContent
 	{
-
-		#[Data("embed_code", "html")]
-		public string $embed_code = "";
-
-		protected function elements()
-		{
-			parent::elements();
-			
-			$this->addElement(new Editor("embed_code", "Embed code"));
-		}
-		
 		//region PageSection
 		
 		public function getTemplateLocation(): string
 		{
-			return "pages/sections/extra-content.twig";
+			return "pages/sections/extra-content-embed-code.twig";
 		}
 	}

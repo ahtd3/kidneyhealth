@@ -67,6 +67,10 @@ export function startTinymce(element, pickerCallback)
 		{
 			title: "Button",
 			value: "button"
+		},
+		{
+			title: "Button Primary",
+			value: "button primary"
 		}],
 		
 		image_class_list: [

@@ -98,6 +98,8 @@
 			$types["Health Professionals Page"] = new static(LinkingPage::class, "pages/health-professionals-page.twig");
 			$types["For Patients Page"] = new static(LinkingPage::class, "pages/for-patients-page.twig");
 			$types["Regional Page"] = new static(Page::class, "pages/regional-page.twig");
+			$types["Support Us Page"] = new static(Page::class, "pages/support-us.twig");
+			$types["About us Page"] = new static(Page::class, "pages/about-us.twig");
 
 			return $types;
 		}

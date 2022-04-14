@@ -1,0 +1,1590 @@
+[07-Mar-2022 10:03:26 Pacific/Auckland] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.0". You are running 7.4.28. in /home/kidneyad/public_html/admin/vendor/composer/platform_check.php on line 24
+[07-Mar-2022 22:52:49 Pacific/Auckland] PHP Fatal error:  Type of Pages\PageSections\ExtraContent::$class must not be defined (as in class Core\Entity) in /home/kidneyad/public_html/admin/classes/Pages/PageSections/ExtraContent.php on line 11
+[07-Mar-2022 22:53:16 Pacific/Auckland] PHP Fatal error:  Type of Pages\PageSections\ExtraContent::$class must not be defined (as in class Core\Entity) in /home/kidneyad/public_html/admin/classes/Pages/PageSections/ExtraContent.php on line 11
+[07-Mar-2022 22:53:38 Pacific/Auckland] PHP Fatal error:  Type of Pages\PageSections\ExtraContent::$class must not be defined (as in class Core\Entity) in /home/kidneyad/public_html/admin/classes/Pages/PageSections/ExtraContent.php on line 11
+[07-Mar-2022 22:53:40 Pacific/Auckland] PHP Fatal error:  Type of Pages\PageSections\ExtraContent::$class must not be defined (as in class Core\Entity) in /home/kidneyad/public_html/admin/classes/Pages/PageSections/ExtraContent.php on line 11
+[07-Mar-2022 22:53:42 Pacific/Auckland] PHP Fatal error:  Type of Pages\PageSections\ExtraContent::$class must not be defined (as in class Core\Entity) in /home/kidneyad/public_html/admin/classes/Pages/PageSections/ExtraContent.php on line 11
+[07-Mar-2022 22:53:44 Pacific/Auckland] PHP Fatal error:  Type of Pages\PageSections\ExtraContent::$class must not be defined (as in class Core\Entity) in /home/kidneyad/public_html/admin/classes/Pages/PageSections/ExtraContent.php on line 11
+[07-Mar-2022 22:55:18 Pacific/Auckland] PHP Fatal error:  Type of Pages\PageSections\ExtraContent::$class must not be defined (as in class Core\Entity) in /home/kidneyad/public_html/admin/classes/Pages/PageSections/ExtraContent.php on line 11
+[07-Mar-2022 22:55:32 Pacific/Auckland] PHP Fatal error:  Type of Pages\PageSections\ExtraContent::$class must not be defined (as in class Core\Entity) in /home/kidneyad/public_html/admin/classes/Pages/PageSections/ExtraContent.php on line 11
+[07-Mar-2022 22:56:18 Pacific/Auckland] PHP Fatal error:  Type of Pages\PageSections\ExtraContent::$class must not be defined (as in class Core\Entity) in /home/kidneyad/public_html/admin/classes/Pages/PageSections/ExtraContent.php on line 11
+[07-Mar-2022 22:57:11 Pacific/Auckland] PHP Fatal error:  Type of Pages\PageSections\ExtraContent::$class must not be defined (as in class Core\Entity) in /home/kidneyad/public_html/admin/classes/Pages/PageSections/ExtraContent.php on line 11
+[07-Mar-2022 22:57:40 Pacific/Auckland] PHP Fatal error:  Type of Pages\PageSections\ExtraContent::$class must not be defined (as in class Core\Entity) in /home/kidneyad/public_html/admin/classes/Pages/PageSections/ExtraContent.php on line 11
+[07-Mar-2022 22:57:43 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "SQLite3" not found in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php:34
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(48): Database\Sqlite->getConnection()
+#1 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(98): Database\Sqlite->prepareStatement()
+#2 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(148): Database\Sqlite->query()
+#3 /home/kidneyad/public_html/admin/classes/Assets/Picker/Picker.php(54): Database\Sqlite->run()
+#4 /home/kidneyad/public_html/admin/classes/Assets/Picker/PickerController.php(104): Assets\Picker\Picker->__construct()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Assets\Picker\PickerController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php on line 34
+[07-Mar-2022 22:57:44 Pacific/Auckland] PHP Fatal error:  Type of Pages\PageSections\ExtraContent::$class must not be defined (as in class Core\Entity) in /home/kidneyad/public_html/admin/classes/Pages/PageSections/ExtraContent.php on line 11
+[07-Mar-2022 22:57:53 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "SQLite3" not found in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php:34
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(48): Database\Sqlite->getConnection()
+#1 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(98): Database\Sqlite->prepareStatement()
+#2 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(148): Database\Sqlite->query()
+#3 /home/kidneyad/public_html/admin/classes/Assets/Picker/Picker.php(54): Database\Sqlite->run()
+#4 /home/kidneyad/public_html/admin/classes/Assets/Picker/PickerController.php(104): Assets\Picker\Picker->__construct()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Assets\Picker\PickerController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php on line 34
+[07-Mar-2022 22:58:01 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "SQLite3" not found in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php:34
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(48): Database\Sqlite->getConnection()
+#1 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(98): Database\Sqlite->prepareStatement()
+#2 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(148): Database\Sqlite->query()
+#3 /home/kidneyad/public_html/admin/classes/Assets/Picker/Picker.php(54): Database\Sqlite->run()
+#4 /home/kidneyad/public_html/admin/classes/Assets/Picker/PickerController.php(104): Assets\Picker\Picker->__construct()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Assets\Picker\PickerController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php on line 34
+[07-Mar-2022 22:58:52 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "SQLite3" not found in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php:34
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(48): Database\Sqlite->getConnection()
+#1 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(98): Database\Sqlite->prepareStatement()
+#2 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(148): Database\Sqlite->query()
+#3 /home/kidneyad/public_html/admin/classes/Assets/Picker/Picker.php(54): Database\Sqlite->run()
+#4 /home/kidneyad/public_html/admin/classes/Assets/Picker/PickerController.php(104): Assets\Picker\Picker->__construct()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Assets\Picker\PickerController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php on line 34
+[07-Mar-2022 22:58:59 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "SQLite3" not found in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php:34
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(48): Database\Sqlite->getConnection()
+#1 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(98): Database\Sqlite->prepareStatement()
+#2 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(148): Database\Sqlite->query()
+#3 /home/kidneyad/public_html/admin/classes/Assets/Picker/Picker.php(54): Database\Sqlite->run()
+#4 /home/kidneyad/public_html/admin/classes/Assets/Picker/PickerController.php(104): Assets\Picker\Picker->__construct()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Assets\Picker\PickerController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php on line 34
+[07-Mar-2022 22:59:57 Pacific/Auckland] PHP Fatal error:  Type of Pages\PageSections\ExtraContent::$class must not be defined (as in class Core\Entity) in /home/kidneyad/public_html/admin/classes/Pages/PageSections/ExtraContent.php on line 11
+[07-Mar-2022 23:00:24 Pacific/Auckland] PHP Fatal error:  Type of Pages\PageSections\ExtraContent::$class must not be defined (as in class Core\Entity) in /home/kidneyad/public_html/admin/classes/Pages/PageSections/ExtraContent.php on line 11
+[07-Mar-2022 23:00:46 Pacific/Auckland] PHP Fatal error:  Type of Pages\PageSections\ExtraContent::$class must not be defined (as in class Core\Entity) in /home/kidneyad/public_html/admin/classes/Pages/PageSections/ExtraContent.php on line 11
+[07-Mar-2022 23:03:10 Pacific/Auckland] PHP Fatal error:  Type of Pages\PageSections\ExtraContent::$class must not be defined (as in class Core\Entity) in /home/kidneyad/public_html/admin/classes/Pages/PageSections/ExtraContent.php on line 11
+[07-Mar-2022 23:04:11 Pacific/Auckland] PHP Warning:  Undefined array key "code" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 335
+[07-Mar-2022 23:04:11 Pacific/Auckland] PHP Warning:  Undefined array key "code" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 335
+[07-Mar-2022 23:04:11 Pacific/Auckland] PHP Warning:  Undefined array key "code" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 335
+[07-Mar-2022 23:04:12 Pacific/Auckland] PHP Fatal error:  Uncaught TypeError: Cannot assign null to property Pages\PageSections\ExtraContent::$code of type string in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php:128
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php(138): Core\Elements\Base\ResultElement->getValue()
+#1 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Base\ResultElement->getJsonValue()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(140): Admin\EditController::getJsonValue()
+#3 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(151): Admin\EditController::getJsonValue()
+#5 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#6 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#7 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#8 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#9 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#10 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#11 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#12 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#13 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#14 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#15 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#16 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php on line 128
+[07-Mar-2022 23:04:15 Pacific/Auckland] PHP Fatal error:  Uncaught TypeError: Cannot assign null to property Pages\PageSections\ExtraContent::$code of type string in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php:128
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php(138): Core\Elements\Base\ResultElement->getValue()
+#1 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Base\ResultElement->getJsonValue()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(140): Admin\EditController::getJsonValue()
+#3 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(151): Admin\EditController::getJsonValue()
+#5 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#6 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#7 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#8 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#9 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#10 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#11 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#12 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#13 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#14 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#15 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#16 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php on line 128
+[07-Mar-2022 23:04:26 Pacific/Auckland] PHP Fatal error:  Uncaught TypeError: Cannot assign null to property Pages\PageSections\ExtraContent::$code of type string in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php:128
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php(138): Core\Elements\Base\ResultElement->getValue()
+#1 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Base\ResultElement->getJsonValue()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(140): Admin\EditController::getJsonValue()
+#3 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(151): Admin\EditController::getJsonValue()
+#5 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#6 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#7 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#8 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#9 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#10 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#11 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#12 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#13 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#14 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#15 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#16 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php on line 128
+[07-Mar-2022 23:05:03 Pacific/Auckland] PHP Fatal error:  Uncaught TypeError: Cannot assign null to property Pages\PageSections\ExtraContent::$code of type string in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php:128
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php(138): Core\Elements\Base\ResultElement->getValue()
+#1 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Base\ResultElement->getJsonValue()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(140): Admin\EditController::getJsonValue()
+#3 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(151): Admin\EditController::getJsonValue()
+#5 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#6 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#7 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#8 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#9 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#10 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#11 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#12 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#13 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#14 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#15 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#16 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php on line 128
+[07-Mar-2022 23:13:52 Pacific/Auckland] PHP Warning:  Undefined array key "code" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 335
+[07-Mar-2022 23:13:52 Pacific/Auckland] PHP Warning:  Undefined array key "code" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 335
+[07-Mar-2022 23:13:52 Pacific/Auckland] PHP Warning:  Undefined array key "code" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 335
+[07-Mar-2022 23:13:52 Pacific/Auckland] PHP Warning:  Undefined array key "code" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 335
+[07-Mar-2022 23:13:52 Pacific/Auckland] PHP Warning:  Undefined array key "code" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 335
+[07-Mar-2022 23:13:52 Pacific/Auckland] PHP Warning:  Undefined array key "code" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 335
+[08-Mar-2022 19:52:58 Pacific/Auckland] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in /home/kidneyad/public_html/admin/classes/Pages/Page.php on line 181
+[08-Mar-2022 19:53:47 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Unknown column 'pages.class' in 'field list' in /home/kidneyad/public_html/admin/classes/Database/Mysql.php:49
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(169): Database\Mysql->prepareStatement()
+#1 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(202): Database\Mysql->query()
+#2 /home/kidneyad/public_html/admin/classes/Core/Entity.php(502): Database\Mysql->run()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(738): Core\Entity::makeOne()
+#4 /home/kidneyad/public_html/admin/classes/Core/Entity.php(765): Core\Entity::loadForMultiple()
+#5 /home/kidneyad/public_html/admin/classes/Core/Entity.php(781): Core\Entity::loadFor()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(121): Core\Entity::load()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Mysql.php on line 49
+[08-Mar-2022 19:54:17 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Unknown column 'pages.class' in 'field list' in /home/kidneyad/public_html/admin/classes/Database/Mysql.php:49
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(169): Database\Mysql->prepareStatement()
+#1 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(202): Database\Mysql->query()
+#2 /home/kidneyad/public_html/admin/classes/Core/Entity.php(502): Database\Mysql->run()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(738): Core\Entity::makeOne()
+#4 /home/kidneyad/public_html/admin/classes/Core/Entity.php(765): Core\Entity::loadForMultiple()
+#5 /home/kidneyad/public_html/admin/classes/Core/Entity.php(781): Core\Entity::loadFor()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(121): Core\Entity::load()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Mysql.php on line 49
+[08-Mar-2022 19:55:07 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Unknown column 'pages.class' in 'field list' in /home/kidneyad/public_html/admin/classes/Database/Mysql.php:49
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(169): Database\Mysql->prepareStatement()
+#1 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(202): Database\Mysql->query()
+#2 /home/kidneyad/public_html/admin/classes/Core/Entity.php(502): Database\Mysql->run()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(738): Core\Entity::makeOne()
+#4 /home/kidneyad/public_html/admin/classes/Core/Entity.php(765): Core\Entity::loadForMultiple()
+#5 /home/kidneyad/public_html/admin/classes/Core/Entity.php(781): Core\Entity::loadFor()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(121): Core\Entity::load()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Mysql.php on line 49
+[08-Mar-2022 19:58:22 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Unknown column 'pages.class' in 'field list' in /home/kidneyad/public_html/admin/classes/Database/Mysql.php:49
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(169): Database\Mysql->prepareStatement()
+#1 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(202): Database\Mysql->query()
+#2 /home/kidneyad/public_html/admin/classes/Core/Entity.php(502): Database\Mysql->run()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(738): Core\Entity::makeOne()
+#4 /home/kidneyad/public_html/admin/classes/Core/Entity.php(765): Core\Entity::loadForMultiple()
+#5 /home/kidneyad/public_html/admin/classes/Core/Entity.php(781): Core\Entity::loadFor()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(121): Core\Entity::load()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Mysql.php on line 49
+[08-Mar-2022 19:59:36 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Unknown column 'pages.class' in 'field list' in /home/kidneyad/public_html/admin/classes/Database/Mysql.php:49
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(169): Database\Mysql->prepareStatement()
+#1 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(202): Database\Mysql->query()
+#2 /home/kidneyad/public_html/admin/classes/Core/Entity.php(502): Database\Mysql->run()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(738): Core\Entity::makeOne()
+#4 /home/kidneyad/public_html/admin/classes/Core/Entity.php(765): Core\Entity::loadForMultiple()
+#5 /home/kidneyad/public_html/admin/classes/Core/Entity.php(781): Core\Entity::loadFor()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(121): Core\Entity::load()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Mysql.php on line 49
+[08-Mar-2022 20:00:18 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Unknown column 'pages.class' in 'field list' in /home/kidneyad/public_html/admin/classes/Database/Mysql.php:49
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(169): Database\Mysql->prepareStatement()
+#1 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(202): Database\Mysql->query()
+#2 /home/kidneyad/public_html/admin/classes/Core/Entity.php(502): Database\Mysql->run()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(738): Core\Entity::makeOne()
+#4 /home/kidneyad/public_html/admin/classes/Core/Entity.php(765): Core\Entity::loadForMultiple()
+#5 /home/kidneyad/public_html/admin/classes/Core/Entity.php(781): Core\Entity::loadFor()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(121): Core\Entity::load()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Mysql.php on line 49
+[08-Mar-2022 20:14:00 Pacific/Auckland] PHP Warning:  Undefined array key "code" in /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php on line 112
+[08-Mar-2022 20:14:01 Pacific/Auckland] PHP Fatal error:  Uncaught TypeError: Cannot assign null to property Pages\Page::$code of type string in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php:128
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php(138): Core\Elements\Base\ResultElement->getValue()
+#1 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Base\ResultElement->getJsonValue()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#3 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#5 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php on line 128
+[08-Mar-2022 20:16:26 Pacific/Auckland] PHP Fatal error:  Uncaught TypeError: Cannot assign null to property Pages\Page::$code of type string in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php:128
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php(138): Core\Elements\Base\ResultElement->getValue()
+#1 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Base\ResultElement->getJsonValue()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#3 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#5 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php on line 128
+[08-Mar-2022 20:17:20 Pacific/Auckland] PHP Fatal error:  Uncaught TypeError: Cannot assign null to property Pages\Page::$code of type string in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php:128
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php(138): Core\Elements\Base\ResultElement->getValue()
+#1 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Base\ResultElement->getJsonValue()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#3 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#5 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php on line 128
+[09-Mar-2022 16:34:39 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "SQLite3" not found in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php:34
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(48): Database\Sqlite->getConnection()
+#1 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(98): Database\Sqlite->prepareStatement()
+#2 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(148): Database\Sqlite->query()
+#3 /home/kidneyad/public_html/admin/classes/Assets/Picker/Picker.php(54): Database\Sqlite->run()
+#4 /home/kidneyad/public_html/admin/classes/Assets/Picker/PickerController.php(104): Assets\Picker\Picker->__construct()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Assets\Picker\PickerController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php on line 34
+[09-Mar-2022 16:38:45 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "SQLite3" not found in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php:34
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(48): Database\Sqlite->getConnection()
+#1 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(98): Database\Sqlite->prepareStatement()
+#2 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(148): Database\Sqlite->query()
+#3 /home/kidneyad/public_html/admin/classes/Assets/Picker/Picker.php(54): Database\Sqlite->run()
+#4 /home/kidneyad/public_html/admin/classes/Assets/Picker/PickerController.php(104): Assets\Picker\Picker->__construct()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Assets\Picker\PickerController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php on line 34
+[09-Mar-2022 16:46:00 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "SQLite3" not found in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php:34
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(48): Database\Sqlite->getConnection()
+#1 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(98): Database\Sqlite->prepareStatement()
+#2 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(148): Database\Sqlite->query()
+#3 /home/kidneyad/public_html/admin/classes/Assets/Picker/Picker.php(54): Database\Sqlite->run()
+#4 /home/kidneyad/public_html/admin/classes/Assets/Picker/PickerController.php(104): Assets\Picker\Picker->__construct()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Assets\Picker\PickerController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php on line 34
+[09-Mar-2022 16:46:06 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "SQLite3" not found in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php:34
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(48): Database\Sqlite->getConnection()
+#1 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(98): Database\Sqlite->prepareStatement()
+#2 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(148): Database\Sqlite->query()
+#3 /home/kidneyad/public_html/admin/classes/Assets/Picker/Picker.php(54): Database\Sqlite->run()
+#4 /home/kidneyad/public_html/admin/classes/Assets/Picker/PickerController.php(104): Assets\Picker\Picker->__construct()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Assets\Picker\PickerController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php on line 34
+[09-Mar-2022 17:10:48 Pacific/Auckland] PHP Parse error:  syntax error, unexpected token "static" in /home/kidneyad/public_html/admin/classes/Pages/Page.php on line 204
+[09-Mar-2022 17:12:27 Pacific/Auckland] PHP Parse error:  syntax error, unexpected token "static" in /home/kidneyad/public_html/admin/classes/Pages/Page.php on line 204
+[09-Mar-2022 17:14:11 Pacific/Auckland] PHP Fatal error:  Uncaught TypeError: Cannot assign null to property Pages\Page::$code of type string in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php:128
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php(138): Core\Elements\Base\ResultElement->getValue()
+#1 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Base\ResultElement->getJsonValue()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#3 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#5 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php on line 128
+[09-Mar-2022 17:16:40 Pacific/Auckland] PHP Fatal error:  Uncaught TypeError: Cannot assign null to property Pages\Page::$code of type string in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php:128
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php(138): Core\Elements\Base\ResultElement->getValue()
+#1 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Base\ResultElement->getJsonValue()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#3 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#5 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php on line 128
+[10-Mar-2022 14:49:33 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Type 'TEXT' does not exist for Pages\PageSections\ExtraContent::$type in /home/kidneyad/public_html/admin/classes/Core/Properties/Property.php:100
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1138): Core\Properties\Property->getValueWrapper()
+#1 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1185): Core\Entity->assignValueWrappers()
+#2 /home/kidneyad/public_html/admin/classes/Core/Entity.php(751): Core\Entity->__construct()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(715): Core\Entity::processValueForQuery()
+#4 /home/kidneyad/public_html/admin/classes/Core/Entity.php(765): Core\Entity::loadForMultiple()
+#5 /home/kidneyad/public_html/admin/classes/Core/Entity.php(781): Core\Entity::loadFor()
+#6 /home/kidneyad/public_html/admin/classes/Pages/PageSections/PageSectionWrapper.php(81): Core\Entity::load()
+#7 [internal function]: Pages\PageSections\PageSectionWrapper->Pages\PageSections\{closure}()
+#8 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1413): Closure->call()
+#9 /home/kidneyad/public_html/admin/classes/Pages/PageSections/PageSectionWrapper.php(105): Core\Entity->__get()
+#10 /home/kidneyad/public_html/admin/classes/Core/Generator.php(637): Pages\PageSections\PageSectionWrapper->elements()
+#11 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(151): Core\Generator->getElements()
+#12 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#13 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#14 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#15 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#16 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#17 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#18 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#19 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#20 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#21 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#22 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#23 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Properties/Property.php on line 100
+[10-Mar-2022 16:50:52 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "SQLite3" not found in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php:34
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(48): Database\Sqlite->getConnection()
+#1 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(98): Database\Sqlite->prepareStatement()
+#2 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(148): Database\Sqlite->query()
+#3 /home/kidneyad/public_html/admin/classes/Assets/Picker/Picker.php(54): Database\Sqlite->run()
+#4 /home/kidneyad/public_html/admin/classes/Assets/Picker/PickerController.php(104): Assets\Picker\Picker->__construct()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Assets\Picker\PickerController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php on line 34
+[10-Mar-2022 16:51:13 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "SQLite3" not found in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php:34
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(48): Database\Sqlite->getConnection()
+#1 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(98): Database\Sqlite->prepareStatement()
+#2 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(148): Database\Sqlite->query()
+#3 /home/kidneyad/public_html/admin/classes/Assets/Picker/Picker.php(54): Database\Sqlite->run()
+#4 /home/kidneyad/public_html/admin/classes/Assets/Picker/PickerController.php(104): Assets\Picker\Picker->__construct()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Assets\Picker\PickerController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php on line 34
+[10-Mar-2022 17:47:15 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Unknown column 'image_blocks.type' in 'field list' in /home/kidneyad/public_html/admin/classes/Database/Mysql.php:49
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(169): Database\Mysql->prepareStatement()
+#1 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(202): Database\Mysql->query()
+#2 /home/kidneyad/public_html/admin/classes/Core/Entity.php(502): Database\Mysql->run()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(738): Core\Entity::makeOne()
+#4 /home/kidneyad/public_html/admin/classes/Core/Entity.php(765): Core\Entity::loadForMultiple()
+#5 /home/kidneyad/public_html/admin/classes/Core/Entity.php(781): Core\Entity::loadFor()
+#6 /home/kidneyad/public_html/admin/classes/Pages/PageSections/PageSectionWrapper.php(81): Core\Entity::load()
+#7 [internal function]: Pages\PageSections\PageSectionWrapper->Pages\PageSections\{closure}()
+#8 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1413): Closure->call()
+#9 /home/kidneyad/public_html/admin/classes/Pages/PageSections/PageSectionWrapper.php(105): Core\Entity->__get()
+#10 /home/kidneyad/public_html/admin/classes/Core/Generator.php(637): Pages\PageSections\PageSectionWrapper->elements()
+#11 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(151): Core\Generator->getElements()
+#12 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#13 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#14 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#15 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#16 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#17 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#18 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#19 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#20 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#21 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#22 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#23 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Mysql.php on line 49
+[10-Mar-2022 17:47:38 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Unknown column 'image_blocks.type' in 'field list' in /home/kidneyad/public_html/admin/classes/Database/Mysql.php:49
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(169): Database\Mysql->prepareStatement()
+#1 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(202): Database\Mysql->query()
+#2 /home/kidneyad/public_html/admin/classes/Core/Entity.php(502): Database\Mysql->run()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(738): Core\Entity::makeOne()
+#4 /home/kidneyad/public_html/admin/classes/Core/Entity.php(765): Core\Entity::loadForMultiple()
+#5 /home/kidneyad/public_html/admin/classes/Core/Entity.php(781): Core\Entity::loadFor()
+#6 /home/kidneyad/public_html/admin/classes/Pages/PageSections/PageSectionWrapper.php(81): Core\Entity::load()
+#7 [internal function]: Pages\PageSections\PageSectionWrapper->Pages\PageSections\{closure}()
+#8 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1413): Closure->call()
+#9 /home/kidneyad/public_html/admin/classes/Pages/PageSections/PageSectionWrapper.php(105): Core\Entity->__get()
+#10 /home/kidneyad/public_html/admin/classes/Core/Generator.php(637): Pages\PageSections\PageSectionWrapper->elements()
+#11 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(151): Core\Generator->getElements()
+#12 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#13 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#14 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#15 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#16 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#17 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#18 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#19 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#20 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#21 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#22 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#23 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Mysql.php on line 49
+[10-Mar-2022 20:10:22 Pacific/Auckland] PHP Warning:  Undefined array key "setup" in /home/kidneyad/public_html/admin/classes/Pages/Linking/LinkingPage.php on line 27
+[10-Mar-2022 20:10:22 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Call to a member function add() on null in /home/kidneyad/public_html/admin/classes/Pages/Linking/LinkingPage.php:30
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Generator.php(637): Pages\Linking\LinkingPage->elements()
+#1 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Core\Generator->getElements()
+#2 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#3 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#4 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#5 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#6 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#7 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Pages/Linking/LinkingPage.php on line 30
+[10-Mar-2022 20:16:11 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 20:16:11 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 20:16:11 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Column 'linked_page_id' cannot be null in /home/kidneyad/public_html/admin/classes/Database/Mysql.php:178
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(202): Database\Mysql->query()
+#1 /home/kidneyad/public_html/admin/classes/Database/Database.php(42): Database\Mysql->run()
+#2 /home/kidneyad/public_html/admin/classes/Core/SaveHandling/SaveHandler.php(294): Database\Database::query()
+#3 /home/kidneyad/public_html/admin/classes/Core/SaveHandling/SaveHandler.php(242): Core\SaveHandling\SaveHandler->saveToDatabase()
+#4 /home/kidneyad/public_html/admin/classes/Core/SaveHandling/SaveHandler.php(104): Core\SaveHandling\SaveHandler->processTracker()
+#5 /home/kidneyad/public_html/admin/classes/Core/SaveHandling/SaveHandler.php(46): Core\SaveHandling\SaveHandler->processChain()
+#6 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1243): Core\SaveHandling\SaveHandler->save()
+#7 /home/kidneyad/public_html/admin/classes/Admin/ProcessController.php(83): Core\Entity->save()
+#8 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\ProcessController::getControllerFromPattern()
+#9 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#11 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Mysql.php on line 178
+[10-Mar-2022 20:17:42 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 20:17:42 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 20:17:42 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Column 'linked_page_id' cannot be null in /home/kidneyad/public_html/admin/classes/Database/Mysql.php:178
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(202): Database\Mysql->query()
+#1 /home/kidneyad/public_html/admin/classes/Database/Database.php(42): Database\Mysql->run()
+#2 /home/kidneyad/public_html/admin/classes/Core/SaveHandling/SaveHandler.php(294): Database\Database::query()
+#3 /home/kidneyad/public_html/admin/classes/Core/SaveHandling/SaveHandler.php(242): Core\SaveHandling\SaveHandler->saveToDatabase()
+#4 /home/kidneyad/public_html/admin/classes/Core/SaveHandling/SaveHandler.php(104): Core\SaveHandling\SaveHandler->processTracker()
+#5 /home/kidneyad/public_html/admin/classes/Core/SaveHandling/SaveHandler.php(46): Core\SaveHandling\SaveHandler->processChain()
+#6 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1243): Core\SaveHandling\SaveHandler->save()
+#7 /home/kidneyad/public_html/admin/classes/Admin/ProcessController.php(83): Core\Entity->save()
+#8 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\ProcessController::getControllerFromPattern()
+#9 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#11 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Mysql.php on line 178
+[10-Mar-2022 20:21:32 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 20:21:32 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 21:04:57 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Unknown column 'links.group_link' in 'field list' in /home/kidneyad/public_html/admin/classes/Database/Mysql.php:49
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(169): Database\Mysql->prepareStatement()
+#1 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(202): Database\Mysql->query()
+#2 /home/kidneyad/public_html/admin/classes/Core/Entity.php(535): Database\Mysql->run()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(881): Core\Entity::makeMany()
+#4 /home/kidneyad/public_html/admin/classes/Core/Generator.php(284): Core\Entity::loadAllForMultiple()
+#5 /home/kidneyad/public_html/admin/classes/Core/Entity.php(929): Core\Generator::loadAllForMultiple()
+#6 /home/kidneyad/public_html/admin/classes/Core/Generator.php(234): Core\Entity::loadAllFor()
+#7 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(62): Core\Generator::loadAllFor()
+#8 /home/kidneyad/public_html/admin/classes/Core/ValueWrappers/LinkWrapper.php(24): Core\Properties\LinkFromMultipleProperty->loadRelated()
+#9 /home/kidneyad/public_html/admin/classes/Core/ValueWrappers/ValueWrapper.php(129): Core\ValueWrappers\LinkWrapper->convertDatabaseValue()
+#10 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1304): Core\ValueWrappers\ValueWrapper->getForOutput()
+#11 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1409): Core\Entity->getValue()
+#12 /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php(128): Core\Entity->__get()
+#13 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(135): Core\Elements\Base\ResultElement->getValue()
+#14 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#15 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#16 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#17 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#18 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#19 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#20 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#21 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#22 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#23 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#24 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#25 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Mysql.php on line 49
+[10-Mar-2022 21:05:59 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Unknown column 'links.group_link' in 'field list' in /home/kidneyad/public_html/admin/classes/Database/Mysql.php:49
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(169): Database\Mysql->prepareStatement()
+#1 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(202): Database\Mysql->query()
+#2 /home/kidneyad/public_html/admin/classes/Core/Entity.php(535): Database\Mysql->run()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(881): Core\Entity::makeMany()
+#4 /home/kidneyad/public_html/admin/classes/Core/Generator.php(284): Core\Entity::loadAllForMultiple()
+#5 /home/kidneyad/public_html/admin/classes/Core/Entity.php(929): Core\Generator::loadAllForMultiple()
+#6 /home/kidneyad/public_html/admin/classes/Core/Generator.php(234): Core\Entity::loadAllFor()
+#7 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(62): Core\Generator::loadAllFor()
+#8 /home/kidneyad/public_html/admin/classes/Core/ValueWrappers/LinkWrapper.php(24): Core\Properties\LinkFromMultipleProperty->loadRelated()
+#9 /home/kidneyad/public_html/admin/classes/Core/ValueWrappers/ValueWrapper.php(129): Core\ValueWrappers\LinkWrapper->convertDatabaseValue()
+#10 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1304): Core\ValueWrappers\ValueWrapper->getForOutput()
+#11 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1409): Core\Entity->getValue()
+#12 /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php(128): Core\Entity->__get()
+#13 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(135): Core\Elements\Base\ResultElement->getValue()
+#14 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#15 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#16 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#17 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#18 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#19 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#20 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#21 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#22 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#23 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#24 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#25 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Mysql.php on line 49
+[10-Mar-2022 21:06:02 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Unknown column 'links.group_link' in 'field list' in /home/kidneyad/public_html/admin/classes/Database/Mysql.php:49
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(169): Database\Mysql->prepareStatement()
+#1 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(202): Database\Mysql->query()
+#2 /home/kidneyad/public_html/admin/classes/Core/Entity.php(535): Database\Mysql->run()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(881): Core\Entity::makeMany()
+#4 /home/kidneyad/public_html/admin/classes/Core/Generator.php(284): Core\Entity::loadAllForMultiple()
+#5 /home/kidneyad/public_html/admin/classes/Core/Entity.php(929): Core\Generator::loadAllForMultiple()
+#6 /home/kidneyad/public_html/admin/classes/Core/Generator.php(234): Core\Entity::loadAllFor()
+#7 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(62): Core\Generator::loadAllFor()
+#8 /home/kidneyad/public_html/admin/classes/Core/ValueWrappers/LinkWrapper.php(24): Core\Properties\LinkFromMultipleProperty->loadRelated()
+#9 /home/kidneyad/public_html/admin/classes/Core/ValueWrappers/ValueWrapper.php(129): Core\ValueWrappers\LinkWrapper->convertDatabaseValue()
+#10 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1304): Core\ValueWrappers\ValueWrapper->getForOutput()
+#11 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1409): Core\Entity->getValue()
+#12 /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php(128): Core\Entity->__get()
+#13 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(135): Core\Elements\Base\ResultElement->getValue()
+#14 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#15 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#16 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#17 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#18 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#19 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#20 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#21 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#22 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#23 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#24 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#25 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Mysql.php on line 49
+[10-Mar-2022 21:07:27 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class Pages\Linking\Link does not have a property named group_link_id in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php:46
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#1 /home/kidneyad/public_html/admin/classes/Core/Attributes/LinkFromMultiple.php(27): Core\Properties\LinkFromMultipleProperty->__construct()
+#2 /home/kidneyad/public_html/admin/classes/Core/Attributes/PropertyAttribute.php(43): Core\Attributes\LinkFromMultiple->getProperty()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(185): Core\Attributes\PropertyAttribute::retrievePropertiesFromAttributes()
+#4 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php(44): Core\Entity::getProperties()
+#5 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#6 /home/kidneyad/public_html/admin/classes/Pages/Linking/LinkingPage.php(22): Core\Properties\LinkFromMultipleProperty->__construct()
+#7 /home/kidneyad/public_html/admin/classes/Core/Entity.php(195): Pages\Linking\LinkingPage::properties()
+#8 /home/kidneyad/public_html/admin/classes/Core/Entity.php(704): Core\Entity::getProperties()
+#9 /home/kidneyad/public_html/admin/classes/Core/Entity.php(765): Core\Entity::loadForMultiple()
+#10 /home/kidneyad/public_html/admin/classes/Core/Entity.php(781): Core\Entity::loadFor()
+#11 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(121): Core\Entity::load()
+#12 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#13 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#14 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#15 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#16 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#17 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php on line 46
+[10-Mar-2022 21:09:20 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class Pages\Linking\Link does not have a property named group_link_id in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php:46
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#1 /home/kidneyad/public_html/admin/classes/Core/Attributes/LinkFromMultiple.php(27): Core\Properties\LinkFromMultipleProperty->__construct()
+#2 /home/kidneyad/public_html/admin/classes/Core/Attributes/PropertyAttribute.php(43): Core\Attributes\LinkFromMultiple->getProperty()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(185): Core\Attributes\PropertyAttribute::retrievePropertiesFromAttributes()
+#4 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php(44): Core\Entity::getProperties()
+#5 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#6 /home/kidneyad/public_html/admin/classes/Pages/Linking/LinkingPage.php(22): Core\Properties\LinkFromMultipleProperty->__construct()
+#7 /home/kidneyad/public_html/admin/classes/Core/Entity.php(195): Pages\Linking\LinkingPage::properties()
+#8 /home/kidneyad/public_html/admin/classes/Core/Entity.php(704): Core\Entity::getProperties()
+#9 /home/kidneyad/public_html/admin/classes/Core/Entity.php(765): Core\Entity::loadForMultiple()
+#10 /home/kidneyad/public_html/admin/classes/Core/Entity.php(781): Core\Entity::loadFor()
+#11 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(121): Core\Entity::load()
+#12 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#13 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#14 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#15 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#16 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#17 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php on line 46
+[10-Mar-2022 21:10:24 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class Pages\Linking\Link does not have a property named group_link_id in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php:46
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#1 /home/kidneyad/public_html/admin/classes/Core/Attributes/LinkFromMultiple.php(27): Core\Properties\LinkFromMultipleProperty->__construct()
+#2 /home/kidneyad/public_html/admin/classes/Core/Attributes/PropertyAttribute.php(43): Core\Attributes\LinkFromMultiple->getProperty()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(185): Core\Attributes\PropertyAttribute::retrievePropertiesFromAttributes()
+#4 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php(44): Core\Entity::getProperties()
+#5 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#6 /home/kidneyad/public_html/admin/classes/Pages/Linking/LinkingPage.php(22): Core\Properties\LinkFromMultipleProperty->__construct()
+#7 /home/kidneyad/public_html/admin/classes/Core/Entity.php(195): Pages\Linking\LinkingPage::properties()
+#8 /home/kidneyad/public_html/admin/classes/Core/Entity.php(704): Core\Entity::getProperties()
+#9 /home/kidneyad/public_html/admin/classes/Core/Entity.php(765): Core\Entity::loadForMultiple()
+#10 /home/kidneyad/public_html/admin/classes/Core/Entity.php(781): Core\Entity::loadFor()
+#11 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(121): Core\Entity::load()
+#12 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#13 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#14 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#15 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#16 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#17 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php on line 46
+[10-Mar-2022 21:13:12 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class Pages\Linking\Link does not have a property named group_link_id in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php:46
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#1 /home/kidneyad/public_html/admin/classes/Core/Attributes/LinkFromMultiple.php(27): Core\Properties\LinkFromMultipleProperty->__construct()
+#2 /home/kidneyad/public_html/admin/classes/Core/Attributes/PropertyAttribute.php(43): Core\Attributes\LinkFromMultiple->getProperty()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(185): Core\Attributes\PropertyAttribute::retrievePropertiesFromAttributes()
+#4 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php(44): Core\Entity::getProperties()
+#5 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#6 /home/kidneyad/public_html/admin/classes/Pages/Linking/LinkingPage.php(22): Core\Properties\LinkFromMultipleProperty->__construct()
+#7 /home/kidneyad/public_html/admin/classes/Core/Entity.php(195): Pages\Linking\LinkingPage::properties()
+#8 /home/kidneyad/public_html/admin/classes/Core/Entity.php(704): Core\Entity::getProperties()
+#9 /home/kidneyad/public_html/admin/classes/Core/Entity.php(765): Core\Entity::loadForMultiple()
+#10 /home/kidneyad/public_html/admin/classes/Core/Entity.php(781): Core\Entity::loadFor()
+#11 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(121): Core\Entity::load()
+#12 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#13 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#14 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#15 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#16 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#17 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php on line 46
+[10-Mar-2022 21:15:45 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class Pages\Linking\Link does not have a property named group_link_id in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php:46
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#1 /home/kidneyad/public_html/admin/classes/Core/Attributes/LinkFromMultiple.php(27): Core\Properties\LinkFromMultipleProperty->__construct()
+#2 /home/kidneyad/public_html/admin/classes/Core/Attributes/PropertyAttribute.php(43): Core\Attributes\LinkFromMultiple->getProperty()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(185): Core\Attributes\PropertyAttribute::retrievePropertiesFromAttributes()
+#4 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php(44): Core\Entity::getProperties()
+#5 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#6 /home/kidneyad/public_html/admin/classes/Pages/Linking/LinkingPage.php(22): Core\Properties\LinkFromMultipleProperty->__construct()
+#7 /home/kidneyad/public_html/admin/classes/Core/Entity.php(195): Pages\Linking\LinkingPage::properties()
+#8 /home/kidneyad/public_html/admin/classes/Core/Entity.php(704): Core\Entity::getProperties()
+#9 /home/kidneyad/public_html/admin/classes/Core/Entity.php(765): Core\Entity::loadForMultiple()
+#10 /home/kidneyad/public_html/admin/classes/Core/Entity.php(781): Core\Entity::loadFor()
+#11 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(121): Core\Entity::load()
+#12 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#13 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#14 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#15 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#16 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#17 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php on line 46
+[10-Mar-2022 21:16:40 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class Pages\Linking\GroupLinks does not have a property named page in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php:46
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#1 /home/kidneyad/public_html/admin/classes/Pages/Linking/LinkingPage.php(22): Core\Properties\LinkFromMultipleProperty->__construct()
+#2 /home/kidneyad/public_html/admin/classes/Core/Entity.php(195): Pages\Linking\LinkingPage::properties()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(704): Core\Entity::getProperties()
+#4 /home/kidneyad/public_html/admin/classes/Core/Entity.php(765): Core\Entity::loadForMultiple()
+#5 /home/kidneyad/public_html/admin/classes/Core/Entity.php(781): Core\Entity::loadFor()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(121): Core\Entity::load()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php on line 46
+[10-Mar-2022 21:20:18 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "Pages\Linking\GridElement" not found in /home/kidneyad/public_html/admin/classes/Pages/Linking/GroupLinks.php:40
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Generator.php(637): Pages\Linking\GroupLinks->elements()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(187): Core\Generator->getElements()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#7 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#11 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Pages/Linking/GroupLinks.php on line 40
+[10-Mar-2022 21:22:21 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Column 'page_id' cannot be null in /home/kidneyad/public_html/admin/classes/Database/Mysql.php:178
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(202): Database\Mysql->query()
+#1 /home/kidneyad/public_html/admin/classes/Database/Database.php(42): Database\Mysql->run()
+#2 /home/kidneyad/public_html/admin/classes/Core/SaveHandling/SaveHandler.php(294): Database\Database::query()
+#3 /home/kidneyad/public_html/admin/classes/Core/SaveHandling/SaveHandler.php(242): Core\SaveHandling\SaveHandler->saveToDatabase()
+#4 /home/kidneyad/public_html/admin/classes/Core/SaveHandling/SaveHandler.php(104): Core\SaveHandling\SaveHandler->processTracker()
+#5 /home/kidneyad/public_html/admin/classes/Core/SaveHandling/SaveHandler.php(46): Core\SaveHandling\SaveHandler->processChain()
+#6 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1243): Core\SaveHandling\SaveHandler->save()
+#7 /home/kidneyad/public_html/admin/classes/Admin/ProcessController.php(83): Core\Entity->save()
+#8 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\ProcessController::getControllerFromPattern()
+#9 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#11 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Mysql.php on line 178
+[10-Mar-2022 21:24:33 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 21:24:33 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 21:24:33 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Column 'page_id' cannot be null in /home/kidneyad/public_html/admin/classes/Database/Mysql.php:178
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(202): Database\Mysql->query()
+#1 /home/kidneyad/public_html/admin/classes/Database/Database.php(42): Database\Mysql->run()
+#2 /home/kidneyad/public_html/admin/classes/Core/SaveHandling/SaveHandler.php(294): Database\Database::query()
+#3 /home/kidneyad/public_html/admin/classes/Core/SaveHandling/SaveHandler.php(242): Core\SaveHandling\SaveHandler->saveToDatabase()
+#4 /home/kidneyad/public_html/admin/classes/Core/SaveHandling/SaveHandler.php(104): Core\SaveHandling\SaveHandler->processTracker()
+#5 /home/kidneyad/public_html/admin/classes/Core/SaveHandling/SaveHandler.php(46): Core\SaveHandling\SaveHandler->processChain()
+#6 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1243): Core\SaveHandling\SaveHandler->save()
+#7 /home/kidneyad/public_html/admin/classes/Admin/ProcessController.php(83): Core\Entity->save()
+#8 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\ProcessController::getControllerFromPattern()
+#9 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#11 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Mysql.php on line 178
+[10-Mar-2022 21:25:23 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 21:25:23 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 21:39:14 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 21:39:14 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 21:39:14 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 21:39:14 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 21:39:14 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 21:39:14 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 21:39:14 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 21:39:14 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 21:41:21 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 21:41:21 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 21:41:21 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 21:41:21 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 21:41:21 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 21:41:21 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 21:41:21 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 21:41:21 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 22:17:41 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 22:17:41 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 22:17:41 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 22:17:41 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 22:17:41 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 22:17:41 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 22:17:41 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 22:17:41 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 22:17:41 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 22:17:41 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 22:17:41 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 22:17:41 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 22:17:41 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[10-Mar-2022 22:17:41 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[10-Mar-2022 22:23:54 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Pages\Page must implement jsonSerialize() in /home/kidneyad/public_html/admin/classes/Core/Entity.php:1496
+Stack trace:
+#0 [internal function]: Core\Entity->jsonSerialize()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(214): json_encode()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(189): Core\Elements\GeneratorElement->getJson()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1496
+[10-Mar-2022 22:24:13 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Pages\Page must implement jsonSerialize() in /home/kidneyad/public_html/admin/classes/Core/Entity.php:1496
+Stack trace:
+#0 [internal function]: Core\Entity->jsonSerialize()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(214): json_encode()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(189): Core\Elements\GeneratorElement->getJson()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1496
+[10-Mar-2022 22:28:42 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Pages\Page must implement jsonSerialize() in /home/kidneyad/public_html/admin/classes/Core/Entity.php:1496
+Stack trace:
+#0 [internal function]: Core\Entity->jsonSerialize()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(214): json_encode()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(189): Core\Elements\GeneratorElement->getJson()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1496
+[10-Mar-2022 22:28:45 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Pages\Page must implement jsonSerialize() in /home/kidneyad/public_html/admin/classes/Core/Entity.php:1496
+Stack trace:
+#0 [internal function]: Core\Entity->jsonSerialize()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(214): json_encode()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(189): Core\Elements\GeneratorElement->getJson()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1496
+[10-Mar-2022 22:28:56 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Pages\Page must implement jsonSerialize() in /home/kidneyad/public_html/admin/classes/Core/Entity.php:1496
+Stack trace:
+#0 [internal function]: Core\Entity->jsonSerialize()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(214): json_encode()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(189): Core\Elements\GeneratorElement->getJson()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1496
+[10-Mar-2022 22:29:12 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Pages\Page must implement jsonSerialize() in /home/kidneyad/public_html/admin/classes/Core/Entity.php:1496
+Stack trace:
+#0 [internal function]: Core\Entity->jsonSerialize()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(214): json_encode()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(189): Core\Elements\GeneratorElement->getJson()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1496
+[10-Mar-2022 22:31:12 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Pages\Page must implement jsonSerialize() in /home/kidneyad/public_html/admin/classes/Core/Entity.php:1496
+Stack trace:
+#0 [internal function]: Core\Entity->jsonSerialize()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(214): json_encode()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(189): Core\Elements\GeneratorElement->getJson()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1496
+[10-Mar-2022 22:31:17 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Pages\Page must implement jsonSerialize() in /home/kidneyad/public_html/admin/classes/Core/Entity.php:1496
+Stack trace:
+#0 [internal function]: Core\Entity->jsonSerialize()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(214): json_encode()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(189): Core\Elements\GeneratorElement->getJson()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1496
+[10-Mar-2022 22:31:18 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Pages\Page must implement jsonSerialize() in /home/kidneyad/public_html/admin/classes/Core/Entity.php:1496
+Stack trace:
+#0 [internal function]: Core\Entity->jsonSerialize()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(214): json_encode()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(189): Core\Elements\GeneratorElement->getJson()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1496
+[10-Mar-2022 22:32:36 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Pages\Page must implement jsonSerialize() in /home/kidneyad/public_html/admin/classes/Core/Entity.php:1496
+Stack trace:
+#0 [internal function]: Core\Entity->jsonSerialize()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(214): json_encode()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(189): Core\Elements\GeneratorElement->getJson()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1496
+[10-Mar-2022 22:32:52 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Pages\Page must implement jsonSerialize() in /home/kidneyad/public_html/admin/classes/Core/Entity.php:1496
+Stack trace:
+#0 [internal function]: Core\Entity->jsonSerialize()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(214): json_encode()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(189): Core\Elements\GeneratorElement->getJson()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1496
+[10-Mar-2022 22:32:56 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Pages\Page must implement jsonSerialize() in /home/kidneyad/public_html/admin/classes/Core/Entity.php:1496
+Stack trace:
+#0 [internal function]: Core\Entity->jsonSerialize()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(214): json_encode()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(189): Core\Elements\GeneratorElement->getJson()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1496
+[10-Mar-2022 22:33:35 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Pages\Page must implement jsonSerialize() in /home/kidneyad/public_html/admin/classes/Core/Entity.php:1496
+Stack trace:
+#0 [internal function]: Core\Entity->jsonSerialize()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(214): json_encode()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(189): Core\Elements\GeneratorElement->getJson()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1496
+[10-Mar-2022 22:35:30 Pacific/Auckland] PHP Warning:  Undefined array key "group_links" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 73
+[10-Mar-2022 22:35:30 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Call to a member function getType() on null in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php:75
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(173): Core\Elements\GeneratorElement->afterAdd()
+#1 /home/kidneyad/public_html/admin/classes/Core/Generator.php(517): Core\Elements\Group->add()
+#2 /home/kidneyad/public_html/admin/classes/Pages/Linking/LinkingPage.php(32): Core\Generator->addElement()
+#3 /home/kidneyad/public_html/admin/classes/Core/Generator.php(637): Pages\Linking\LinkingPage->elements()
+#4 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Core\Generator->getElements()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 75
+[10-Mar-2022 22:35:58 Pacific/Auckland] PHP Warning:  Undefined array key "group_links" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 73
+[10-Mar-2022 22:35:58 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Call to a member function getType() on null in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php:75
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(173): Core\Elements\GeneratorElement->afterAdd()
+#1 /home/kidneyad/public_html/admin/classes/Core/Generator.php(517): Core\Elements\Group->add()
+#2 /home/kidneyad/public_html/admin/classes/Pages/Linking/LinkingPage.php(32): Core\Generator->addElement()
+#3 /home/kidneyad/public_html/admin/classes/Core/Generator.php(637): Pages\Linking\LinkingPage->elements()
+#4 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Core\Generator->getElements()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 75
+[10-Mar-2022 22:38:32 Pacific/Auckland] PHP Warning:  Undefined array key "group_links" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 73
+[10-Mar-2022 22:38:32 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Call to a member function getType() on null in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php:75
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(173): Core\Elements\GeneratorElement->afterAdd()
+#1 /home/kidneyad/public_html/admin/classes/Core/Generator.php(517): Core\Elements\Group->add()
+#2 /home/kidneyad/public_html/admin/classes/Pages/Linking/LinkingPage.php(32): Core\Generator->addElement()
+#3 /home/kidneyad/public_html/admin/classes/Core/Generator.php(637): Pages\Linking\LinkingPage->elements()
+#4 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Core\Generator->getElements()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 75
+[10-Mar-2022 22:39:43 Pacific/Auckland] PHP Warning:  Undefined array key "group_links" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 73
+[10-Mar-2022 22:39:43 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Call to a member function getType() on null in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php:75
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(173): Core\Elements\GeneratorElement->afterAdd()
+#1 /home/kidneyad/public_html/admin/classes/Core/Generator.php(517): Core\Elements\Group->add()
+#2 /home/kidneyad/public_html/admin/classes/Pages/Linking/LinkingPage.php(32): Core\Generator->addElement()
+#3 /home/kidneyad/public_html/admin/classes/Core/Generator.php(637): Pages\Linking\LinkingPage->elements()
+#4 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Core\Generator->getElements()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 75
+[10-Mar-2022 22:47:04 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Pages\Page must implement jsonSerialize() in /home/kidneyad/public_html/admin/classes/Core/Entity.php:1496
+Stack trace:
+#0 [internal function]: Core\Entity->jsonSerialize()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(214): json_encode()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(189): Core\Elements\GeneratorElement->getJson()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1496
+[10-Mar-2022 22:47:23 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Pages\Page must implement jsonSerialize() in /home/kidneyad/public_html/admin/classes/Core/Entity.php:1496
+Stack trace:
+#0 [internal function]: Core\Entity->jsonSerialize()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(214): json_encode()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(189): Core\Elements\GeneratorElement->getJson()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1496
+[10-Mar-2022 22:57:38 Pacific/Auckland] PHP Warning:  Undefined array key "links" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 73
+[10-Mar-2022 22:57:38 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Call to a member function getType() on null in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php:75
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Generator.php(530): Core\Elements\GeneratorElement->afterAdd()
+#1 /home/kidneyad/public_html/admin/classes/Pages/Linking/GroupLinks.php(41): Core\Generator->addElement()
+#2 /home/kidneyad/public_html/admin/classes/Core/Generator.php(637): Pages\Linking\GroupLinks->elements()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(151): Core\Generator->getElements()
+#4 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#6 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#7 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#8 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#9 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#10 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#11 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#12 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#13 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#14 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#15 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 75
+[10-Mar-2022 23:09:48 Pacific/Auckland] PHP Warning:  Undefined array key "file" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 335
+[10-Mar-2022 23:48:31 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "Pages\Linking\ForPatientsPage" not found in /home/kidneyad/public_html/admin/classes/Admin/EditController.php:121
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#1 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#2 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#3 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#4 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#5 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Admin/EditController.php on line 121
+[11-Mar-2022 00:17:22 Pacific/Auckland] PHP Warning:  rename(/tmp//test.txt,/home/kidneyad/public_html/resources/files/links/test.txt): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[11-Mar-2022 00:17:22 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[11-Mar-2022 08:09:10 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "SQLite3" not found in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php:34
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(48): Database\Sqlite->getConnection()
+#1 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(98): Database\Sqlite->prepareStatement()
+#2 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(148): Database\Sqlite->query()
+#3 /home/kidneyad/public_html/admin/classes/Assets/Picker/Picker.php(54): Database\Sqlite->run()
+#4 /home/kidneyad/public_html/admin/classes/Assets/Picker/PickerController.php(104): Assets\Picker\Picker->__construct()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Assets\Picker\PickerController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php on line 34
+[11-Mar-2022 08:09:13 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "SQLite3" not found in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php:34
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(48): Database\Sqlite->getConnection()
+#1 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(98): Database\Sqlite->prepareStatement()
+#2 /home/kidneyad/public_html/admin/classes/Database/Sqlite.php(148): Database\Sqlite->query()
+#3 /home/kidneyad/public_html/admin/classes/Assets/Picker/Picker.php(54): Database\Sqlite->run()
+#4 /home/kidneyad/public_html/admin/classes/Assets/Picker/PickerController.php(104): Assets\Picker\Picker->__construct()
+#5 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Assets\Picker\PickerController::getControllerFromPattern()
+#6 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#7 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#8 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#9 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#10 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Sqlite.php on line 34
+[11-Mar-2022 19:41:34 Pacific/Auckland] PHP Warning:  Undefined array key "regional" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 73
+[11-Mar-2022 19:41:34 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Call to a member function getType() on null in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php:75
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Generator.php(530): Core\Elements\GeneratorElement->afterAdd()
+#1 /home/kidneyad/public_html/admin/classes/Pages/Regional/RegionalGroup.php(40): Core\Generator->addElement()
+#2 /home/kidneyad/public_html/admin/classes/Core/Generator.php(637): Pages\Regional\RegionalGroup->elements()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(187): Core\Generator->getElements()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#8 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#9 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#12 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#13 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 75
+[11-Mar-2022 19:44:28 Pacific/Auckland] PHP Warning:  Undefined array key "regional" in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 73
+[11-Mar-2022 19:44:28 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Call to a member function getType() on null in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php:75
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Generator.php(530): Core\Elements\GeneratorElement->afterAdd()
+#1 /home/kidneyad/public_html/admin/classes/Pages/Regional/RegionalGroup.php(40): Core\Generator->addElement()
+#2 /home/kidneyad/public_html/admin/classes/Core/Generator.php(637): Pages\Regional\RegionalGroup->elements()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(187): Core\Generator->getElements()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#6 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#8 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#9 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#10 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#12 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#13 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php on line 75
+[11-Mar-2022 19:45:19 Pacific/Auckland] PHP Warning:  file in Pages\Regional\Regional is a private, protected or non-existent property in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1400
+[11-Mar-2022 19:45:19 Pacific/Auckland] PHP Warning:  Attempt to read property "getter" on null in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1407
+[11-Mar-2022 19:45:19 Pacific/Auckland] PHP Fatal error:  Uncaught Error: file in Pages\Regional\Regional is a private, protected or non-existent property. in /home/kidneyad/public_html/admin/classes/Core/Entity.php:1294
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1409): Core\Entity->getValue()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php(128): Core\Entity->__get()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/FileElement.php(57): Core\Elements\Base\ResultElement->getValue()
+#3 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\FileElement->getJsonValue()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(140): Admin\EditController::getJsonValue()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(214): Core\Elements\GeneratorElement->getJsonValue()
+#6 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(189): Core\Elements\GeneratorElement->getJson()
+#7 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(198): Core\Elements\GeneratorElement->getJson()
+#8 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\GeneratorElement->getJson()
+#9 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(91): Core\Elements\Group->getJson()
+#10 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(162): Core\Elements\Group->getJson()
+#11 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#12 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#13 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#14 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#15 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#16 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Entity.php on line 1294
+[11-Mar-2022 19:52:27 Pacific/Auckland] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'links.regional_id' in 'field list' in /home/kidneyad/public_html/admin/classes/Database/Mysql.php:45
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(45): mysqli->prepare()
+#1 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(169): Database\Mysql->prepareStatement()
+#2 /home/kidneyad/public_html/admin/classes/Database/Mysql.php(202): Database\Mysql->query()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(535): Database\Mysql->run()
+#4 /home/kidneyad/public_html/admin/classes/Core/Entity.php(881): Core\Entity::makeMany()
+#5 /home/kidneyad/public_html/admin/classes/Core/Generator.php(284): Core\Entity::loadAllForMultiple()
+#6 /home/kidneyad/public_html/admin/classes/Core/Entity.php(929): Core\Generator::loadAllForMultiple()
+#7 /home/kidneyad/public_html/admin/classes/Core/Generator.php(238): Core\Entity::loadAllFor()
+#8 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(62): Core\Generator::loadAllFor()
+#9 /home/kidneyad/public_html/admin/classes/Core/ValueWrappers/LinkWrapper.php(24): Core\Properties\LinkFromMultipleProperty->loadRelated()
+#10 /home/kidneyad/public_html/admin/classes/Core/ValueWrappers/ValueWrapper.php(129): Core\ValueWrappers\LinkWrapper->convertDatabaseValue()
+#11 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1304): Core\ValueWrappers\ValueWrapper->getForOutput()
+#12 /home/kidneyad/public_html/admin/classes/Core/Entity.php(1409): Core\Entity->getValue()
+#13 /home/kidneyad/public_html/admin/classes/Core/Elements/Base/ResultElement.php(128): Core\Entity->__get()
+#14 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(135): Core\Elements\Base\ResultElement->getValue()
+#15 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#16 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(151): Admin\EditController::getJsonValue()
+#17 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\GeneratorElement->getJsonValue()
+#18 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#19 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#20 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(73): Admin\EditController::getJsonValue()
+#21 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(53): Core\Elements\Group->getJsonValue()
+#22 /home/kidneyad/public_html/admin/classes/Admin/EditController.php(154): Admin\EditController::getJsonValue()
+#23 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#24 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#25 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#26 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#27 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#28 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Database/Mysql.php on line 45
+[11-Mar-2022 20:45:40 Pacific/Auckland] PHP Warning:  rename(/tmp//icon-nationwide.svg,/home/kidneyad/public_html/resources/images/regional/icon-nationwide.svg): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[11-Mar-2022 20:45:40 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[11-Mar-2022 20:45:40 Pacific/Auckland] PHP Warning:  rename(/tmp//icon-north-island.svg,/home/kidneyad/public_html/resources/images/regional/icon-north-island.svg): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[11-Mar-2022 20:45:40 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[11-Mar-2022 20:45:40 Pacific/Auckland] PHP Warning:  rename(/tmp//south-island.svg,/home/kidneyad/public_html/resources/images/regional/south-island.svg): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[11-Mar-2022 20:45:40 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[11-Mar-2022 20:45:40 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:45:40 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:45:40 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:45:40 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:45:40 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:45:40 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:46:52 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:46:52 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:46:52 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:46:52 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:46:52 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:46:52 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:46:52 Pacific/Auckland] PHP Warning:  rename(/tmp//icon-nationwide.svg,/home/kidneyad/public_html/resources/images/regional/icon-nationwide.svg): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[11-Mar-2022 20:46:52 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[11-Mar-2022 20:46:53 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:46:53 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:46:53 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:46:53 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:46:53 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:46:53 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:48:03 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:48:03 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:48:03 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:48:03 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:48:03 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:48:03 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:48:03 Pacific/Auckland] PHP Warning:  rename(/tmp//icon-north-island.svg,/home/kidneyad/public_html/resources/images/regional/icon-north-island.svg): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[11-Mar-2022 20:48:03 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[11-Mar-2022 20:48:03 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:48:03 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:48:03 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:48:03 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:48:03 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:48:03 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:50:01 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:50:01 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:50:01 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:50:01 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:50:01 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:50:01 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:50:01 Pacific/Auckland] PHP Warning:  rename(/tmp//icon-nationwide.svg,/home/kidneyad/public_html/resources/images/regional/icon-nationwide.svg): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/FileSystemItem.php on line 107
+[11-Mar-2022 20:50:01 Pacific/Auckland] PHP Warning:  chmod(): No such file or directory in /home/kidneyad/public_html/admin/classes/Files/File.php on line 211
+[11-Mar-2022 20:50:01 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:50:01 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:50:01 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:50:01 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:50:01 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:50:01 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:51:16 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:51:16 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:51:16 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:51:16 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:51:16 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:51:16 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:52:59 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:52:59 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:52:59 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:52:59 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 20:52:59 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[11-Mar-2022 20:52:59 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[11-Mar-2022 21:11:37 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class Configuration\RegionalGroup does not have a property named parent in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php:46
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#1 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(140): Core\Properties\LinkFromMultipleProperty->__construct()
+#2 /home/kidneyad/public_html/admin/classes/Core/Entity.php(195): Configuration\Configuration::properties()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(664): Core\Entity::getProperties()
+#4 /home/kidneyad/public_html/admin/classes/Core/Entity.php(689): Core\Entity::tableStringFor()
+#5 /home/kidneyad/public_html/admin/classes/Core/Entity.php(309): Core\Entity::tableString()
+#6 /home/kidneyad/public_html/admin/classes/Core/Entity.php(384): Core\Entity::processQueryFor()
+#7 /home/kidneyad/public_html/admin/classes/Core/Entity.php(500): Core\Entity::processQuery()
+#8 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(155): Core\Entity::makeOne()
+#9 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(384): Configuration\Configuration::acquire()
+#10 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(446): Configuration\Configuration::getAdminNavLink()
+#11 /home/kidneyad/public_html/admin/classes/Configuration/Registry.php(94): Configuration\Configuration::getAdminNavItem()
+#12 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(68): Configuration\Registry::getAdminNavItems()
+#13 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(108): Admin\AdminController->getTemplateVariables()
+#14 /home/kidneyad/public_html/admin/index.php(57): Admin\AdminController->output()
+#15 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php on line 46
+[11-Mar-2022 21:14:12 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class Configuration\RegionalGroup does not have a property named parent in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php:46
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#1 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(140): Core\Properties\LinkFromMultipleProperty->__construct()
+#2 /home/kidneyad/public_html/admin/classes/Core/Entity.php(195): Configuration\Configuration::properties()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(664): Core\Entity::getProperties()
+#4 /home/kidneyad/public_html/admin/classes/Core/Entity.php(689): Core\Entity::tableStringFor()
+#5 /home/kidneyad/public_html/admin/classes/Core/Entity.php(309): Core\Entity::tableString()
+#6 /home/kidneyad/public_html/admin/classes/Core/Entity.php(384): Core\Entity::processQueryFor()
+#7 /home/kidneyad/public_html/admin/classes/Core/Entity.php(500): Core\Entity::processQuery()
+#8 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(155): Core\Entity::makeOne()
+#9 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(384): Configuration\Configuration::acquire()
+#10 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(446): Configuration\Configuration::getAdminNavLink()
+#11 /home/kidneyad/public_html/admin/classes/Configuration/Registry.php(94): Configuration\Configuration::getAdminNavItem()
+#12 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(68): Configuration\Registry::getAdminNavItems()
+#13 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(108): Admin\AdminController->getTemplateVariables()
+#14 /home/kidneyad/public_html/admin/index.php(57): Admin\AdminController->output()
+#15 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php on line 46
+[11-Mar-2022 21:20:19 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "Pages\Regional\RegionalPage" not found in /home/kidneyad/public_html/admin/classes/Admin/EditController.php:121
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#1 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#2 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#3 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#4 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#5 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Admin/EditController.php on line 121
+[11-Mar-2022 21:22:08 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "Pages\Regional\RegionalPage" not found in /home/kidneyad/public_html/admin/classes/Admin/EditController.php:121
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#1 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#2 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#3 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#4 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#5 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Admin/EditController.php on line 121
+[11-Mar-2022 21:23:37 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class "Pages\Regional\RegionalPage" not found in /home/kidneyad/public_html/admin/classes/Admin/EditController.php:121
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\EditController::getControllerFromPattern()
+#1 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#2 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(122): Admin\AdminController::getControllerFor()
+#3 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#4 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#5 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Admin/EditController.php on line 121
+[22-Mar-2022 16:21:47 Pacific/Auckland] PHP Warning:  Undefined array key "onMenuHeader" in /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php on line 112
+[13-Apr-2022 19:24:47 Pacific/Auckland] PHP Fatal error:  Type of Configuration\StaffMembers::$position must be int (as in class Core\Generator) in /home/kidneyad/public_html/admin/classes/Configuration/StaffMembers.php on line 14
+[13-Apr-2022 19:27:20 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class Configuration\StaffMembers does not have a property named staffMembers in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php:46
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#1 /home/kidneyad/public_html/admin/classes/Core/Attributes/LinkFromMultiple.php(27): Core\Properties\LinkFromMultipleProperty->__construct()
+#2 /home/kidneyad/public_html/admin/classes/Core/Attributes/PropertyAttribute.php(43): Core\Attributes\LinkFromMultiple->getProperty()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(185): Core\Attributes\PropertyAttribute::retrievePropertiesFromAttributes()
+#4 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php(44): Core\Entity::getProperties()
+#5 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#6 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(154): Core\Properties\LinkFromMultipleProperty->__construct()
+#7 /home/kidneyad/public_html/admin/classes/Core/Entity.php(195): Configuration\Configuration::properties()
+#8 /home/kidneyad/public_html/admin/classes/Core/Entity.php(664): Core\Entity::getProperties()
+#9 /home/kidneyad/public_html/admin/classes/Core/Entity.php(689): Core\Entity::tableStringFor()
+#10 /home/kidneyad/public_html/admin/classes/Core/Entity.php(309): Core\Entity::tableString()
+#11 /home/kidneyad/public_html/admin/classes/Core/Entity.php(384): Core\Entity::processQueryFor()
+#12 /home/kidneyad/public_html/admin/classes/Core/Entity.php(500): Core\Entity::processQuery()
+#13 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(169): Core\Entity::makeOne()
+#14 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(403): Configuration\Configuration::acquire()
+#15 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(465): Configuration\Configuration::getAdminNavLink()
+#16 /home/kidneyad/public_html/admin/classes/Configuration/Registry.php(94): Configuration\Configuration::getAdminNavItem()
+#17 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(68): Configuration\Registry::getAdminNavItems()
+#18 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(108): Admin\AdminController->getTemplateVariables()
+#19 /home/kidneyad/public_html/admin/index.php(57): Admin\AdminController->output()
+#20 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php on line 46
+[13-Apr-2022 19:27:24 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class Configuration\StaffMembers does not have a property named staffMembers in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php:46
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#1 /home/kidneyad/public_html/admin/classes/Core/Attributes/LinkFromMultiple.php(27): Core\Properties\LinkFromMultipleProperty->__construct()
+#2 /home/kidneyad/public_html/admin/classes/Core/Attributes/PropertyAttribute.php(43): Core\Attributes\LinkFromMultiple->getProperty()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(185): Core\Attributes\PropertyAttribute::retrievePropertiesFromAttributes()
+#4 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php(44): Core\Entity::getProperties()
+#5 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#6 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(154): Core\Properties\LinkFromMultipleProperty->__construct()
+#7 /home/kidneyad/public_html/admin/classes/Core/Entity.php(195): Configuration\Configuration::properties()
+#8 /home/kidneyad/public_html/admin/classes/Core/Entity.php(664): Core\Entity::getProperties()
+#9 /home/kidneyad/public_html/admin/classes/Core/Entity.php(689): Core\Entity::tableStringFor()
+#10 /home/kidneyad/public_html/admin/classes/Core/Entity.php(309): Core\Entity::tableString()
+#11 /home/kidneyad/public_html/admin/classes/Core/Entity.php(384): Core\Entity::processQueryFor()
+#12 /home/kidneyad/public_html/admin/classes/Core/Entity.php(500): Core\Entity::processQuery()
+#13 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(169): Core\Entity::makeOne()
+#14 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(403): Configuration\Configuration::acquire()
+#15 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(465): Configuration\Configuration::getAdminNavLink()
+#16 /home/kidneyad/public_html/admin/classes/Configuration/Registry.php(94): Configuration\Configuration::getAdminNavItem()
+#17 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(68): Configuration\Registry::getAdminNavItems()
+#18 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(108): Admin\AdminController->getTemplateVariables()
+#19 /home/kidneyad/public_html/admin/index.php(57): Admin\AdminController->output()
+#20 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php on line 46
+[13-Apr-2022 19:27:29 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class Configuration\StaffMembers does not have a property named staffMembers in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php:46
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#1 /home/kidneyad/public_html/admin/classes/Core/Attributes/LinkFromMultiple.php(27): Core\Properties\LinkFromMultipleProperty->__construct()
+#2 /home/kidneyad/public_html/admin/classes/Core/Attributes/PropertyAttribute.php(43): Core\Attributes\LinkFromMultiple->getProperty()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(185): Core\Attributes\PropertyAttribute::retrievePropertiesFromAttributes()
+#4 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php(44): Core\Entity::getProperties()
+#5 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#6 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(154): Core\Properties\LinkFromMultipleProperty->__construct()
+#7 /home/kidneyad/public_html/admin/classes/Core/Entity.php(195): Configuration\Configuration::properties()
+#8 /home/kidneyad/public_html/admin/classes/Core/Entity.php(664): Core\Entity::getProperties()
+#9 /home/kidneyad/public_html/admin/classes/Core/Entity.php(689): Core\Entity::tableStringFor()
+#10 /home/kidneyad/public_html/admin/classes/Core/Entity.php(309): Core\Entity::tableString()
+#11 /home/kidneyad/public_html/admin/classes/Core/Entity.php(384): Core\Entity::processQueryFor()
+#12 /home/kidneyad/public_html/admin/classes/Core/Entity.php(500): Core\Entity::processQuery()
+#13 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(169): Core\Entity::makeOne()
+#14 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(403): Configuration\Configuration::acquire()
+#15 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(465): Configuration\Configuration::getAdminNavLink()
+#16 /home/kidneyad/public_html/admin/classes/Configuration/Registry.php(94): Configuration\Configuration::getAdminNavItem()
+#17 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(68): Configuration\Registry::getAdminNavItems()
+#18 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(108): Admin\AdminController->getTemplateVariables()
+#19 /home/kidneyad/public_html/admin/index.php(57): Admin\AdminController->output()
+#20 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php on line 46
+[13-Apr-2022 19:27:29 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Class Configuration\StaffMembers does not have a property named staffMembers in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php:46
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#1 /home/kidneyad/public_html/admin/classes/Core/Attributes/LinkFromMultiple.php(27): Core\Properties\LinkFromMultipleProperty->__construct()
+#2 /home/kidneyad/public_html/admin/classes/Core/Attributes/PropertyAttribute.php(43): Core\Attributes\LinkFromMultiple->getProperty()
+#3 /home/kidneyad/public_html/admin/classes/Core/Entity.php(185): Core\Attributes\PropertyAttribute::retrievePropertiesFromAttributes()
+#4 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php(44): Core\Entity::getProperties()
+#5 /home/kidneyad/public_html/admin/classes/Core/Properties/LinkFromMultipleProperty.php(24): Core\Properties\LinkProperty->__construct()
+#6 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(154): Core\Properties\LinkFromMultipleProperty->__construct()
+#7 /home/kidneyad/public_html/admin/classes/Core/Entity.php(195): Configuration\Configuration::properties()
+#8 /home/kidneyad/public_html/admin/classes/Core/Entity.php(664): Core\Entity::getProperties()
+#9 /home/kidneyad/public_html/admin/classes/Core/Entity.php(689): Core\Entity::tableStringFor()
+#10 /home/kidneyad/public_html/admin/classes/Core/Entity.php(309): Core\Entity::tableString()
+#11 /home/kidneyad/public_html/admin/classes/Core/Entity.php(384): Core\Entity::processQueryFor()
+#12 /home/kidneyad/public_html/admin/classes/Core/Entity.php(500): Core\Entity::processQuery()
+#13 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(169): Core\Entity::makeOne()
+#14 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(403): Configuration\Configuration::acquire()
+#15 /home/kidneyad/public_html/admin/classes/Configuration/Configuration.php(465): Configuration\Configuration::getAdminNavLink()
+#16 /home/kidneyad/public_html/admin/classes/Configuration/Registry.php(94): Configuration\Configuration::getAdminNavItem()
+#17 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(68): Configuration\Registry::getAdminNavItems()
+#18 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(108): Admin\AdminController->getTemplateVariables()
+#19 /home/kidneyad/public_html/admin/index.php(57): Admin\AdminController->output()
+#20 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Properties/LinkProperty.php on line 46
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 88
+[13-Apr-2022 20:22:39 Pacific/Auckland] PHP Warning:  Trying to access array offset on value of type bool in /home/kidneyad/public_html/admin/classes/Files/Image.php on line 89
+[13-Apr-2022 20:27:03 Pacific/Auckland] PHP Warning:  Uninitialized string offset 0 in /home/kidneyad/public_html/admin/classes/Core/Elements/FileElement.php on line 80
+[13-Apr-2022 20:27:03 Pacific/Auckland] PHP Warning:  foreach() argument must be of type array|object, string given in /home/kidneyad/public_html/admin/classes/Core/Elements/FileElement.php on line 112
+[13-Apr-2022 20:27:03 Pacific/Auckland] PHP Warning:  Undefined array key 0 in /home/kidneyad/public_html/admin/classes/Core/Elements/FileElement.php on line 127
+[13-Apr-2022 20:27:03 Pacific/Auckland] PHP Fatal error:  Uncaught Error: Call to a member function copy() on null in /home/kidneyad/public_html/admin/classes/Core/Elements/FileElement.php:127
+Stack trace:
+#0 /home/kidneyad/public_html/admin/classes/Core/Elements/ImageElement.php(184): Core\Elements\FileElement->getResult()
+#1 /home/kidneyad/public_html/admin/classes/Core/Elements/ImageElement.php(166): Core\Elements\ImageElement->getChildResult()
+#2 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(294): Core\Elements\ImageElement->getResult()
+#3 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(304): Core\Elements\GeneratorElement->getResult()
+#4 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(294): Core\Elements\GeneratorElement->getResult()
+#5 /home/kidneyad/public_html/admin/classes/Core/Elements/GeneratorElement.php(304): Core\Elements\GeneratorElement->getResult()
+#6 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(112): Core\Elements\GeneratorElement->getResult()
+#7 /home/kidneyad/public_html/admin/classes/Core/Elements/Group.php(112): Core\Elements\Group->getResult()
+#8 /home/kidneyad/public_html/admin/classes/Admin/ProcessController.php(62): Core\Elements\Group->getResult()
+#9 /home/kidneyad/public_html/admin/classes/Controller/UrlController.php(117): Admin\ProcessController::getControllerFromPattern()
+#10 /home/kidneyad/public_html/admin/classes/Admin/AdminController.php(100): Controller\UrlController::getControllerFor()
+#11 /home/kidneyad/public_html/admin/index.php(50): Admin\AdminController::getControllerFor()
+#12 {main}
+  thrown in /home/kidneyad/public_html/admin/classes/Core/Elements/FileElement.php on line 127

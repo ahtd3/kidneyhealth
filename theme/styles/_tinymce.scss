@@ -42,5 +42,18 @@
 			$border-radius: 3em
 		);
 		padding: 11px 39px;
+
+		&.primary {
+			@include button_base(	
+                $hover-background:$BLUE_COLOUR_ACTIVE, 
+                $background: $BLUE_COLOUR, 
+				$color: $LIGHT_COLOUR, 
+				$hover-color: $LIGHT_COLOUR,
+				$font-size: 20px,
+				$border-radius: 3em
+			);
+			padding: 11px 39px;
+		}
 	}
+	
 }

@@ -1,0 +1,207 @@
+.about-page {
+    main {
+        .content-wrapper,
+        .content-page {
+            padding-bottom: 0;
+        }
+        .extra-content {
+            margin-top: 36px;
+            margin-bottom: 22px;
+            h3 {
+                font-size: 32px;
+                line-height: 42px;
+                color: $BLUE_COLOUR;
+                font-weight: $MEDIUM;
+                font-family: $FONT_OSWALD;
+                text-transform: unset;
+                margin-bottom: 12px;
+            }
+        
+            h2 {
+                font-size: 50px;
+                line-height: 60px;
+                color: $BLUE_COLOUR;
+                font-weight: $MEDIUM;
+                font-family: $FONT_OSWALD;
+                text-transform: unset;
+                margin-bottom: 23px;
+                margin-top: 42px;
+            }
+        }
+    
+        .extra-content__inner {
+            ul {
+                margin-bottom: 27px;
+            }
+        }
+    
+        .button {
+            font-size: 24px;
+            line-height: 40px;
+            padding: 15px 37.5px;
+            margin-right: 15px;
+            min-width: 281px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 19px;
+            line-height: 26px;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+            li {
+                padding-left: 10px;
+                position: relative;
+                line-height: 34px;
+                font-size: 19px;
+                &:before {
+                    position: absolute;
+                    content: "•";
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+.staff {
+    margin-bottom: 66px;
+
+    &:last-child {
+        margin-bottom: 117px;
+    }
+}
+.staff-member {
+    h3 {
+        font-size: 36px;
+        line-height: 42px;
+        border-bottom: 1px solid $GRAY_COLOUR7;
+        text-transform: unset;
+        padding-bottom: 15px;
+        margin-bottom: 49px;
+    }
+    p {
+        margin: 0;
+    }
+    .staff-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(max(calc(25% - 38px), 220px), 1fr));
+        grid-gap: 38px 35px;
+    }
+
+    .staff-item {
+        display: flex;
+        flex-direction: column;
+
+        &__content {
+            background-color: $GRAY_COLOUR;
+            display: flex;
+            flex-direction: column;
+            padding: 16px 30px 27px 31px;
+            height: 100%;
+            min-height: 164px;
+        }
+
+        &__name {
+            font-size: 26px;
+            line-height: 42px;
+            color: $BLUE_COLOUR;
+            font-weight: $MEDIUM;
+            font-family: $FONT_OSWALD;
+            margin-bottom: 0;
+        }
+
+        &__title {
+            font-size: 17px;
+            line-height: 26px;
+            color: $DARK_COLOUR1;
+            font-family: $FONT_MONTSERRAT;
+            margin-bottom: 0;
+        }
+
+        &__more {
+            margin-top: auto;
+            font-size: 18px;
+            line-height: 26px;
+            color: $RED_COLOUR;
+            font-weight: $MEDIUM;
+            font-family: $FONT_OSWALD;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: flex;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+@media (max-width: 768.98px) {
+    .about-page {
+        main {
+            .content-wrapper,
+            .content-page {
+                padding-bottom: 0;
+            }
+            h1 {
+                font-size: 30px;
+                line-height: 33px;
+            }
+            .button {
+                padding: 5px 32.07px;
+                font-size: 21px;
+                min-width: 181px;
+            }
+            .extra-content {
+                margin-top: 0;
+                margin-bottom: 22px;
+                h3 {
+                    font-size: 28px;
+                    line-height: 1.5em;
+                    text-transform: unset;
+                    margin-bottom: 12px;
+                }
+            
+                h2 {
+                    font-size: 30px;
+                    line-height: 33px;
+                    margin-bottom: 23px;
+                    margin-top: 18px;
+                }
+            }
+        
+            .extra-content__inner {
+                ul {
+                    margin-bottom: 27px;
+                }
+            }
+        }
+    }
+
+    .staff-member {
+        h3 {
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+
+        .staff-item__content {
+            padding: 15px;
+            min-height: 144px;
+        }
+        
+        .staff-list {
+            grid-gap: 15px;
+        }
+    }
+    .staff {
+        margin-bottom: 36px;
+
+        &:last-child {
+            margin-bottom: 80px;
+        }
+    }
+}

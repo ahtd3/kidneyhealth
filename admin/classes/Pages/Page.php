@@ -142,8 +142,6 @@
 		#[LinkFromMultiple(PageSectionWrapper::class, "page")]
 		public array $pageSectionWrappers = [];
 
-		public $code;
-
 		/*~~~~~
 		 * static methods excluding interface methods
 		 **/
@@ -179,8 +177,6 @@
 			static::addProperty(new Property('path'));
 			static::addProperty(new ImageProperty('image', 'image', static::IMAGE_LOCATION, static::IMAGE_WIDTH, static::IMAGE_HEIGHT, static::IMAGE_RESIZE_TYPE));
 			static::addProperty(new Property('imageDescription', 'image_description', 'string'));
-
-			static::addProperty(new Property('code','code','string'));
 		}
 
 		/**
@@ -353,7 +349,6 @@
 			$this->addElement((new Text("name", 'Menu text'))->setHint("Required")->addClasses(['half'])->addValidation(Text::REQUIRED), "Content");
 
 			parent::elements();
-			$this->addElement(new Text("code", 'Class'), "Content");
 			$this->addElement((new Text("mainHeading", 'Main heading'))->setHint('if different to menu text'), "Content");
 			$this->addElement(new Editor("content", 'Content'), "Content");
 			$this->addElement(new GeneratorElement("pageSectionWrappers", "Page Sections"), "Content");
@@ -406,6 +401,7 @@
 			$this->addElement((new Text("redirect", "Redirect URL", $this->redirect))->setConditional("return actsAs === 'externalLink'"), "Setup");
 			$this->addElement((new Select("original", "Link to / duplicate of", $this->getPossibleLinks()))->setConditional("return actsAs === 'internalLink' || actsAs === 'duplicate'"), "Setup");
 			$this->addElement(new Checkbox("onNav", 'Display in main menu'), "Setup");
+
 			$this->addElement(new Checkbox("onMenuHeader", 'Display in top menu'), "Setup");
 
 			if(static::SITE_SECONDARY_NAV)

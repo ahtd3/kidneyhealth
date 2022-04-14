@@ -16,7 +16,7 @@
                     <ul>
                         {% for item in config.getVisibleSocialMediaLinks() %}
                         <li>
-                            <a href="{{item.url}}" target="_blank">
+                            <a href="{{item.url}}" title="{{item.text}}" target="_blank">
                                 <img src="{{item.image.getLink()}}" alt="Social Media">
                             </a>
                         </li>

@@ -27,6 +27,7 @@
 	use Template\Links\ExternalLink;
 	use Core\Elements\Editor;
 	use Configuration\RegionalGroup;
+	use Configuration\StaffGroup;
 	/**
 	 * Handles global configuration
 	 */
@@ -90,6 +91,7 @@
 		public $footer_link = "";
 		public $help_link = "";
 		public $stay_up_to_date_link = "";
+		public $place_name_on_google_map = '';
 		/** @var Image|null */
 		public $logo_header = null;
 
@@ -99,10 +101,15 @@
 		public $supporters_footer = "";
 
 		public $embed_facebook = "";
-
+		
 		/** @var RegionalGroup[] group_links */
 		public $regional_group;
 
+		/** @var StaffGroup[] group_links */
+		public $staff_group;
+
+		public $embed_home1 = '';
+		public $embed_home2 = '';
 		/**
 		 * Sets the properties for this class
 		 */
@@ -135,12 +142,16 @@
 			static::addProperty(new Property('donate_link', 'donate_link', 'string'));
 			static::addProperty(new Property('help_link', 'help_link', 'string'));
 			static::addProperty(new Property('stay_up_to_date_link', 'stay_up_to_date_link', 'string'));
+			static::addProperty(new Property('place_name_on_google_map', 'place_name_on_google_map', 'string'));
 			static::addProperty(new Property('footer_link', 'footer_link', 'html'));
 			static::addProperty(new Property('supporters_footer', 'supporters_footer', 'html'));
 			static::addProperty(new Property('embed_facebook', 'embed_facebook', 'html'));
+			static::addProperty(new Property('embed_home1', 'embed_home1', 'html'));
+			static::addProperty(new Property('embed_home2', 'embed_home2', 'html'));
 			static::addProperty(new ImageProperty("logo_header", "logo_header", static::FAVICON_LOCATION, 450, 450, ImageProperty::SCALE));
 			static::addProperty(new ImageProperty("logo_footer", "logo_footer", static::FAVICON_LOCATION, 450, 450, ImageProperty::SCALE));
 			static::addProperty((new LinkFromMultipleProperty("regional_group", RegionalGroup::class, "parent"))->setAutoDelete(true));
+			static::addProperty((new LinkFromMultipleProperty("staff_group", StaffGroup::class, "parent"))->setAutoDelete(true));
 		}
 
 		/**
@@ -296,12 +307,16 @@
 			$this->addElement(new Text('donate_link', 'Donate Link'), 'Theme');
 			$this->addElement(new Text('help_link', 'Help Link'), 'Theme');
 			$this->addElement(new Text('stay_up_to_date_link', 'Stay Up To Date Link'), 'Theme');
+			$this->addElement(new Text('place_name_on_google_map', 'Place name on google map'), 'Theme');
 			$this->addElement(new Editor('footer_link', 'Quick Links'), 'Theme');
 			$this->addElement(new Editor('embed_facebook', 'Embed page Facebook'), 'Theme');
+			$this->addElement(new Text('embed_home1', 'Embed code Homepage (first)'), 'Theme');
+			$this->addElement(new Text('embed_home2', 'Embed code Homepage (second)'), 'Theme');
 			$this->addElement(new Editor('supporters_footer', 'Support Our Supporters'), 'Theme');
 			$this->addElement(new ImageElement("logo_header", "Logo Header"), "Theme");
 			$this->addElement(new ImageElement("logo_footer", "Logo Footer"), "Theme");
 			$this->addElement(new GeneratorElement('regional_group', 'Regional'), 'Regional');
+			$this->addElement(new GeneratorElement('staff_group', 'Staff Member'), 'Staff Member');
 		}
 
 		/**

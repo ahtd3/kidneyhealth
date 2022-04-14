@@ -64,7 +64,7 @@
 //  and putting it at the end of the cascade lets this be done with minimum specificity override
 @import "front-page";
 
-
+@import "cms_general";
 @import "knh_header";
 @import "knh_footer";
 @import "knh_banner";
@@ -77,3 +77,4 @@
 @import "_cms_for-health-professionals";
 @import "knh_search_result";
 @import "cms_support_group";
+@import "cms_about_us";

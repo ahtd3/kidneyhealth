@@ -16,6 +16,7 @@
 	{
 		const TABLE = "group_links";
 		const ID_FIELD = "group_link_id";
+		const LABEL_PROPERTY = "label";
 		
 		#[Data("content", "html")]
 		public string $content = "";

@@ -1,0 +1,15 @@
+{% extends 'template/template.twig' %}
+
+{% block content %}
+	{% block page_image %}
+		{{ page.image.tag('content-image', page.imageDescription)|raw }}
+	{% endblock %}
+	{% block content_title %}
+		<h1>{{ page.getMainHeading() }}</h1>
+	{% endblock %}
+	{% block page_content %}
+		{{ page.getPageContent()|expandHtml }}
+	{% endblock %}
+{% endblock %}
+
+{% block class_body %}support-us{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'template/template.twig' %}
+
+{% block content %}
+	{% block page_image %}
+		{{ page.image.tag('content-image', page.imageDescription)|raw }}
+	{% endblock %}
+	<div class="content-page">
+		{% block content_title %}
+		<h1>{{ page.getMainHeading() }}</h1>
+		{% endblock %}
+		{% block page_content %}
+			{{ page.getPageContent()|expandHtml }}
+		{% endblock %}
+	</div>
+{% endblock %}
+
+{% block page_sections %}
+	{{ parent() }}
+	<div class="container">
+		<div class="staff-member">
+            {% for group in config.staff_group %}
+            <div class="staff">
+                <div class="regional__head--icon">
+                    <h3>{{group.label}}</h3>
+                </div>
+                <div class="staff-list">
+                    {% for member in group.staffGroup %}
+                    <div class="staff-item">
+                        {% if member.image.getLink() %}
+                            <img src="{{member.image.getLink()}}" alt="{{member.full_name}}">
+                        {% else %}
+                            <img src="{{member.getDefault()}}" alt="{{member.full_name}}">
+                        {% endif %}
+                        <div class="staff-item__content">
+                            <p class="staff-item__name">{{member.full_name}}</p>
+                            <p class="staff-item__title">{{member.title}}</p>
+                            <p class="staff-item__more popup-more-info" data-staff="{{member|json_encode}}">Meet {{member.first_name}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+		</div>
+	</div>
+{% endblock %}
+
+{% block class_body %}about-page{% endblock %}

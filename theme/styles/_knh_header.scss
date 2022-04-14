@@ -47,48 +47,37 @@
 
     .main-navigation {
         padding: 24px 0;
-
+        a {
+            font-size: 20px;
+            line-height: 40px;
+            color: $DARK_COLOUR3;
+            font-weight: $REGULAR;
+            font-family: $FONT_OSWALD;
+            white-space: nowrap;
+            text-transform: capitalize;
+        }
         li {
             align-items: center;
             margin-left: 30px;
 
             &.sel,
             &:hover {
-                a:not(.button) {
+                & > a:not(.button) {
                     color: $RED_COLOUR;
                     background: unset;
                 }
             }
             &.button-donate {
                 margin-left: 60px;
-                .button {
-                    @include button_base(
-                        $hover-background:$BLUE_COLOUR_ACTIVE, 
-                        $background: $BLUE_COLOUR, 
-                        $font-size: 18px,
-                        $border-radius: 3em
-                    );
-                    padding: 11px 39px;
-                    line-height: 40px;
-                    font-weight: $MEDIUM;
-                }
             }
 
             &.button-help {
                 margin-left: 103px;
-                a:not(.button) {
+                a {
                     font-size: 24px;
                     color: $RED_COLOUR;
                 }
                 
-            }
-            a:not(.button) {
-                font-size: 20px;
-                line-height: 40px;
-                color: $DARK_COLOUR3;
-                font-weight: 400;
-                font-family: "Oswald";
-                white-space: nowrap;
             }
 
             a.button {
@@ -178,6 +167,44 @@
     }
 }
 
+@media screen and (min-width:  1280px)  {
+    .site-header .main-navigation {
+        .design-collapse {
+            display: none;
+        }
+        li {
+            &.button-donate a {
+                @include button_base(
+                    $hover-background:$BLUE_COLOUR_ACTIVE, 
+                    $background: $BLUE_COLOUR, 
+                    $font-size: 18px,
+                    $border-radius: 3em
+                );
+                padding: 11px 39px;
+                line-height: 40px;
+                font-weight: $MEDIUM;
+            }
+
+            &.has-children {
+                ul {
+                    background: white;
+                    border: 1px solid #eee;
+                }
+
+                li {
+                    margin-left: unset;
+                    padding-left: 20px; 
+                    padding-right: 20px;
+                }
+
+                a {
+                    text-align: start;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width:  1279px) {
     .site-header {
         .button {
@@ -185,6 +212,20 @@
             font-size: 16px;
             line-height: 40px;
             min-height: unset;
+        }
+        .has-children {
+            ul {
+                padding-left: 10px;
+
+                li {
+                    background-color: unset;
+                }
+            }
+
+            a {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
         }
         &__top {
             display: block;
@@ -205,11 +246,6 @@
         
         &__left {
             padding-top: 20px;
-            a {
-            }
-            .logo {
-
-            }
         }
 
         .open-nav {
@@ -220,34 +256,53 @@
             width: 33px;
             .bar {
                 height: 3px;
-                background: #98012e;
+                background: $RED_COLOUR;
             }
         }
     
         .main-navigation {
-            background-color: $LIGHT_COLOUR;
-            padding-top: 10px;
+            background-color: $BLUE_COLOUR;
             width: 100%;
             max-width: 100%;
-            padding-left: 20px;
-            padding-right: 20px;
-            background-color: #f2f1ee;
-            .button-donate {
-                display: none;
-            }
+            padding: 44px 20px;
             li {
                 margin-left: unset;
+                border-top: unset;
                 &.sel,
                 &:hover {
                     background-color: unset;
                 }
     
                 &.button-help {
-                    margin: unset;
+                    display: none;
                 }
-
+                &.button-donate {
+                    margin-left: 0;
+                    padding: 0;
+    
+                    .button {
+                        padding: 0;
+                        text-transform: capitalize;
+                        font-size: 20px;
+                        line-height: 40px;
+                        color: $DARK_COLOUR3;
+                        font-weight: $REGULAR;
+                        font-family: $FONT_OSWALD;
+                        white-space: nowrap;
+                        padding: 10px 14px;
+                    }
+                }
                 &:first-child {
                     border-top: unset;
+                }
+
+                a {
+                    padding: 5px 14px;
+                }
+
+                &.button-help a,
+                a:not(.button) {
+                    color: $LIGHT_COLOUR;
                 }
             }
         }
@@ -282,6 +337,10 @@
         &__left {
             max-width: 77.5%;
             padding-top: 8px;
+
+            .logo {
+                max-width: 248px;
+            }
         }
     }
 }

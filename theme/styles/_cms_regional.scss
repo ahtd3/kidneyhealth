@@ -100,15 +100,17 @@
         }
 
         .row {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(max(25%, 300px), 1fr));
+
             padding-top: 48px;
             padding-bottom: 37px;
             margin-bottom: 98px;
         }
 
         .column {
-            width: 33.33%;
-            padding-left: 51px;
+            padding: 0 50px;
+            max-width: 400px;
 
             a {
                 color: $BLUE_COLOUR;
@@ -116,7 +118,7 @@
         }
 
         .column:last-child {
-            padding-left: 67px;
+            padding-left: 49px;
             padding-right:20px;
         }
 

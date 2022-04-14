@@ -33,7 +33,8 @@
 		[
 			"Big Slideshow" => BigSlideshow::class,
 			"Extra Content" => ExtraContent::class,
-			"Image Block" => ImageBlock::class
+			"Image Block" => ImageBlock::class,
+			"Embed Code" => EmbedCode::class,
 		];
 		
 		public bool $active = true;

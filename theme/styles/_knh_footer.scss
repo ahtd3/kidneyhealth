@@ -27,6 +27,10 @@
     }
     .footer-body {
         display: flex;
+        h3 {
+            color: $LIGHT_COLOUR;
+            text-transform: inherit;
+        }
         p {
             color: $LIGHT_COLOUR;
             line-height: 27px;
