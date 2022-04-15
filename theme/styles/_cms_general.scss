@@ -56,6 +56,12 @@
         height: 100%;
         vertical-align: middle;
     }
+    &::after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
 
     &__background {
         position: absolute;
@@ -97,13 +103,30 @@
         top: 10px;
         right: 10px;
         cursor: pointer;
+        
+        font-size: 7mm;
+        text-align: center;
+        font-family: Arial,sans-serif;
+        line-height: 25px;
+        width: 25px;
+
+        svg {
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+            svg {
+                fill: $RED_COLOUR;
+            }
+        }
     }
 
     &__content {
 
     }
 }
-
+.popup-info-open {
+    overflow: hidden;
+}
 .popup-more-info {
     cursor: pointer;
 }
