@@ -41,7 +41,7 @@
 		/** @var File|null */
 		public $file = null;
 
-		// public $link_type  = "";
+		public $hyperlink  = "";
 		
 		#[LinkTo("group_link_id")]
 		public GroupLinks $groupLink;
@@ -58,6 +58,7 @@
 			// static::addProperty(new Property("link_type", "link_type", "string"));
 			// static::addProperty(new Property("group_link", "group_link", "string"));
 			static::addProperty(new FileProperty("file", "file", static::FILE_LOCATION));
+			static::addProperty(new Property("hyperlink", "hyperlink", "string"));
 			static::addProperty(new LinkToProperty("linkedPage", "linked_page_id", Page::class));
 		}
 		
@@ -69,6 +70,7 @@
 			// $this->addElement(new Select("link_type", "Type of link", self::outputAllTypes()));
 			// $this->addElement(new Text("linkedPage", "Linked page"));
 			$this->addElement(new FileElement("file", "Linked file"));
+			$this->addElement(new Text("hyperlink", "Hyperlink"))->setDescription('If the file is not added, the hyperlink will be displayed');
 		}
 		
 		public function getLink()
@@ -77,9 +79,9 @@
 			{
 				return $this->file->getLink();
 			}
-			else if(!$this->linkedPage->isNull())
+			else if($this->hyperlink)
 			{
-				return $this->linkedPage->path;
+				return $this->hyperlink;
 			}
 			else
 			{

@@ -47,6 +47,12 @@
     z-index: 100;
     text-align: center;
     display: none;
+
+    color: $DARK_COLOUR1;
+    font-family: $FONT_MONTSERRAT;
+    line-height: 1.5;
+    font-weight: $LIGHT;
+
     &.open {
         display: block;
     }

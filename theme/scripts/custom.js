@@ -108,6 +108,7 @@ $(function() {
         close.on('click', function() {
             popup.fadeOut(function() {
                 popup.removeClass('open')
+                document.body.style.paddingRight = ''
                 document.body.classList.remove('popup-info-open')
             });
         })
@@ -121,7 +122,9 @@ $(function() {
                     ${data.description}
                 </div>
             `)
-
+            
+            let widScrollBar = window.innerWidth - document.body.offsetWidth;
+            document.body.style.paddingRight = `${widScrollBar}px`
             document.body.classList.add('popup-info-open')
             popup.fadeIn(function() {
                 popup.addClass('open');

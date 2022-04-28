@@ -34,7 +34,7 @@
                         <div class="staff-item__content">
                             <p class="staff-item__name">{{member.full_name}}</p>
                             <p class="staff-item__title">{{member.title}}</p>
-                            <p class="staff-item__more popup-more-info" data-staff="{{member|json_encode}}">Meet {{member.first_name}}</p>
+                            <p class="staff-item__more {% if member.description != "" %} popup-more-info {% endif %}" data-staff="{{member|json_encode}}">Meet {{member.first_name}}</p>
                         </div>
                     </div>
                     {% endfor %}
